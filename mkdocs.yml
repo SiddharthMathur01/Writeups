@@ -7,7 +7,7 @@ theme:
     code: Noto Sans Mono
   icon:
     logo: octicons/command-palette-16
-  favicon: /asstes/command-palette-16.svg
+  favicon: assets/command-palette-16.svg
   palette:
     - scheme: slate
       toggle:
