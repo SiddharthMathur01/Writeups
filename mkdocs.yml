@@ -1,0 +1,38 @@
+site_name: CTF Write Ups
+site_url: https://sitename.example
+theme:
+  name: material
+  font: 
+    text: Public Sans
+    code: Noto Sans Mono
+  icon:
+    logo: octicons/command-palette-16
+  favicon: /asstes/command-palette-16.svg
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: black
+      accent: deep purple
+
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue grey
+      accent: deep orange
+
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

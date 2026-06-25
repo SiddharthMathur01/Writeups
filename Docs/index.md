@@ -1,0 +1,4 @@
+```bash
+cat flag/txt
+
+```
