@@ -1,0 +1,21 @@
+{#- Stats: quick numeric highlights, easy to update via mkdocs.yml extra.stats -#}
+<section class="ctf-section ctf-section--tight">
+  <div class="ctf-stats">
+    <div class="ctf-stat-card ctf-reveal-on-scroll">
+      <div class="ctf-stat-card__value" data-count="{{ config.extra.stats.challenges_solved }}">0</div>
+      <div class="ctf-stat-card__label">Challenges Solved</div>
+    </div>
+    <div class="ctf-stat-card ctf-reveal-on-scroll" style="transition-delay: 0.06s;">
+      <div class="ctf-stat-card__value" data-count="{{ config.extra.stats.writeups }}">0</div>
+      <div class="ctf-stat-card__label">Writeups</div>
+    </div>
+    <div class="ctf-stat-card ctf-reveal-on-scroll" style="transition-delay: 0.12s;">
+      <div class="ctf-stat-card__value" data-count="{{ config.extra.stats.categories }}">0</div>
+      <div class="ctf-stat-card__label">Categories</div>
+    </div>
+    <div class="ctf-stat-card ctf-reveal-on-scroll" style="transition-delay: 0.18s;">
+      <div class="ctf-stat-card__value">{{ config.extra.stats.platforms }}</div>
+      <div class="ctf-stat-card__label">Platforms</div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+{#- About Me: split layout, picture placeholder + bio + social buttons -#}
+<section class="ctf-section" id="about">
+  <div class="ctf-about">
+    <div class="ctf-about__image ctf-reveal-on-scroll">
+      <img src="assets/images/profile-placeholder.svg" alt="Portrait placeholder for Siddharth Mathur" loading="lazy" />
+    </div>
+    <div class="ctf-about__text ctf-reveal-on-scroll" style="transition-delay: 0.08s;">
+      <p class="ctf-eyebrow">About Me</p>
+      <h2 class="ctf-about__heading">Hi, I'm Siddharth.</h2>
+      <p>
+        I'm a Computer Science student passionate about Cyber Security, Reverse Engineering,
+        Binary Exploitation, Web Security, Digital Forensics, Cryptography, and CTF competitions.
+      </p>
+      <p>
+        I created this website to document my learning journey through CTF writeups. Every
+        challenge teaches something new, and these notes serve both as my personal knowledge
+        base and as a resource for others.
+      </p>
+      <div class="ctf-about__actions">
+        <a href="https://github.com/SiddharthMathur01" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost">
+          <span class="ctf-btn__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/github.svg" %}</span>
+          <span class="ctf-btn__label">GitHub</span>
+        </a>
+        <a href="https://linkedin.com/in/siddharthmathur01" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost">
+          <span class="ctf-btn__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/linkedin.svg" %}</span>
+          <span class="ctf-btn__label">LinkedIn</span>
+        </a>
+        <a href="mailto:contact@siddharthmathur.dev" class="ctf-btn ctf-btn--ghost">
+          <span class="ctf-btn__icon" aria-hidden="true">{% include ".icons/fontawesome/solid/envelope.svg" %}</span>
+          <span class="ctf-btn__label">Email</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

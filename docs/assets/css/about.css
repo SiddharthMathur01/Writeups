@@ -1,0 +1,37 @@
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+
+.about-page {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.hero__label {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+}
+
+.hero__label::before,
+.hero__label::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: var(--border);
+  margin: 0 var(--space-sm);
+}

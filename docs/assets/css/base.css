@@ -1,0 +1,311 @@
+/* ==========================================================================
+   Base Styles — Typography, Layout, Navigation
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+/* Global resets */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6,
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.md-typeset h1 {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+}
+
+.md-typeset h2 {
+  font-size: var(--text-3xl);
+  margin-top: var(--space-3xl);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.md-typeset h3 {
+  font-size: var(--text-2xl);
+  margin-top: var(--space-2xl);
+}
+
+.md-typeset p,
+.md-typeset li,
+.md-typeset td {
+  font-size: var(--text-base);
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.md-typeset a:hover {
+  border-bottom-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* ==========================================================================
+   Header — Floating centered pill with blur
+   ========================================================================== */
+.md-header {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  position: sticky;
+  padding: 0.75rem 1.5rem 0;
+}
+
+/* The inner nav = floating pill */
+.md-header__inner.md-grid {
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  background: rgba(250, 250, 250, 0.7);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  padding: 0.2rem 1rem;
+}
+
+[data-md-color-scheme="slate"] .md-header__inner.md-grid {
+  background: rgba(20, 20, 20, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.md-header__button {
+  color: var(--color-text) !important;
+}
+
+.md-header__topic {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: var(--text-base);
+}
+
+/* ==========================================================================
+   Navigation tabs — HIDE on homepage, show on doc pages
+   On doc pages, show as a subtle centered bar
+   ========================================================================== */
+.md-tabs {
+  background: transparent !important;
+  border: none !important;
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem 1.5rem 0;
+}
+
+.md-tabs__list {
+  display: flex;
+  justify-content: center;
+  background: rgba(250, 250, 250, 0.55);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 0.1rem 0.25rem;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__list {
+  background: rgba(20, 20, 20, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.md-tabs__link {
+  color: var(--color-text-muted) !important;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+  padding: 0.5rem 1.25rem;
+  opacity: 0.6;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--color-text) !important;
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Search
+   ========================================================================== */
+.md-search__input {
+  background-color: var(--color-surface) !important;
+  border-radius: var(--border-radius-pill);
+}
+
+/* ==========================================================================
+   HOMEPAGE: Full-width layout
+   
+   Strategy: Use JavaScript-set class on body instead of :has() 
+   for broader browser support. The home.html template will add
+   class="home-page" to the body via a script.
+   But we also support :has() as a progressive enhancement.
+   ========================================================================== */
+
+/* --- Full-width grid override --- */
+/* Target via :has() for modern browsers */
+.md-main__inner.md-grid:has(.home-content) {
+  display: block !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.md-main__inner.md-grid:has(.home-content) > .md-sidebar {
+  display: none !important;
+}
+
+.md-main__inner.md-grid:has(.home-content) > .md-content {
+  max-width: 100% !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.md-main__inner.md-grid:has(.home-content) > .md-content > .md-content__inner {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fallback: also target via JS-set body class */
+body.home-page .md-main__inner.md-grid {
+  display: block !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.home-page .md-sidebar {
+  display: none !important;
+}
+
+body.home-page .md-content {
+  max-width: 100% !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+body.home-page .md-content__inner {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide MkDocs default footer on homepage */
+body.home-page .md-footer {
+  display: none;
+}
+
+.md-main:has(.home-content) ~ .md-footer {
+  display: none;
+}
+
+/* Hide tabs on homepage (no second navbar) */
+body.home-page .md-tabs {
+  display: none !important;
+}
+
+/* ==========================================================================
+   NON-HOMEPAGE: normal layout
+   ========================================================================== */
+.md-main__inner {
+  margin-top: 0;
+}
+
+.md-content {
+  max-width: var(--max-width-narrow);
+}
+
+/* Sidebar */
+.md-sidebar {
+  border-right: 1px solid var(--color-border);
+}
+
+.md-nav__link {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.md-nav__link:hover,
+.md-nav__link--active {
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   Page background decoration
+   ========================================================================== */
+.page-bg-decoration {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-doodle {
+  position: absolute;
+  opacity: 0.04;
+  color: var(--color-text);
+}
+
+.bg-doodle--1 { top: 30%; right: 5%; width: 300px; }
+.bg-doodle--2 { top: 60%; left: 3%; width: 120px; }
+.bg-doodle--3 { top: 80%; right: 15%; width: 150px; }
+.bg-doodle--4 { top: 45%; left: 10%; width: 180px; }
+
+[data-md-color-scheme="slate"] .bg-doodle {
+  opacity: 0.03;
+}
+
+/* ==========================================================================
+   Footer (doc pages)
+   ========================================================================== */
+.md-footer {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text-muted) !important;
+  border-top: 1px solid var(--color-border);
+}
+
+.md-footer-meta {
+  background-color: transparent !important;
+}
+
+/* ==========================================================================
+   Misc
+   ========================================================================== */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-light); }
+
+.md-source {
+  color: var(--color-text) !important;
+}

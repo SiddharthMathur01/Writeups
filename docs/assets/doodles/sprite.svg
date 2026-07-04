@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+  <!-- Doodle Sprite — reference with <use href="#blob1"> etc. -->
+
+  <!-- Organic blob 1 -->
+  <symbol id="blob1" viewBox="0 0 200 200">
+    <path d="M44.5,-76.3C56.9,-69.2,65.8,-55.7,73.2,-41.5C80.7,-27.3,86.7,-12.3,85.3,1.8C83.9,15.9,75.1,29.1,65.2,40.3C55.3,51.5,44.3,60.7,31.7,67.4C19.1,74.1,4.8,78.3,-9.7,78.1C-24.2,77.9,-38.9,73.3,-50.5,65C-62.1,56.7,-70.6,44.7,-76.1,31.3C-81.6,17.9,-84.1,3.1,-81.4,-10.2C-78.7,-23.5,-70.8,-35.3,-60.7,-44.2C-50.6,-53.1,-38.3,-59.1,-25.9,-66C-13.5,-72.9,-1.1,-80.7,12.3,-81.8C25.7,-82.9,32.1,-83.4,44.5,-76.3Z" transform="translate(100 100)" fill="currentColor"/>
+  </symbol>
+
+  <!-- Organic blob 2 -->
+  <symbol id="blob2" viewBox="0 0 200 200">
+    <path d="M39.5,-67.2C49.8,-59.5,56,-46.1,63.2,-33C70.4,-19.9,78.6,-7.1,78.3,5.3C78,17.7,69.2,29.7,59.6,39.9C50,50.1,39.6,58.5,27.6,64.5C15.6,70.5,2,74.1,-12.4,74.3C-26.8,74.5,-42,71.3,-53.4,63.1C-64.8,54.9,-72.4,41.7,-76.3,27.5C-80.2,13.3,-80.4,-1.9,-76.1,-15.3C-71.8,-28.7,-63,-40.3,-52,-49.3C-41,-58.3,-27.8,-64.7,-14.3,-68.5C-0.8,-72.3,13,-79.5,25.4,-78.1C37.8,-76.7,29.2,-74.9,39.5,-67.2Z" transform="translate(100 100)" fill="currentColor"/>
+  </symbol>
+
+  <!-- Concentric circles -->
+  <symbol id="circles" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="100" cy="100" r="55" fill="none" stroke="currentColor" stroke-width="1"/>
+    <circle cx="100" cy="100" r="30" fill="none" stroke="currentColor" stroke-width="0.75"/>
+    <circle cx="100" cy="100" r="12" fill="currentColor"/>
+  </symbol>
+
+  <!-- Blob 3 -->
+  <symbol id="blob3" viewBox="0 0 200 200">
+    <path d="M42.8,-73.9C55.1,-66.1,64.5,-53.8,71.8,-40.3C79.1,-26.8,84.3,-12.1,83.5,2.1C82.7,16.3,75.9,30,66.7,41.3C57.5,52.6,45.9,61.5,33,68.1C20.1,74.7,5.9,79,-8.9,78.4C-23.7,77.8,-39.1,72.3,-51.4,63.2C-63.7,54.1,-72.9,41.4,-78,27.1C-83.1,12.8,-84.1,-3.1,-80.2,-17.6C-76.3,-32.1,-67.5,-45.2,-55.8,-53.3C-44.1,-61.4,-29.5,-64.5,-15.7,-68.9C-1.9,-73.3,11.1,-79,23.8,-78.7C36.5,-78.4,30.5,-81.7,42.8,-73.9Z" transform="translate(100 100)" fill="currentColor"/>
+  </symbol>
+
+  <!-- Squiggly wave -->
+  <symbol id="squiggle1" viewBox="0 0 100 100">
+    <path d="M10,50 Q25,10 50,50 Q75,90 90,50" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M10,62 Q25,22 50,62 Q75,102 90,62" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Hexagon nested -->
+  <symbol id="hexagon" viewBox="0 0 100 100">
+    <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <polygon points="50,22 78,36 78,64 50,78 22,64 22,36" fill="none" stroke="currentColor" stroke-width="1"/>
+  </symbol>
+
+  <!-- Scattered dots -->
+  <symbol id="dots" viewBox="0 0 100 100">
+    <circle cx="15" cy="20" r="4" fill="currentColor"/>
+    <circle cx="45" cy="12" r="3" fill="currentColor"/>
+    <circle cx="75" cy="25" r="5" fill="currentColor"/>
+    <circle cx="30" cy="50" r="3.5" fill="currentColor"/>
+    <circle cx="60" cy="45" r="2.5" fill="currentColor"/>
+    <circle cx="85" cy="55" r="4" fill="currentColor"/>
+    <circle cx="20" cy="80" r="3" fill="currentColor"/>
+    <circle cx="50" cy="75" r="4.5" fill="currentColor"/>
+    <circle cx="80" cy="85" r="3" fill="currentColor"/>
+  </symbol>
+
+  <!-- Abstract arrow / lightning -->
+  <symbol id="arrow" viewBox="0 0 100 100">
+    <path d="M30,10 L70,45 L45,45 L70,90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- Small star burst -->
+  <symbol id="star" viewBox="0 0 100 100">
+    <line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="10" y1="50" x2="90" y2="50" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="22" y1="22" x2="78" y2="78" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="78" y1="22" x2="22" y2="78" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="50" cy="50" r="6" fill="currentColor"/>
+  </symbol>
+</svg>

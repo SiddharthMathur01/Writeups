@@ -1,0 +1,26 @@
+{#- Hero: large heading, subtitle, CTA buttons, decorative doodles -#}
+<section class="ctf-hero">
+  {% include "partials/doodles.html" %}
+  <div class="ctf-hero__content">
+    <p class="ctf-eyebrow ctf-reveal">Capture&nbsp;The&nbsp;Flag &middot; Writeups &amp; Research</p>
+    <h1 class="ctf-hero__title ctf-reveal ctf-reveal--delay-1">
+      Learn. Break.
+      <span class="ctf-underline">Document.
+        <svg viewBox="0 0 220 14" preserveAspectRatio="none"><path d="M2 9C40 2 100 2 218 9" /></svg>
+      </span>
+    </h1>
+    <p class="ctf-hero__subtitle ctf-reveal ctf-reveal--delay-2">
+      A collection of CTF writeups, exploitation techniques, and cybersecurity research.
+    </p>
+    <div class="ctf-hero__actions ctf-reveal ctf-reveal--delay-3">
+      <a href="Cylab/" class="ctf-btn ctf-btn--primary">
+        <span class="ctf-btn__label">View Writeups</span>
+        <span class="ctf-btn__arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="https://github.com/SiddharthMathur01" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost">
+        <span class="ctf-btn__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/github.svg" %}</span>
+        <span class="ctf-btn__label">GitHub</span>
+      </a>
+    </div>
+  </div>
+</section>

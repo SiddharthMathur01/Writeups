@@ -1,0 +1,23 @@
+{#-
+  Custom landing-page template for the homepage.
+  Selected via front matter in docs/index.md: `template: home.html`
+-#}
+{% extends "base.html" %}
+
+{% block htmltitle %}
+  <title>{{ config.site_name }} — {{ config.site_description }}</title>
+{% endblock %}
+
+{% block container %}
+  <div class="md-content" data-md-component="content">
+    <article class="md-content__inner md-typeset ctf-home">
+      {% block content %}
+        {% include "partials/hero.html" %}
+        {% include "partials/stats.html" %}
+        {% include "partials/about.html" %}
+        {% include "partials/featured.html" %}
+        {% include "partials/recent-writeups.html" %}
+      {% endblock %}
+    </article>
+  </div>
+{% endblock %}

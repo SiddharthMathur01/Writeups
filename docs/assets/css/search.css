@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Search Form - Pill Shape & Styling
+   ========================================================================== */
+
+.md-search__form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Target both search form and input to override MkDocs defaults */
+.md-search__form .md-search__input {
+  background-color: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-pill) !important;
+  color: var(--text-primary) !important;
+  height: 36px !important;
+  padding: 0 16px 0 36px !important;
+  transition: all var(--anim-base) !important;
+  width: 40px !important; /* icon only on mobile */
+  box-shadow: none !important;
+}
+
+.md-search__form .md-search__input:focus,
+.md-search__form .md-search__input:focus-within {
+  background-color: var(--surface-hover) !important;
+  border-color: var(--accent) !important;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .md-search__form .md-search__input {
+    width: 250px !important;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 960px) {
+  .md-search__form .md-search__input {
+    width: 320px !important;
+  }
+
+  .md-search__form::after {
+    content: "Ctrl K";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--surface-hover);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    pointer-events: none;
+    font-family: monospace;
+    font-weight: 600;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,56 @@
+{#-
+  Individual writeup template. Renders a hero block built from the page's
+  front matter (difficulty, category, points, tags, time, author, date),
+  then the markdown writeup content itself below it.
+  Selected via front matter: `template: writeup.html`
+-#}
+{% extends "base.html" %}
+
+{% block container %}
+  <div class="md-content" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+
+      <div class="ctf-writeup-hero ctf-reveal">
+        {% include "partials/actions.html" %}
+        <div class="ctf-writeup-hero__badges">
+          {% set diff = (page.meta.difficulty or "Medium") | lower %}
+          <span class="ctf-badge {% if diff == 'easy' %}ctf-badge--easy{% elif diff == 'hard' %}ctf-badge--hard{% else %}ctf-badge--medium{% endif %}">{{ page.meta.difficulty or "Medium" }}</span>
+          <span class="ctf-badge ctf-badge--dark">{{ page.meta.category or "CyLab" }}</span>
+          {% for tag in page.meta.tags or [] %}
+            <span class="ctf-badge">{{ tag }}</span>
+          {% endfor %}
+        </div>
+
+        <h1>{{ page.meta.title or page.title }}</h1>
+
+        <div class="ctf-writeup-hero__facts">
+          {% if page.meta.points %}
+          <div class="ctf-fact">
+            <span class="ctf-fact__label">Points</span>
+            <span class="ctf-fact__value">{{ page.meta.points }}</span>
+          </div>
+          {% endif %}
+          {% if page.meta.solve_time %}
+          <div class="ctf-fact">
+            <span class="ctf-fact__label">Est. Solve Time</span>
+            <span class="ctf-fact__value">{{ page.meta.solve_time }}</span>
+          </div>
+          {% endif %}
+          <div class="ctf-fact">
+            <span class="ctf-fact__label">Author</span>
+            <span class="ctf-fact__value">{{ page.meta.author or "Siddharth Mathur" }}</span>
+          </div>
+          {% if page.meta.date %}
+          <div class="ctf-fact">
+            <span class="ctf-fact__label">Date</span>
+            <span class="ctf-fact__value">{{ page.meta.date }}</span>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+
+      {% include "partials/content.html" %}
+
+    </article>
+  </div>
+{% endblock %}

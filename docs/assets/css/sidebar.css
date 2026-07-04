@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Sidebar - Obsidian-like Active States
+   ========================================================================== */
+
+.writeup-sidebar,
+.md-sidebar--primary {
+  position: relative;
+  border-right: 2px solid transparent;
+  transition: border-right var(--anim-base);
+}
+
+.writeup-sidebar:hover,
+.md-sidebar--primary:hover {
+  border-right: 2px solid var(--border);
+}
+
+/* Active State */
+.md-nav__item--active > .md-nav__link,
+.md-nav__link--active {
+  position: relative;
+  background-color: var(--surface-hover) !important;
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+  border-radius: var(--radius-md) !important;
+  padding-left: 12px !important;
+  transition: background-color var(--anim-fast);
+}
+
+.md-nav__item--active > .md-nav__link::before,
+.md-nav__link--active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 3px;
+  background-color: var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}

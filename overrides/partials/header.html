@@ -1,0 +1,69 @@
+{#-
+  Custom floating, centered pill navbar. Replaces Material's default
+  full-width header. Reuses Material's real search/palette/source partials
+  (unmodified) so their JS keeps working — only the surrounding markup and
+  CSS classes change to fit the pill layout.
+
+  The hamburger opens a custom-built drawer (see partials/nav-drawer.html)
+  driven by docs/assets/js/navbar.js — it does not reuse Material's
+  built-in `#__drawer` sidebar mechanism, since that only behaves as an
+  off-canvas menu below a breakpoint and we need it on every screen size.
+-#}
+<header class="md-header ctf-header" data-md-component="header">
+  <nav class="ctf-navbar" aria-label="{{ lang.t('header') }}">
+
+    <div class="ctf-navbar__group ctf-navbar__group--left">
+      <button type="button" class="ctf-navbar__icon-btn" data-ctf-drawer-open aria-haspopup="true" aria-expanded="false" aria-controls="ctf-drawer" aria-label="Open navigation menu">
+        {% include ".icons/material/menu.svg" %}
+      </button>
+
+      <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" class="ctf-navbar__brand" data-md-component="logo" aria-label="{{ config.site_name }}">
+        <span class="ctf-navbar__logo">{% include "partials/logo.html" %}</span>
+        <span class="ctf-navbar__title">{{ config.site_name }}</span>
+      </a>
+    </div>
+
+    <div class="ctf-navbar__group ctf-navbar__group--right">
+      {% if config.theme.palette %}
+        {% if not config.theme.palette is mapping %}
+          <div class="ctf-navbar__palette">
+            {% include "partials/palette.html" %}
+          </div>
+        {% endif %}
+      {% endif %}
+      {% if not config.theme.palette is mapping %}
+        {% include "partials/javascripts/palette.html" %}
+      {% endif %}
+
+      {% if "material/search" in config.plugins %}
+        {% set search = config.plugins["material/search"] | attr("config") %}
+        {% if search.enabled %}
+          <label class="ctf-navbar__search-trigger" for="__search">
+            {% include ".icons/material/magnify.svg" %}
+            <span>Search</span>
+          </label>
+        {% endif %}
+      {% endif %}
+
+      {% if config.repo_url %}
+        <a href="{{ config.repo_url }}" title="{{ lang.t('source') }}" class="ctf-navbar__icon-btn" target="_blank" rel="noopener" aria-label="{{ lang.t('source') }}">
+          {% set icon = config.theme.icon.repo or "fontawesome/brands/github" %}
+          {% include ".icons/" ~ icon ~ ".svg" %}
+        </a>
+      {% endif %}
+    </div>
+
+  </nav>
+
+  {#- Rendered outside the pill (which has backdrop-filter, creating a
+      containing block that would otherwise trap this fixed-position
+      overlay inside the pill's box). -#}
+  {% if "material/search" in config.plugins %}
+    {% set search = config.plugins["material/search"] | attr("config") %}
+    {% if search.enabled %}
+      {% include "partials/search.html" %}
+    {% endif %}
+  {% endif %}
+</header>
+
+{% include "partials/nav-drawer.html" %}

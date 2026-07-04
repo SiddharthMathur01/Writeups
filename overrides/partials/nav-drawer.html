@@ -1,0 +1,61 @@
+{#-
+  Custom off-canvas navigation drawer, opened from the pill navbar's
+  hamburger button. This is the site's primary top-level navigation
+  (Home / Writeups / About / GitHub) on every page and every breakpoint.
+  Behavior (open/close, Escape, outside click, focus handling) lives in
+  docs/assets/js/navbar.js.
+-#}
+{% set home_url = config.extra.homepage | d(nav.homepage.url, true) | url %}
+{% set is_home = page and (page.url == "" or page.url == ".") %}
+{% set is_about = page and page.file is defined and page.file.src_uri == "about.md" %}
+{% set is_cylab = page and page.url.startswith("Cylab/") %}
+
+<div class="ctf-drawer__backdrop" data-ctf-drawer-backdrop hidden></div>
+
+<aside class="ctf-drawer" id="ctf-drawer" data-ctf-drawer role="dialog" aria-modal="true" aria-label="Site navigation" hidden>
+  <div class="ctf-drawer__header">
+    <span class="ctf-drawer__brand">
+      <span class="ctf-navbar__logo">{% include "partials/logo.html" %}</span>
+      {{ config.site_name }}
+    </span>
+    <button type="button" class="ctf-navbar__icon-btn" data-ctf-drawer-close aria-label="Close navigation menu">
+      {% include ".icons/material/close.svg" %}
+    </button>
+  </div>
+
+  <nav class="ctf-drawer__nav" aria-label="Primary">
+    <a href="{{ home_url }}" class="ctf-drawer__link {{ 'ctf-drawer__link--active' if is_home }}" {% if is_home %}aria-current="page"{% endif %}>
+      {% include ".icons/material/home-outline.svg" %}
+      <span>Home</span>
+    </a>
+
+    <div class="ctf-drawer__group">
+      <button type="button" class="ctf-drawer__link ctf-drawer__link--expand" data-ctf-drawer-accordion aria-expanded="{{ 'true' if is_cylab else 'false' }}" aria-controls="ctf-drawer-writeups">
+        {% include ".icons/material/book-open-variant-outline.svg" %}
+        <span>Writeups</span>
+        <span class="ctf-drawer__chevron">{% include ".icons/material/chevron-down.svg" %}</span>
+      </button>
+      <div class="ctf-drawer__submenu" id="ctf-drawer-writeups" {% if not is_cylab %}hidden{% endif %}>
+        <a href="{{ 'Cylab/' | url }}" class="ctf-drawer__sublink {{ 'ctf-drawer__link--active' if is_cylab }}" {% if is_cylab %}aria-current="page"{% endif %}>
+          CyLab CTF
+        </a>
+        {#- Add future categories here, e.g.:
+        <a href="{{ 'HackTheBox/' | url }}" class="ctf-drawer__sublink">HackTheBox</a>
+        -#}
+      </div>
+    </div>
+
+    <a href="{{ 'about/' | url }}" class="ctf-drawer__link {{ 'ctf-drawer__link--active' if is_about }}" {% if is_about %}aria-current="page"{% endif %}>
+      {% include ".icons/material/account-outline.svg" %}
+      <span>About</span>
+    </a>
+
+    {% if config.repo_url %}
+      <a href="{{ config.repo_url }}" target="_blank" rel="noopener" class="ctf-drawer__link">
+        {% set icon = config.theme.icon.repo or "fontawesome/brands/github" %}
+        {% include ".icons/" ~ icon ~ ".svg" %}
+        <span>GitHub</span>
+      </a>
+    {% endif %}
+  </nav>
+</aside>

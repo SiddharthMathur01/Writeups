@@ -1,0 +1,19 @@
+{#- Featured Categories: large cards, one per CTF category. Add more entries
+    here (and to mkdocs.yml nav) as new categories/platforms are added. -#}
+<section class="ctf-section" style="border-top: 1px solid var(--ctf-border);">
+  <div class="ctf-section-head ctf-reveal-on-scroll">
+    <p class="ctf-eyebrow">Browse by category</p>
+    <h2 class="ctf-serif">Featured Categories</h2>
+    <p>Writeups organized by competition and platform.</p>
+  </div>
+  <div class="ctf-featured-grid">
+    <div class="ctf-feature-card ctf-reveal-on-scroll">
+      <div class="ctf-feature-card__icon">
+        {% include ".icons/octicons/shield-lock-16.svg" %}
+      </div>
+      <h3 class="ctf-feature-card__title">CyLab CTF</h3>
+      <p class="ctf-feature-card__desc">Writeups from CyLab Capture The Flag challenges.</p>
+      <a href="Cylab/" class="ctf-feature-card__link">Explore <span class="ctf-arrow">→</span></a>
+    </div>
+  </div>
+</section>

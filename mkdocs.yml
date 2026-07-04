@@ -1,38 +1,122 @@
-site_name: CTF Write Ups
-site_url: https://siddharthmathur01.github.io/Writeups/
+site_name: Siddharth's CTF Writeups
+site_description: Documenting challenges, exploits, payloads, and lessons learned while solving Capture The Flag competitions.
+site_author: Siddharth Mathur
+site_url: https://siddharthmathur01.github.io/ctf-writeups/
+
+repo_url: https://github.com/SiddharthMathur01
+repo_name: SiddharthMathur01
+
+hooks:
+  - hooks.py
+
 theme:
   name: material
-  font: 
-    text: Public Sans
-    code: Noto Sans Mono
+  custom_dir: overrides
+  language: en
+  favicon: assets/images/favicon.svg
+  logo: assets/images/terminal-icon.svg
   icon:
-    logo: octicons/command-palette-16
-  favicon: assets/command-palette-16.svg
-  palette:
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Dark mode
-      primary: black
-      accent: deep purple
+    repo: fontawesome/brands/github
 
-    - scheme: default
+  font:
+    text: Public Sans
+    code: JetBrains Mono
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: ctf-light
+      primary: black
+      accent: black
       toggle:
         icon: material/weather-night
-        name: Light mode
-      primary: blue grey
-      accent: deep orange
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: ctf-dark
+      primary: black
+      accent: white
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - content.action.edit
+    - toc.follow
+    - announce.dismiss
+
+extra_css:
+  - assets/css/extra.css
+
+extra_javascript:
+  - assets/js/extra.js
+  - assets/js/navbar.js
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+  - assets/js/mermaid-init.js
+
+extra:
+  homepage: /
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/SiddharthMathur01
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/siddharthmathur01
+    - icon: fontawesome/solid/envelope
+      link: mailto:contact@siddharthmathur.dev
+  stats:
+    challenges_solved: 17
+    writeups: 17
+    categories: 1
+    platforms: "CyLab"
 
 markdown_extensions:
   - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+nav:
+  - Home: index.md
+  - Cylab CTF:
+      - Overview: Cylab/index.md
+      - Baby RSA: Cylab/baby-rsa.md
+      - Shadow Vault: Cylab/shadow-vault.md
+      - Whisper Net: Cylab/whisper-net.md
+  - About: about.md
+
+copyright: Copyright &copy; 2026 Siddharth Mathur

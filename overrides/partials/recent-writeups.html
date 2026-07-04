@@ -1,0 +1,16 @@
+{#- Recent Writeups: auto-populated from config.extra.recent_writeups
+    (see hooks.py, which scans docs/Cylab front matter at build time). -#}
+<section class="ctf-section" style="border-top: 1px solid var(--ctf-border);">
+  <div class="ctf-section-head ctf-reveal-on-scroll">
+    <p class="ctf-eyebrow">Latest work</p>
+    <h2 class="ctf-serif">Recent Writeups</h2>
+    <p>Fresh from the terminal — the most recently documented solves.</p>
+  </div>
+  <div class="ctf-writeup-grid">
+    {% for writeup in config.extra.recent_writeups[:6] %}
+      {% include "partials/writeup-card.html" %}
+    {% else %}
+      <p style="text-align:center; color: var(--ctf-text-secondary);">No writeups published yet — check back soon.</p>
+    {% endfor %}
+  </div>
+</section>

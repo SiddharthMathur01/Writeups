@@ -1,0 +1,18 @@
+{#-
+  Same as Material's default partials/content.html, except the
+  auto-inserted <h1> is also skipped for writeup pages — their title is
+  already rendered inside the custom hero (see overrides/writeup.html),
+  so falling through to Material's default behavior here would print the
+  title twice.
+-#}
+{% include "partials/tags.html" %}
+{% if page.meta.template != "writeup.html" %}
+  {% include "partials/actions.html" %}
+{% endif %}
+{% if "\u003ch1" not in page.content and page.meta.template != "writeup.html" %}
+  <h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %}
+{{ page.content }}
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}

@@ -1,0 +1,24 @@
+{#-
+  Category listing template. Renders the page's own markdown (the hero
+  intro) followed by an auto-generated grid of writeup cards, filtered to
+  this category directory. Selected via front matter: `template: category.html`
+-#}
+{% extends "base.html" %}
+
+{% block container %}
+  <div class="md-content" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      {% include "partials/content.html" %}
+
+      <div class="ctf-writeup-grid ctf-reveal-on-scroll">
+        {% for writeup in config.extra.recent_writeups %}
+          {% if writeup.category == "Cylab" %}
+            {% include "partials/writeup-card.html" %}
+          {% endif %}
+        {% else %}
+          <p style="color: var(--ctf-text-secondary);">No writeups published in this category yet.</p>
+        {% endfor %}
+      </div>
+    </article>
+  </div>
+{% endblock %}

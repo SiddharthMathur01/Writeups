@@ -1,0 +1,58 @@
+<section class="section section--border-top animate-on-scroll">
+  <span class="section__label">Latest</span>
+  <h2 class="section__title">Recent Writeups</h2>
+  <p class="section__subtitle">The most recent challenge solutions and documentation.</p>
+
+  <div class="writeups-grid">
+    {%- set writeup_pages = [] -%}
+    {%- for nav_item in nav -%}
+      {%- if nav_item.children -%}
+        {%- for child in nav_item.children -%}
+          {%- if child.children -%}
+            {%- for page in child.children -%}
+              {%- if page.is_page and page.meta and page.meta.difficulty -%}
+                {%- set _ = writeup_pages.append(page) -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- elif child.is_page and child.meta and child.meta.difficulty -%}
+            {%- set _ = writeup_pages.append(child) -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- for page in writeup_pages[:5] -%}
+    <a href="{{ page.url | url }}" class="writeup-card stagger hover-lift">
+      <div class="writeup-card__header">
+        <h3 class="writeup-card__title">{{ page.title }}</h3>
+      </div>
+      <div class="writeup-card__meta">
+        {%- if page.meta.difficulty -%}
+        <span class="badge badge--{{ page.meta.difficulty | lower }}">{{ page.meta.difficulty }}</span>
+        {%- endif -%}
+        {%- if page.meta.category -%}
+        <span class="badge badge--category">{{ page.meta.category }}</span>
+        {%- endif -%}
+        {%- if page.meta.platform -%}
+        <span class="badge badge--tag">{{ page.meta.platform }}</span>
+        {%- endif -%}
+      </div>
+      {%- if page.meta.tags -%}
+      <div class="writeup-card__tags">
+        {%- for tag in page.meta.tags.split(',') -%}
+        <span class="badge badge--tag">{{ tag | trim }}</span>
+        {%- endfor -%}
+      </div>
+      {%- endif -%}
+      <div class="writeup-card__date">
+        {%- if page.meta.date -%}Solved: {{ page.meta.date }}{%- endif -%}
+      </div>
+      <span class="writeup-card__link">Read More →</span>
+    </a>
+    {%- endfor -%}
+
+    {%- if writeup_pages | length == 0 -%}
+    <p style="text-align:center;color:var(--color-text-muted);grid-column:1/-1;">Writeups will appear here as they are published.</p>
+    {%- endif -%}
+  </div>
+</section>
