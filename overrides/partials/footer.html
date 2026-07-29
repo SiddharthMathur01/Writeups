@@ -40,11 +40,12 @@
   {% endif %}
 
   <div class="md-footer-meta md-typeset">
+    {% include "partials/doodles-footer.html" %}
     <div class="ctf-footer">
       <span>Made with <span aria-hidden="true">&#10084;&#65039;</span> by Siddharth Mathur</span>
       <div class="ctf-footer__links">
         <a href="https://github.com/SiddharthMathur01" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/siddharthmathur01" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/siddharth-mathur-084804329/" target="_blank" rel="noopener">LinkedIn</a>
         <span>&middot;</span>
         <span>Last updated {{ config.extra.build_date_utc | default("recently") }}</span>
         <span>&middot;</span>

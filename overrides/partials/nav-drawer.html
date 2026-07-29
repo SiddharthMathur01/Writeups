@@ -8,7 +8,7 @@
 {% set home_url = config.extra.homepage | d(nav.homepage.url, true) | url %}
 {% set is_home = page and (page.url == "" or page.url == ".") %}
 {% set is_about = page and page.file is defined and page.file.src_uri == "about.md" %}
-{% set is_cylab = page and page.url.startswith("Cylab/") %}
+{% set is_picoCTF = page and page.url.startswith("picoCTF/") %}
 
 <div class="ctf-drawer__backdrop" data-ctf-drawer-backdrop hidden></div>
 
@@ -30,14 +30,14 @@
     </a>
 
     <div class="ctf-drawer__group">
-      <button type="button" class="ctf-drawer__link ctf-drawer__link--expand" data-ctf-drawer-accordion aria-expanded="{{ 'true' if is_cylab else 'false' }}" aria-controls="ctf-drawer-writeups">
+      <button type="button" class="ctf-drawer__link ctf-drawer__link--expand" data-ctf-drawer-accordion aria-expanded="{{ 'true' if is_picoCTF else 'false' }}" aria-controls="ctf-drawer-writeups">
         {% include ".icons/material/book-open-variant-outline.svg" %}
         <span>Writeups</span>
         <span class="ctf-drawer__chevron">{% include ".icons/material/chevron-down.svg" %}</span>
       </button>
-      <div class="ctf-drawer__submenu" id="ctf-drawer-writeups" {% if not is_cylab %}hidden{% endif %}>
-        <a href="{{ 'Cylab/' | url }}" class="ctf-drawer__sublink {{ 'ctf-drawer__link--active' if is_cylab }}" {% if is_cylab %}aria-current="page"{% endif %}>
-          CyLab CTF
+      <div class="ctf-drawer__submenu" id="ctf-drawer-writeups" {% if not is_picoCTF %}hidden{% endif %}>
+        <a href="{{ 'picoCTF/' | url }}" class="ctf-drawer__sublink {{ 'ctf-drawer__link--active' if is_picoCTF }}" {% if is_picoCTF %}aria-current="page"{% endif %}>
+          picoCTF
         </a>
         {#- Add future categories here, e.g.:
         <a href="{{ 'HackTheBox/' | url }}" class="ctf-drawer__sublink">HackTheBox</a>

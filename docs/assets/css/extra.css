@@ -23,15 +23,24 @@
   --ctf-shadow: 0 1px 2px rgba(10,10,10,0.04), 0 8px 24px rgba(10,10,10,0.05);
   --ctf-shadow-hover: 0 4px 10px rgba(10,10,10,0.06), 0 20px 40px rgba(10,10,10,0.09);
   --ctf-doodle: #0A0A0A;
-  --ctf-doodle-opacity: 0.9;
-  --ctf-doodle-opacity-muted: 0.06;
+  --ctf-doodle-opacity-hero: 0.34;
+  --ctf-doodle-opacity-mid: 0.27;
+  --ctf-doodle-opacity-low: 0.20;
+  --ctf-doodle-opacity-focal: 0.44;
+  --ctf-doodle-opacity-behind: 0.08;
   --ctf-code-bg: #101012;
   --ctf-code-text: #F2F2F2;
 
   --md-primary-fg-color: var(--ctf-bg);
   --md-primary-bg-color: var(--ctf-text);
   --md-default-bg-color: var(--ctf-bg);
-  --md-default-fg-color: var(--ctf-text);
+  --md-default-bg-color--light: color-mix(in srgb, var(--ctf-surface) 70%, transparent);
+  --md-default-bg-color--lighter: color-mix(in srgb, var(--ctf-surface) 30%, transparent);
+  --md-default-bg-color--lightest: color-mix(in srgb, var(--ctf-surface) 12%, transparent);
+  --md-default-fg-color: color-mix(in srgb, var(--ctf-text) 87%, transparent);
+  --md-default-fg-color--light: color-mix(in srgb, var(--ctf-text) 54%, transparent);
+  --md-default-fg-color--lighter: color-mix(in srgb, var(--ctf-text) 32%, transparent);
+  --md-default-fg-color--lightest: color-mix(in srgb, var(--ctf-text) 7%, transparent);
   --md-typeset-a-color: var(--ctf-text);
 }
 
@@ -49,15 +58,24 @@
   --ctf-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
   --ctf-shadow-hover: 0 4px 10px rgba(0,0,0,0.4), 0 20px 40px rgba(0,0,0,0.5);
   --ctf-doodle: #F3F3F4;
-  --ctf-doodle-opacity: 0.55;
-  --ctf-doodle-opacity-muted: 0.07;
+  --ctf-doodle-opacity-hero: 0.34;
+  --ctf-doodle-opacity-mid: 0.27;
+  --ctf-doodle-opacity-low: 0.20;
+  --ctf-doodle-opacity-focal: 0.44;
+  --ctf-doodle-opacity-behind: 0.08;
   --ctf-code-bg: #0A0A0B;
   --ctf-code-text: #F2F2F2;
 
   --md-primary-fg-color: var(--ctf-bg);
   --md-primary-bg-color: var(--ctf-text);
   --md-default-bg-color: var(--ctf-bg);
-  --md-default-fg-color: var(--ctf-text);
+  --md-default-bg-color--light: color-mix(in srgb, var(--ctf-surface) 70%, transparent);
+  --md-default-bg-color--lighter: color-mix(in srgb, var(--ctf-surface) 30%, transparent);
+  --md-default-bg-color--lightest: color-mix(in srgb, var(--ctf-surface) 12%, transparent);
+  --md-default-fg-color: color-mix(in srgb, var(--ctf-text) 87%, transparent);
+  --md-default-fg-color--light: color-mix(in srgb, var(--ctf-text) 54%, transparent);
+  --md-default-fg-color--lighter: color-mix(in srgb, var(--ctf-text) 32%, transparent);
+  --md-default-fg-color--lightest: color-mix(in srgb, var(--ctf-text) 7%, transparent);
   --md-typeset-a-color: var(--ctf-text);
 }
 
@@ -189,7 +207,7 @@ body { background: var(--ctf-bg); }
 .ctf-navbar__logo svg {
   width: 100%;
   height: 100%;
-  fill: var(--ctf-text);
+  fill: none;
   stroke: var(--ctf-text);
 }
 
@@ -227,6 +245,14 @@ body { background: var(--ctf-bg); }
 .ctf-navbar__search-trigger:hover {
   border-color: var(--ctf-border-strong);
   color: var(--ctf-text);
+}
+
+/* Hide the compact trigger while the real search overlay is open — having
+   both visible at once reads as duplicate search boxes. */
+[data-md-toggle="search"]:checked ~ .md-header .ctf-navbar__search-trigger {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
 }
 
 .ctf-navbar__search-trigger svg {
@@ -284,6 +310,7 @@ body { background: var(--ctf-bg); }
 .md-search__input::placeholder { color: var(--ctf-text-tertiary); }
 
 .md-search__output {
+  top: calc(2.4rem + 1.1rem) !important;
   max-width: 640px;
   left: 0;
   right: 0;
@@ -639,23 +666,33 @@ body.ctf-no-scroll { overflow: hidden; }
   border-bottom: 1px solid var(--ctf-border);
 }
 
-.ctf-hero__doodles {
+.ctf-doodle-field {
   position: absolute;
   inset: 0;
+  overflow: hidden;
   pointer-events: none;
   z-index: 0;
+  color: var(--ctf-doodle);
 }
 
-.ctf-hero__doodles svg {
+.ctf-doodle-field svg {
   position: absolute;
-  opacity: var(--ctf-doodle-opacity);
   stroke: var(--ctf-doodle);
+  stroke-linecap: round;
+  stroke-linejoin: round;
   fill: none;
 }
 
-.ctf-hero__doodles svg.ctf-doodle--muted {
-  opacity: var(--ctf-doodle-opacity-muted);
+.ctf-doodle-field svg.ctf-doodle--fill {
+  fill: currentColor;
+  stroke: none;
 }
+
+.ctf-doodle-field--hero svg { opacity: var(--ctf-doodle-opacity-hero); }
+.ctf-doodle-field--mid svg { opacity: var(--ctf-doodle-opacity-mid); }
+.ctf-doodle-field--low svg { opacity: var(--ctf-doodle-opacity-low); }
+.ctf-doodle-field svg.ctf-doodle--focal { opacity: var(--ctf-doodle-opacity-focal); }
+.ctf-doodle-field svg.ctf-doodle--behind { opacity: var(--ctf-doodle-opacity-behind); }
 
 .ctf-hero__content {
   position: relative;
@@ -722,7 +759,7 @@ body.ctf-no-scroll { overflow: hidden; }
 
 .ctf-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   gap: 1.1rem;
 }
 
@@ -745,9 +782,11 @@ body.ctf-no-scroll { overflow: hidden; }
 .ctf-stat-card__value {
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 6vw, 3rem);
   line-height: 1;
   margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .ctf-stat-card__label {
@@ -808,7 +847,7 @@ body.ctf-no-scroll { overflow: hidden; }
 
 .ctf-featured-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 1.4rem;
 }
 
@@ -835,6 +874,12 @@ body.ctf-no-scroll { overflow: hidden; }
   color: var(--ctf-accent-inverse);
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 1.4rem;
+}
+
+.ctf-feature-card__icon svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
 }
 
 .ctf-feature-card__title {
@@ -868,7 +913,7 @@ body.ctf-no-scroll { overflow: hidden; }
 
 .ctf-writeup-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 1.3rem;
 }
 
@@ -976,6 +1021,10 @@ body.ctf-no-scroll { overflow: hidden; }
 /* -----------------------------------------------------------
    Category / listing page (non-home documentation page)
    ----------------------------------------------------------- */
+
+.ctf-about-page {
+  position: relative;
+}
 
 .ctf-page-hero {
   padding: 3.4rem 0 2.6rem;
@@ -1196,7 +1245,7 @@ body.ctf-no-scroll { overflow: hidden; }
 
 .ctf-footer__links a:hover { color: var(--ctf-text) !important; }
 
-.md-footer-meta { background: transparent; }
+.md-footer-meta { background: transparent; position: relative; }
 
 /* -----------------------------------------------------------
    Animations
@@ -1262,10 +1311,20 @@ html { scroll-behavior: smooth; }
 }
 
 @media (max-width: 720px) {
-  .ctf-stats { grid-template-columns: repeat(2, 1fr); }
   .ctf-section { padding: 3.6rem 1.25rem; }
   .ctf-hero { padding: 5.5rem 1.25rem 4rem; }
   .ctf-hero__title { font-size: clamp(2.2rem, 9vw, 3rem); }
   .ctf-writeup-hero { padding: 1.8rem; }
   .ctf-writeup-hero h1 { font-size: 1.9rem; }
+
+  /* The large focal/behind-text doodles are sized for wide viewports —
+     shrink them on mobile so they never crowd the hero copy. */
+  .ctf-doodle-field svg.ctf-doodle--focal {
+    width: 72px !important;
+    height: 64px !important;
+  }
+  .ctf-doodle-field svg.ctf-doodle--behind {
+    width: 100px !important;
+    height: 86px !important;
+  }
 }

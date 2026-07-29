@@ -1,7 +1,7 @@
 """
 Lightweight MkDocs hook (no plugin package needed).
 
-Scans docs/Cylab/*.md front matter and exposes a normalized list at
+Scans docs/picoCTF/*.md front matter and exposes a normalized list at
 config.extra.recent_writeups so the homepage and category page can render
 writeup cards without hand-maintaining a duplicate list. Adding a new
 challenge markdown file with front matter is enough for it to show up.
@@ -13,7 +13,7 @@ import yaml
 
 FRONT_MATTER_RE = re.compile(r"^---\s*\n(.*?\n)---\s*\n", re.DOTALL)
 
-CATEGORY_DIRS = ["Cylab"]
+CATEGORY_DIRS = ["picoCTF"]
 
 
 def _read_front_matter(path):

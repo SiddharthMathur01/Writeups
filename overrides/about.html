@@ -1,0 +1,16 @@
+{#-
+  About page template. Same base content rendering as a normal page, but
+  wrapped so we can add a matching (lower-density) doodle field — keeps
+  the About page feeling visually connected to the homepage.
+  Selected via front matter: `template: about.html`
+-#}
+{% extends "base.html" %}
+
+{% block container %}
+  <div class="md-content" data-md-component="content">
+    <article class="md-content__inner md-typeset ctf-about-page">
+      {% include "partials/doodles-about-page.html" %}
+      {% include "partials/content.html" %}
+    </article>
+  </div>
+{% endblock %}

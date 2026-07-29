@@ -1,0 +1,13 @@
+{#-
+  Inlines the terminal logo SVG directly instead of Material's default
+  <img src="..."> reference. An externally-referenced SVG resolves
+  `currentColor` inside its own isolated document context (defaulting to
+  black), so it can't pick up our theme's text color and goes invisible
+  in dark mode. Inlining it lets our CSS (`fill`/`stroke: var(--ctf-text)`)
+  actually reach the SVG's paths.
+-#}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <rect x="1.5" y="1.5" width="29" height="29" rx="8" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M9 12L14 16L9 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16 20H23" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

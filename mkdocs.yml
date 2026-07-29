@@ -66,14 +66,14 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/SiddharthMathur01
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/siddharthmathur01
+      link: https://www.linkedin.com/in/siddharth-mathur-084804329/
     - icon: fontawesome/solid/envelope
-      link: mailto:contact@siddharthmathur.dev
+      link: mailto:16mathursiddharth@gmail.com
   stats:
     challenges_solved: 17
     writeups: 17
     categories: 1
-    platforms: "CyLab"
+    platforms: "picoCTF"
 
 markdown_extensions:
   - attr_list
@@ -112,11 +112,11 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Cylab CTF:
-      - Overview: Cylab/index.md
-      - Baby RSA: Cylab/baby-rsa.md
-      - Shadow Vault: Cylab/shadow-vault.md
-      - Whisper Net: Cylab/whisper-net.md
+  - picoCTF:
+      - Overview: picoCTF/index.md
+      - Baby RSA: picoCTF/baby-rsa.md
+      - Shadow Vault: picoCTF/shadow-vault.md
+      - Whisper Net: picoCTF/whisper-net.md
   - About: about.md
 
 copyright: Copyright &copy; 2026 Siddharth Mathur

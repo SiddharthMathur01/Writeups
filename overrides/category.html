@@ -12,7 +12,7 @@
 
       <div class="ctf-writeup-grid ctf-reveal-on-scroll">
         {% for writeup in config.extra.recent_writeups %}
-          {% if writeup.category == "Cylab" %}
+          {% if writeup.category == "picoCTF" %}
             {% include "partials/writeup-card.html" %}
           {% endif %}
         {% else %}

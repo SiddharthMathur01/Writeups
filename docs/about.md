@@ -1,7 +1,9 @@
 ---
 title: About
+template: about.html
 hide:
   - navigation
+  - toc
 ---
 
 <div class="ctf-page-hero">
@@ -42,6 +44,6 @@ problems.
 
 <div class="ctf-about__actions" style="margin-top: 1.5rem;">
   <a href="https://github.com/SiddharthMathur01" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost"><span class="ctf-btn__label">GitHub</span></a>
-  <a href="https://linkedin.com/in/siddharthmathur01" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost"><span class="ctf-btn__label">LinkedIn</span></a>
-  <a href="mailto:contact@siddharthmathur.dev" class="ctf-btn ctf-btn--ghost"><span class="ctf-btn__label">Email</span></a>
+  <a href="https://www.linkedin.com/in/siddharth-mathur-084804329/" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost"><span class="ctf-btn__label">LinkedIn</span></a>
+  <a href="mailto:16mathursiddharth@gmail.com" class="ctf-btn ctf-btn--ghost"><span class="ctf-btn__label">Email</span></a>
 </div>

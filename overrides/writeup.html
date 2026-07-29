@@ -15,7 +15,7 @@
         <div class="ctf-writeup-hero__badges">
           {% set diff = (page.meta.difficulty or "Medium") | lower %}
           <span class="ctf-badge {% if diff == 'easy' %}ctf-badge--easy{% elif diff == 'hard' %}ctf-badge--hard{% else %}ctf-badge--medium{% endif %}">{{ page.meta.difficulty or "Medium" }}</span>
-          <span class="ctf-badge ctf-badge--dark">{{ page.meta.category or "CyLab" }}</span>
+          <span class="ctf-badge ctf-badge--dark">{{ page.meta.category or "picoCTF" }}</span>
           {% for tag in page.meta.tags or [] %}
             <span class="ctf-badge">{{ tag }}</span>
           {% endfor %}

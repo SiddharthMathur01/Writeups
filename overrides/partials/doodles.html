@@ -1,188 +1,226 @@
-{#- Abstract monochrome line-art doodles, inspired by the reference layout.
-    Positioned absolutely; purely decorative (aria-hidden). -#}
-<div class="ctf-hero__doodles" aria-hidden="true">
+{#- Hero decorative doodle field — completely redesigned. Every shape here
+    is fresh hand-drawn artwork (organic blobs, brush strokes, scribbles,
+    spirals, stars, sketch marks) built from scratch, not a resize of any
+    prior geometric set. Color/opacity come entirely from the semantic
+    .ctf-doodle-field(--hero/--focal/--behind) CSS classes. -#}
+<div class="ctf-doodle-field ctf-doodle-field--hero" aria-hidden="true">
 
-  <svg class="ctf-float" style="top: 14%; left: 4%; width: 70px; height: 70px;" viewBox="0 0 70 70">
-    <path d="M5 35C5 15 25 5 40 12C55 19 62 40 48 52C34 64 12 58 8 45" stroke-width="1.6"/>
-  </svg>
+  <!-- ============ FOCAL: large brush-like blobs anchoring the edges ============ -->
 
-  <svg style="top: 8%; left: 13%; width: 26px; height: 26px;" viewBox="0 0 26 26">
-    <path d="M2 13L24 13M13 2L13 24" stroke-width="1.4" stroke-linecap="round"/>
-  </svg>
-
-  <svg class="ctf-float ctf-float--slow" style="top: 60%; left: 6%; width: 46px; height: 46px;" viewBox="0 0 46 46">
-    <circle cx="23" cy="23" r="18" stroke-width="1.4" stroke-dasharray="3 5"/>
+  <svg class="ctf-doodle--focal ctf-doodle--fill" style="top: 10%; left: 2%; width: 150px; height: 128px;" viewBox="0 0 70 60">
+    <path d="M12 32C6 22 14 8 28 6C40 4 46 14 56 12C66 10 68 24 60 32C54 38 58 48 48 53C36 59 22 56 15 46C9 38 16 40 12 32Z"/>
   </svg>
 
-  <svg style="top: 30%; left: 2%; width: 18px; height: 18px;" viewBox="0 0 18 18">
-    <circle cx="9" cy="9" r="3" fill="currentColor" stroke="none"/>
+  <svg class="ctf-doodle--focal" style="top: 14%; right: 1.5%; width: 160px; height: 140px;" viewBox="0 0 74 64">
+    <path d="M10 34C4 22 14 6 30 5C44 4 50 16 60 14C70 12 72 28 62 36C55 42 58 52 46 58C32 65 16 60 10 48C5 39 14 42 10 34Z"/>
   </svg>
 
-  <svg class="ctf-float ctf-float--rev" style="top: 18%; right: 5%; width: 60px; height: 60px;" viewBox="0 0 60 60">
-    <path d="M30 4C42 4 54 14 54 28C54 44 40 54 26 52C12 50 4 36 10 24" stroke-width="1.6"/>
+  <svg class="ctf-doodle--focal ctf-doodle--fill" style="bottom: 6%; left: 4%; width: 118px; height: 100px;" viewBox="0 0 58 48">
+    <path d="M8 26C3 17 11 5 24 5C35 5 38 15 47 12C56 9 58 22 50 28C46 31 48 40 38 44C26 49 13 44 9 34C6 28 11 32 8 26Z"/>
   </svg>
 
-  <svg style="top: 46%; right: 10%; width: 34px; height: 34px;" viewBox="0 0 34 34">
-    <path d="M4 4L30 30M4 30L30 4" stroke-width="1.3" stroke-linecap="round" opacity="0.7"/>
+  <svg class="ctf-doodle--focal" style="bottom: 8%; right: 3%; width: 130px; height: 112px;" viewBox="0 0 62 52">
+    <path d="M9 28C4 18 12 5 26 5C38 5 41 16 51 13C60 10 62 24 53 30C48 34 50 43 40 47C27 52 14 47 9 36C5 29 12 34 9 28Z"/>
   </svg>
 
-  <svg class="ctf-float ctf-float--slow" style="top: 66%; right: 4%; width: 50px; height: 50px;" viewBox="0 0 50 50">
-    <path d="M4 25C4 12 16 4 27 8C38 12 44 25 36 34C28 43 12 40 8 32" stroke-width="1.6"/>
+  <!-- ============ BEHIND-TEXT: very low opacity, large, sit behind the copy ============ -->
+
+  <svg class="ctf-doodle--behind ctf-doodle--fill" style="top: 26%; left: 34%; width: 220px; height: 180px; transform: rotate(18deg);" viewBox="0 0 70 60">
+    <path d="M12 32C6 22 14 8 28 6C40 4 46 14 56 12C66 10 68 24 60 32C54 38 58 48 48 53C36 59 22 56 15 46C9 38 16 40 12 32Z"/>
+  </svg>
+  <svg class="ctf-doodle--behind" style="bottom: 2%; right: 32%; width: 170px; height: 150px; transform: rotate(-24deg) scaleX(-1);" viewBox="0 0 62 52">
+    <path d="M9 28C4 18 12 5 26 5C38 5 41 16 51 13C60 10 62 24 53 30C48 34 50 43 40 47C27 52 14 47 9 36C5 29 12 34 9 28Z"/>
   </svg>
 
-  <svg style="top: 4%; right: 24%; width: 20px; height: 20px;" viewBox="0 0 20 20">
-    <path d="M10 2V18M2 10H18" stroke-width="1.3" stroke-linecap="round" opacity="0.6"/>
+  <!-- ============ MEDIUM: brush-stroke blobs (elongated, tapered) ============ -->
+
+  <svg style="top: 6%; left: 22%; width: 70px; height: 30px; transform: rotate(-6deg);" viewBox="0 0 60 26">
+    <path d="M3 16C2 8 10 4 20 6C28 8 30 3 40 5C50 7 58 12 57 17C56 21 46 24 36 21C28 19 26 23 16 21C7 19 4 22 3 16Z"/>
+  </svg>
+  <svg style="bottom: 14%; left: 30%; width: 62px; height: 26px; transform: rotate(9deg) scaleX(-1);" viewBox="0 0 60 26">
+    <path d="M3 16C2 8 10 4 20 6C28 8 30 3 40 5C50 7 58 12 57 17C56 21 46 24 36 21C28 19 26 23 16 21C7 19 4 22 3 16Z"/>
+  </svg>
+  <svg style="top: 68%; right: 6%; width: 58px; height: 24px; transform: rotate(-14deg);" viewBox="0 0 60 26">
+    <path d="M3 16C2 8 10 4 20 6C28 8 30 3 40 5C50 7 58 12 57 17C56 21 46 24 36 21C28 19 26 23 16 21C7 19 4 22 3 16Z"/>
   </svg>
 
-  <svg style="bottom: 10%; left: 22%; width: 22px; height: 22px;" viewBox="0 0 22 22">
-    <circle cx="11" cy="11" r="8" stroke-width="1.3" stroke-dasharray="2 4"/>
+  <!-- freehand open outlines -->
+  <svg style="top: 34%; left: 6%; width: 66px; height: 58px;" viewBox="0 0 40 35">
+    <path d="M7 12C13 2 30 1 36 11C41 20 34 31 22 33C11 35 2 28 3 18"/>
+  </svg>
+  <svg style="top: 10%; right: 20%; width: 54px; height: 48px;" viewBox="0 0 40 35">
+    <path d="M6 10C11 2 26 1 32 9C37 16 32 26 21 29C11 32 2 25 4 16"/>
+  </svg>
+  <svg style="bottom: 30%; right: 14%; width: 50px; height: 44px;" viewBox="0 0 40 35">
+    <path d="M34 8C29 1 14 0 8 8C3 15 8 25 19 28C29 31 38 24 36 15"/>
   </svg>
 
-  <svg style="bottom: 16%; right: 22%; width: 16px; height: 16px;" viewBox="0 0 16 16">
-    <circle cx="8" cy="8" r="2.4" fill="currentColor" stroke="none"/>
+  <!-- scribbles / scrawls -->
+  <svg style="top: 44%; left: 3%; width: 64px; height: 30px;" viewBox="0 0 56 26">
+    <path d="M2 14C6 3 9 22 13 12C17 3 19 23 24 13C28 4 31 20 36 11C40 4 43 18 47 12C50 7 52 15 55 10"/>
+  </svg>
+  <svg style="top: 4%; right: 8%; width: 58px; height: 26px;" viewBox="0 0 56 26">
+    <path d="M2 14C6 3 9 22 13 12C17 3 19 23 24 13C28 4 31 20 36 11C40 4 43 18 47 12C50 7 52 15 55 10"/>
+  </svg>
+  <svg style="bottom: 6%; left: 16%; width: 50px; height: 22px; transform: rotate(4deg);" viewBox="0 0 56 26">
+    <path d="M2 14C6 3 9 22 13 12C17 3 19 23 24 13C28 4 31 20 36 11C40 4 43 18 47 12C50 7 52 15 55 10"/>
   </svg>
 
-  {#- ============================================================
-      Additional low-opacity doodles (~4-8% opacity via the
-      .ctf-doodle--muted modifier) to add density without disturbing
-      the set above, which is left untouched on purpose.
-      ============================================================ -#}
-
-  <!-- thin outlined circles -->
-  <svg class="ctf-doodle--muted" style="top: 3%; left: 34%; width: 14px; height: 14px;" viewBox="0 0 14 14">
-    <circle cx="7" cy="7" r="5.5" stroke-width="1.2"/>
+  <!-- squiggly lines (looser, bigger amplitude than scribbles) -->
+  <svg style="top: 56%; left: 18%; width: 46px; height: 20px;" viewBox="0 0 46 20">
+    <path d="M2 10C9 1 13 19 20 10C27 1 31 19 38 10C41 6 44 12 44 10"/>
   </svg>
-  <svg class="ctf-doodle--muted" style="top: 22%; right: 30%; width: 20px; height: 20px;" viewBox="0 0 20 20">
-    <circle cx="10" cy="10" r="8" stroke-width="1.2"/>
-  </svg>
-  <svg class="ctf-doodle--muted" style="bottom: 26%; left: 15%; width: 30px; height: 30px;" viewBox="0 0 30 30">
-    <circle cx="15" cy="15" r="12.5" stroke-width="1.2"/>
+  <svg style="top: 24%; right: 4%; width: 40px; height: 17px;" viewBox="0 0 46 20">
+    <path d="M2 10C9 1 13 19 20 10C27 1 31 19 38 10C41 6 44 12 44 10"/>
   </svg>
 
-  <!-- partial circles / arcs -->
-  <svg class="ctf-doodle--muted" style="top: 36%; left: 9%; width: 40px; height: 40px;" viewBox="0 0 40 40">
-    <path d="M4 24C2 13 11 3 22 4" stroke-width="1.4" stroke-linecap="round"/>
+  <!-- imperfect (hand-wobbled) circles -->
+  <svg style="top: 30%; left: 42%; width: 34px; height: 32px;" viewBox="0 0 32 30">
+    <path d="M16 3C23 2 29 8 28 16C28 23 21 28 14 27C7 26 2 19 4 12C6 6 10 4 16 3Z"/>
   </svg>
-  <svg class="ctf-doodle--muted" style="top: 10%; right: 14%; width: 36px; height: 36px;" viewBox="0 0 36 36">
-    <path d="M32 12C34 23 25 33 14 32" stroke-width="1.4" stroke-linecap="round"/>
+  <svg style="bottom: 4%; left: 44%; width: 28px; height: 26px;" viewBox="0 0 32 30">
+    <path d="M16 3C23 2 29 8 28 16C28 23 21 28 14 27C7 26 2 19 4 12C6 6 10 4 16 3Z"/>
   </svg>
-  <svg class="ctf-doodle--muted ctf-float ctf-float--slow" style="bottom: 8%; right: 30%; width: 26px; height: 26px;" viewBox="0 0 26 26">
-    <path d="M3 16C1 8 8 1 16 3" stroke-width="1.3" stroke-linecap="round"/>
-  </svg>
-
-  <!-- dashed circles -->
-  <svg class="ctf-doodle--muted" style="top: 50%; left: 18%; width: 20px; height: 20px;" viewBox="0 0 20 20">
-    <circle cx="10" cy="10" r="8" stroke-width="1.2" stroke-dasharray="2.5 4"/>
-  </svg>
-  <svg class="ctf-doodle--muted" style="top: 62%; right: 16%; width: 28px; height: 28px;" viewBox="0 0 28 28">
-    <circle cx="14" cy="14" r="11.5" stroke-width="1.2" stroke-dasharray="2.5 4.5"/>
+  <svg style="top: 12%; left: 36%; width: 24px; height: 22px;" viewBox="0 0 32 30">
+    <path d="M16 3C23 2 29 8 28 16C28 23 21 28 14 27C7 26 2 19 4 12C6 6 10 4 16 3Z"/>
   </svg>
 
-  <!-- plus signs -->
-  <svg class="ctf-doodle--muted" style="top: 30%; left: 21%; width: 16px; height: 16px;" viewBox="0 0 16 16">
-    <path d="M8 1V15M1 8H15" stroke-width="1.4" stroke-linecap="round"/>
+  <!-- spirals (loose, hand-drawn) -->
+  <svg style="top: 48%; right: 24%; width: 40px; height: 40px;" viewBox="0 0 38 38">
+    <path d="M19 19C19 14 24 12 26 17C28 23 21 27 15 23C8 19 11 9 19 6C28 3 35 12 31 20"/>
   </svg>
-  <svg class="ctf-doodle--muted" style="top: 44%; right: 20%; width: 14px; height: 14px;" viewBox="0 0 14 14">
-    <path d="M7 1V13M1 7H13" stroke-width="1.4" stroke-linecap="round"/>
-  </svg>
-  <svg class="ctf-doodle--muted" style="bottom: 12%; right: 15%; width: 18px; height: 18px;" viewBox="0 0 18 18">
-    <path d="M9 2V16M2 9H16" stroke-width="1.4" stroke-linecap="round"/>
-  </svg>
-  <svg class="ctf-doodle--muted" style="bottom: 30%; left: 8%; width: 12px; height: 12px;" viewBox="0 0 12 12">
-    <path d="M6 1V11M1 6H11" stroke-width="1.3" stroke-linecap="round"/>
+  <svg style="bottom: 20%; left: 8%; width: 34px; height: 34px;" viewBox="0 0 38 38">
+    <path d="M19 19C19 14 24 12 26 17C28 23 21 27 15 23C8 19 11 9 19 6C28 3 35 12 31 20"/>
   </svg>
 
-  <!-- x / cross symbols -->
-  <svg class="ctf-doodle--muted" style="top: 16%; left: 18%; width: 16px; height: 16px;" viewBox="0 0 16 16">
-    <path d="M2 2L14 14M2 14L14 2" stroke-width="1.3" stroke-linecap="round"/>
+  <!-- small stars (varied point styles) -->
+  <svg class="ctf-doodle--fill" style="top: 18%; left: 14%; width: 26px; height: 26px;" viewBox="0 0 24 24">
+    <path d="M12 0L14.5 9L24 11L14.5 13.5L12 24L9.5 14L0 11L9.8 9Z"/>
   </svg>
-  <svg class="ctf-doodle--muted" style="top: 55%; right: 8%; width: 14px; height: 14px;" viewBox="0 0 14 14">
-    <path d="M2 2L12 12M2 12L12 2" stroke-width="1.3" stroke-linecap="round"/>
+  <svg class="ctf-doodle--fill" style="top: 62%; right: 3%; width: 22px; height: 22px;" viewBox="0 0 20 20">
+    <path d="M10 0L11.8 7.4L20 9L11.9 10.7L10 20L8.1 10.8L0 9L8.2 7.5Z"/>
   </svg>
-  <svg class="ctf-doodle--muted" style="bottom: 20%; left: 26%; width: 12px; height: 12px;" viewBox="0 0 12 12">
-    <path d="M1.5 1.5L10.5 10.5M1.5 10.5L10.5 1.5" stroke-width="1.2" stroke-linecap="round"/>
+  <svg class="ctf-doodle--fill" style="top: 8%; left: 45%; width: 18px; height: 18px;" viewBox="0 0 18 18">
+    <path d="M9 0L10.5 6.6L18 8L10.6 9.6L9 18L7.4 9.6L0 8L7.5 6.6Z"/>
   </svg>
-
-  <!-- small dots -->
-  <svg class="ctf-doodle--muted" style="top: 12%; left: 27%; width: 8px; height: 8px;" viewBox="0 0 8 8"><circle cx="4" cy="4" r="2.2" fill="currentColor" stroke="none"/></svg>
-  <svg class="ctf-doodle--muted" style="top: 40%; right: 25%; width: 6px; height: 6px;" viewBox="0 0 6 6"><circle cx="3" cy="3" r="1.6" fill="currentColor" stroke="none"/></svg>
-  <svg class="ctf-doodle--muted" style="bottom: 34%; right: 12%; width: 8px; height: 8px;" viewBox="0 0 8 8"><circle cx="4" cy="4" r="2.2" fill="currentColor" stroke="none"/></svg>
-  <svg class="ctf-doodle--muted" style="bottom: 6%; left: 32%; width: 6px; height: 6px;" viewBox="0 0 6 6"><circle cx="3" cy="3" r="1.6" fill="currentColor" stroke="none"/></svg>
-
-  <!-- dot grids -->
-  <svg class="ctf-doodle--muted" style="top: 6%; left: 6%; width: 34px; height: 34px;" viewBox="0 0 34 34">
-    <circle cx="3" cy="3" r="1.6" fill="currentColor" stroke="none"/>
-    <circle cx="17" cy="3" r="1.6" fill="currentColor" stroke="none"/>
-    <circle cx="31" cy="3" r="1.6" fill="currentColor" stroke="none"/>
-    <circle cx="3" cy="17" r="1.6" fill="currentColor" stroke="none"/>
-    <circle cx="17" cy="17" r="1.6" fill="currentColor" stroke="none"/>
-    <circle cx="31" cy="17" r="1.6" fill="currentColor" stroke="none"/>
-    <circle cx="3" cy="31" r="1.6" fill="currentColor" stroke="none"/>
-    <circle cx="17" cy="31" r="1.6" fill="currentColor" stroke="none"/>
-    <circle cx="31" cy="31" r="1.6" fill="currentColor" stroke="none"/>
-  </svg>
-  <svg class="ctf-doodle--muted" style="bottom: 4%; right: 5%; width: 26px; height: 26px;" viewBox="0 0 26 26">
-    <circle cx="3" cy="3" r="1.4" fill="currentColor" stroke="none"/>
-    <circle cx="13" cy="3" r="1.4" fill="currentColor" stroke="none"/>
-    <circle cx="23" cy="3" r="1.4" fill="currentColor" stroke="none"/>
-    <circle cx="3" cy="13" r="1.4" fill="currentColor" stroke="none"/>
-    <circle cx="13" cy="13" r="1.4" fill="currentColor" stroke="none"/>
-    <circle cx="23" cy="13" r="1.4" fill="currentColor" stroke="none"/>
-    <circle cx="3" cy="23" r="1.4" fill="currentColor" stroke="none"/>
-    <circle cx="13" cy="23" r="1.4" fill="currentColor" stroke="none"/>
-    <circle cx="23" cy="23" r="1.4" fill="currentColor" stroke="none"/>
+  <svg class="ctf-doodle--fill" style="bottom: 24%; right: 26%; width: 16px; height: 16px;" viewBox="0 0 16 16">
+    <path d="M8 0L9.3 5.9L16 7L9.3 8.1L8 16L6.7 8.2L0 7L6.7 5.8Z"/>
   </svg>
 
-  <!-- hexagon outlines -->
-  <svg class="ctf-doodle--muted" style="top: 26%; right: 6%; width: 28px; height: 28px;" viewBox="0 0 28 28">
-    <path d="M14 1 25.5 7.5V20.5L14 27 2.5 20.5V7.5Z" stroke-width="1.3"/>
+  <!-- crosses -->
+  <svg style="top: 20%; left: 27%; width: 26px; height: 26px;" viewBox="0 0 22 22">
+    <path d="M3 3.5L18.5 18M2.7 18.3L18 2.6"/>
   </svg>
-  <svg class="ctf-doodle--muted ctf-float" style="bottom: 18%; left: 4%; width: 24px; height: 24px;" viewBox="0 0 24 24">
-    <path d="M12 1 22 6.5V17.5L12 23 2 17.5V6.5Z" stroke-width="1.3"/>
+  <svg style="top: 52%; right: 13%; width: 22px; height: 22px;" viewBox="0 0 22 22">
+    <path d="M3 3.5L18.5 18M2.7 18.3L18 2.6"/>
   </svg>
-
-  <!-- squiggly lines -->
-  <svg class="ctf-doodle--muted" style="top: 42%; left: 3%; width: 44px; height: 18px;" viewBox="0 0 44 18">
-    <path d="M2 9C7 2 11 16 16 9C21 2 25 16 30 9C35 2 39 16 42 9" stroke-width="1.3" stroke-linecap="round"/>
+  <svg style="bottom: 16%; right: 22%; width: 18px; height: 18px;" viewBox="0 0 22 22">
+    <path d="M3 3.5L18.5 18M2.7 18.3L18 2.6"/>
   </svg>
-  <svg class="ctf-doodle--muted" style="bottom: 24%; right: 4%; width: 40px; height: 16px;" viewBox="0 0 40 16">
-    <path d="M2 8C6 2 10 14 14 8C18 2 22 14 26 8C30 2 34 14 38 8" stroke-width="1.3" stroke-linecap="round"/>
+  <svg style="top: 38%; left: 46%; width: 15px; height: 15px;" viewBox="0 0 22 22">
+    <path d="M3 3.5L18.5 18M2.7 18.3L18 2.6"/>
   </svg>
 
-  <!-- small blobs -->
-  <svg class="ctf-doodle--muted" style="top: 8%; right: 34%; width: 22px; height: 22px;" viewBox="0 0 22 22">
-    <path d="M3 12C2 6 8 2 13 4C18 6 20 13 15 18C10 22 4 18 3 12Z" stroke-width="1.2"/>
+  <!-- dots + dot clusters -->
+  <svg class="ctf-doodle--fill" style="top: 42%; left: 25%; width: 12px; height: 12px;" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4.6"/></svg>
+  <svg class="ctf-doodle--fill" style="top: 8%; right: 30%; width: 10px; height: 10px;" viewBox="0 0 10 10"><circle cx="5" cy="5" r="3.8"/></svg>
+  <svg class="ctf-doodle--fill" style="bottom: 12%; left: 40%; width: 9px; height: 9px;" viewBox="0 0 9 9"><circle cx="4.5" cy="4.5" r="3.4"/></svg>
+
+  <svg class="ctf-doodle--fill" style="top: 60%; left: 5%; width: 46px; height: 26px;" viewBox="0 0 46 26">
+    <circle cx="5" cy="13" r="3.8"/>
+    <circle cx="18" cy="6" r="2.6"/>
+    <circle cx="28" cy="18" r="4.2"/>
+    <circle cx="40" cy="9" r="2.2"/>
   </svg>
-  <svg class="ctf-doodle--muted" style="bottom: 14%; left: 12%; width: 20px; height: 20px;" viewBox="0 0 20 20">
-    <path d="M3 11C2 6 7 2 11 4C16 6 18 12 14 16C9 19 4 16 3 11Z" stroke-width="1.2"/>
+  <svg class="ctf-doodle--fill" style="top: 3%; right: 16%; width: 38px; height: 22px;" viewBox="0 0 38 22">
+    <circle cx="5" cy="10" r="3"/>
+    <circle cx="16" cy="16" r="3.7"/>
+    <circle cx="28" cy="6" r="2.4"/>
+  </svg>
+  <svg class="ctf-doodle--fill" style="bottom: 2%; right: 20%; width: 34px; height: 20px;" viewBox="0 0 34 20">
+    <circle cx="4" cy="10" r="2.8"/>
+    <circle cx="14" cy="4" r="2"/>
+    <circle cx="24" cy="14" r="3.3"/>
   </svg>
 
-  <!-- tiny stars -->
-  <svg class="ctf-doodle--muted" style="top: 24%; left: 30%; width: 14px; height: 14px;" viewBox="0 0 14 14">
-    <path d="M7 0L8.3 5.7L14 7L8.3 8.3L7 14L5.7 8.3L0 7L5.7 5.7Z" fill="currentColor" stroke="none"/>
+  <!-- hand-drawn loops -->
+  <svg style="top: 32%; right: 34%; width: 30px; height: 26px;" viewBox="0 0 28 24">
+    <path d="M4 17C3 9 11 4 17 8C23 12 20 20 13 18C9 17 8 12 13 11C17 10 19 13 17 16"/>
   </svg>
-  <svg class="ctf-doodle--muted" style="bottom: 9%; right: 27%; width: 12px; height: 12px;" viewBox="0 0 12 12">
-    <path d="M6 0L7.1 4.9L12 6L7.1 7.1L6 12L4.9 7.1L0 6L4.9 4.9Z" fill="currentColor" stroke="none"/>
+  <svg style="bottom: 22%; left: 22%; width: 26px; height: 22px;" viewBox="0 0 28 24">
+    <path d="M4 17C3 9 11 4 17 8C23 12 20 20 13 18C9 17 8 12 13 11C17 10 19 13 17 16"/>
   </svg>
 
-  <!-- short construction lines -->
-  <svg class="ctf-doodle--muted" style="top: 20%; right: 4%; width: 22px; height: 10px;" viewBox="0 0 22 10">
-    <path d="M1 1V9M8 1V9M15 1V9M21 1V9" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- freehand arcs -->
+  <svg style="top: 16%; right: 26%; width: 36px; height: 32px;" viewBox="0 0 34 30">
+    <path d="M3 24C1 12 12 2 24 4"/>
   </svg>
-  <svg class="ctf-doodle--muted" style="bottom: 30%; right: 20%; width: 18px; height: 8px;" viewBox="0 0 18 8">
-    <path d="M1 1V7M7 1V7M13 1V7M17 1V7" stroke-width="1.1" stroke-linecap="round"/>
+  <svg style="bottom: 34%; left: 46%; width: 28px; height: 24px;" viewBox="0 0 34 30">
+    <path d="M31 6C33 16 24 27 12 25"/>
   </svg>
-  <svg class="ctf-doodle--muted" style="top: 68%; left: 24%; width: 16px; height: 7px;" viewBox="0 0 16 7">
-    <path d="M1 1V6M6 1V6M11 1V6M15 1V6" stroke-width="1.1" stroke-linecap="round"/>
+  <svg style="top: 74%; left: 34%; width: 24px; height: 20px;" viewBox="0 0 34 30">
+    <path d="M3 24C1 12 12 2 24 4"/>
+  </svg>
+
+  <!-- floating sketch lines / short marks -->
+  <svg style="top: 26%; left: 17%; width: 30px; height: 12px;" viewBox="0 0 30 12">
+    <path d="M2 8C7 2 11 10 16 5C20 1 24 8 28 4"/>
+  </svg>
+  <svg style="bottom: 26%; right: 9%; width: 26px; height: 10px;" viewBox="0 0 30 12">
+    <path d="M2 8C7 2 11 10 16 5C20 1 24 8 28 4"/>
+  </svg>
+  <svg style="top: 80%; right: 30%; width: 22px; height: 9px;" viewBox="0 0 30 12">
+    <path d="M2 8C7 2 11 10 16 5C20 1 24 8 28 4"/>
+  </svg>
+
+  <!-- playful symbols: wave/tilde and open-bracket sketch marks -->
+  <svg style="top: 46%; left: 39%; width: 20px; height: 10px;" viewBox="0 0 24 12">
+    <path d="M2 6C5 1 8 11 12 6C16 1 19 11 22 6"/>
+  </svg>
+  <svg style="bottom: 10%; right: 27%; width: 17px; height: 17px;" viewBox="0 0 18 20">
+    <path d="M14 2C8 2 4 7 4 12C4 16 7 18 11 18"/>
   </svg>
 
   <!-- near the CTA buttons -->
-  <svg class="ctf-doodle--muted" style="top: 78%; left: 16%; width: 18px; height: 18px;" viewBox="0 0 18 18">
-    <circle cx="9" cy="9" r="7" stroke-width="1.2" stroke-dasharray="2 3.5"/>
+  <svg class="ctf-doodle--fill" style="top: 78%; left: 20%; width: 20px; height: 20px;" viewBox="0 0 18 18">
+    <path d="M9 0L10.5 6.6L18 8L10.6 9.6L9 18L7.4 9.6L0 8L7.5 6.6Z"/>
   </svg>
-  <svg class="ctf-doodle--muted" style="top: 80%; right: 17%; width: 14px; height: 14px;" viewBox="0 0 14 14">
-    <path d="M7 1V13M1 7H13" stroke-width="1.3" stroke-linecap="round"/>
+  <svg style="top: 81%; right: 19%; width: 24px; height: 24px;" viewBox="0 0 32 30">
+    <path d="M16 3C23 2 29 8 28 16C28 23 21 28 14 27C7 26 2 19 4 12C6 6 10 4 16 3Z"/>
   </svg>
-  <svg class="ctf-doodle--muted" style="top: 74%; right: 9%; width: 9px; height: 9px;" viewBox="0 0 9 9"><circle cx="4.5" cy="4.5" r="2.4" fill="currentColor" stroke="none"/></svg>
+  <svg style="top: 76%; right: 8%; width: 22px; height: 9px;" viewBox="0 0 30 12">
+    <path d="M2 8C7 2 11 10 16 5C20 1 24 8 28 4"/>
+  </svg>
+
+  <!-- ============ extra edge-hugging marks to close out the last empty
+       gutters at the very left/right edges and sparse corners ============ -->
+
+  <svg style="top: 2%; left: 0.3%; width: 46px; height: 20px;" viewBox="0 0 46 20">
+    <path d="M2 10C9 1 13 19 20 10C27 1 31 19 38 10C41 6 44 12 44 10"/>
+  </svg>
+  <svg style="top: 58%; left: 0.5%; width: 30px; height: 27px;" viewBox="0 0 32 30">
+    <path d="M16 3C23 2 29 8 28 16C28 23 21 28 14 27C7 26 2 19 4 12C6 6 10 4 16 3Z"/>
+  </svg>
+  <svg class="ctf-doodle--fill" style="bottom: 40%; left: 0.5%; width: 9px; height: 9px;" viewBox="0 0 9 9"><circle cx="4.5" cy="4.5" r="3.4"/></svg>
+  <svg style="top: 30%; left: 0.8%; width: 20px; height: 20px;" viewBox="0 0 22 22">
+    <path d="M3 3.5L18.5 18M2.7 18.3L18 2.6"/>
+  </svg>
+
+  <svg style="top: 4%; right: 0.3%; width: 40px; height: 17px;" viewBox="0 0 46 20">
+    <path d="M2 10C9 1 13 19 20 10C27 1 31 19 38 10C41 6 44 12 44 10"/>
+  </svg>
+  <svg class="ctf-doodle--fill" style="top: 34%; right: 0.4%; width: 26px; height: 26px;" viewBox="0 0 24 24">
+    <path d="M12 0L14.5 9L24 11L14.5 13.5L12 24L9.5 14L0 11L9.8 9Z"/>
+  </svg>
+  <svg style="bottom: 42%; right: 0.5%; width: 24px; height: 22px;" viewBox="0 0 28 24">
+    <path d="M4 17C3 9 11 4 17 8C23 12 20 20 13 18C9 17 8 12 13 11C17 10 19 13 17 16"/>
+  </svg>
+  <svg class="ctf-doodle--fill" style="bottom: 2%; right: 0.5%; width: 10px; height: 10px;" viewBox="0 0 10 10"><circle cx="5" cy="5" r="3.8"/></svg>
+
+  <!-- sparse top-left / bottom-right corner fillers -->
+  <svg style="top: 1%; left: 15%; width: 20px; height: 20px;" viewBox="0 0 22 22">
+    <path d="M3 3.5L18.5 18M2.7 18.3L18 2.6"/>
+  </svg>
+  <svg class="ctf-doodle--fill" style="bottom: 1%; right: 14%; width: 12px; height: 12px;" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4.6"/></svg>
 
 </div>
