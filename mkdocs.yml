@@ -43,6 +43,7 @@ theme:
     - navigation.tracking
     - navigation.top
     - navigation.footer
+    - navigation.indexes
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -110,13 +111,6 @@ markdown_extensions:
       permalink: true
       toc_depth: 3
 
-nav:
-  - Home: index.md
-  - picoCTF:
-      - Overview: picoCTF/index.md
-      - Baby RSA: picoCTF/baby-rsa.md
-      - Shadow Vault: picoCTF/shadow-vault.md
-      - Whisper Net: picoCTF/whisper-net.md
-  - About: about.md
+
 
 copyright: Copyright &copy; 2026 Siddharth Mathur
