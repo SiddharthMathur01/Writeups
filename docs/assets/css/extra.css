@@ -28,8 +28,8 @@
   --ctf-doodle-opacity-low: 0.20;
   --ctf-doodle-opacity-focal: 0.44;
   --ctf-doodle-opacity-behind: 0.08;
-  --ctf-code-bg: #101012;
-  --ctf-code-text: #F2F2F2;
+  --ctf-code-bg: #F5F5F7;
+  --ctf-code-text: #1E1E1E;
 
   --md-primary-fg-color: var(--ctf-bg);
   --md-primary-bg-color: var(--ctf-text);
@@ -1145,8 +1145,67 @@ body.ctf-no-scroll { overflow: hidden; }
   box-shadow: var(--ctf-shadow);
 }
 
+/* --- Code block title/filename bar visibility fix --- */
+[data-md-color-scheme="ctf-dark"] .md-typeset .highlight .filename {
+  background: var(--ctf-surface-raised);
+  color: var(--ctf-text);
+  border-bottom: 1px solid var(--ctf-border);
+}
+
+[data-md-color-scheme="ctf-light"] .md-typeset .highlight .filename {
+  background: var(--ctf-surface-raised);
+  color: var(--ctf-text);
+  border-bottom: 1px solid var(--ctf-border);
+}
+
 .md-typeset pre > code {
   background: var(--ctf-code-bg) !important;
+}
+
+/* --- Pygments syntax-token colour overrides for dark code backgrounds ---
+   Only needed in dark mode where the code-bg is near-black.
+   Scope to  pre > code  so inline <code> is unaffected. */
+[data-md-color-scheme="ctf-dark"] .md-typeset pre > code .p,
+[data-md-color-scheme="ctf-dark"] .md-typeset pre > code .pi {
+  /* Punctuation — includes ":" and some "-" tokens */
+  color: #ccc !important;
+}
+
+[data-md-color-scheme="ctf-dark"] .md-typeset pre > code .nn {
+  /* Name.Namespace — YAML document separator "---" */
+  color: #ccc !important;
+}
+
+[data-md-color-scheme="ctf-dark"] .md-typeset pre > code .l-Scalar-Plain {
+  /* Literal.Scalar.Plain — plain text values in YAML */
+  color: var(--ctf-code-text) !important;
+}
+
+
+/* --- Copy button dark-mode highlight fix ---
+   The .md-code__nav wrapper has a visible background that shows as a
+   gray square in the top-right of code blocks. Hide it by default and
+   only reveal on code-block hover. */
+[data-md-color-scheme="ctf-dark"] .md-code__nav {
+  background-color: transparent !important;
+}
+
+[data-md-color-scheme="ctf-dark"] :hover > .md-code__nav {
+  background-color: var(--ctf-surface-raised) !important;
+}
+
+[data-md-color-scheme="ctf-dark"] .md-code__button {
+  color: transparent;
+}
+
+[data-md-color-scheme="ctf-dark"] :hover > .md-code__nav .md-code__button,
+[data-md-color-scheme="ctf-dark"] :hover > * > .md-code__button {
+  color: var(--ctf-text-tertiary);
+}
+
+[data-md-color-scheme="ctf-dark"] .md-code__button:hover,
+[data-md-color-scheme="ctf-dark"] .md-code__button:focus {
+  color: var(--ctf-text) !important;
 }
 
 .md-typeset code:not(.highlight code) {
@@ -1169,6 +1228,41 @@ body.ctf-no-scroll { overflow: hidden; }
 .md-typeset summary {
   font-family: "Public Sans", sans-serif;
   font-weight: 700;
+}
+
+/* --- Admonition dark-mode text-visibility fix --- */
+[data-md-color-scheme="ctf-dark"] .md-typeset .admonition,
+[data-md-color-scheme="ctf-dark"] .md-typeset details {
+  background: var(--ctf-surface);
+  color: var(--ctf-text);
+}
+
+[data-md-color-scheme="ctf-dark"] .md-typeset .admonition .admonition-title,
+[data-md-color-scheme="ctf-dark"] .md-typeset details summary {
+  background: var(--ctf-surface-raised);
+  color: var(--ctf-text);
+}
+
+[data-md-color-scheme="ctf-dark"] .md-typeset .admonition p,
+[data-md-color-scheme="ctf-dark"] .md-typeset .admonition li,
+[data-md-color-scheme="ctf-dark"] .md-typeset .admonition code,
+[data-md-color-scheme="ctf-dark"] .md-typeset details p,
+[data-md-color-scheme="ctf-dark"] .md-typeset details li,
+[data-md-color-scheme="ctf-dark"] .md-typeset details code {
+  color: var(--ctf-text);
+}
+
+/* Also fix for light scheme so both stay consistent */
+[data-md-color-scheme="ctf-light"] .md-typeset .admonition,
+[data-md-color-scheme="ctf-light"] .md-typeset details {
+  background: var(--ctf-surface);
+  color: var(--ctf-text);
+}
+
+[data-md-color-scheme="ctf-light"] .md-typeset .admonition .admonition-title,
+[data-md-color-scheme="ctf-light"] .md-typeset details summary {
+  background: var(--ctf-surface-raised);
+  color: var(--ctf-text);
 }
 
 /* file tree block */

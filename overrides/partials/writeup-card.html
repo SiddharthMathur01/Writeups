@@ -1,6 +1,6 @@
 {#- Single writeup card. Expects `writeup` (dict with title, difficulty,
     category, date, description, tags, url) in the surrounding context. -#}
-<a href="{{ writeup.url }}" class="ctf-writeup-card ctf-reveal-on-scroll">
+<a href="{{ base_url }}/{{ writeup.url }}" class="ctf-writeup-card ctf-reveal-on-scroll">
   <div class="ctf-writeup-card__meta">
     {% set diff = writeup.difficulty | lower %}
     <span class="ctf-badge {% if diff == 'easy' %}ctf-badge--easy{% elif diff == 'hard' %}ctf-badge--hard{% else %}ctf-badge--medium{% endif %}">{{ writeup.difficulty }}</span>
