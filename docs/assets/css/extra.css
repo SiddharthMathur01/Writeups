@@ -22,12 +22,7 @@
   --ctf-accent-inverse: #FFFFFF;
   --ctf-shadow: 0 1px 2px rgba(10,10,10,0.04), 0 8px 24px rgba(10,10,10,0.05);
   --ctf-shadow-hover: 0 4px 10px rgba(10,10,10,0.06), 0 20px 40px rgba(10,10,10,0.09);
-  --ctf-doodle: #0A0A0A;
-  --ctf-doodle-opacity-hero: 0.34;
-  --ctf-doodle-opacity-mid: 0.27;
-  --ctf-doodle-opacity-low: 0.20;
-  --ctf-doodle-opacity-focal: 0.44;
-  --ctf-doodle-opacity-behind: 0.08;
+
   --ctf-code-bg: #F5F5F7;
   --ctf-code-text: #1E1E1E;
 
@@ -57,12 +52,7 @@
   --ctf-accent-inverse: #0B0B0C;
   --ctf-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
   --ctf-shadow-hover: 0 4px 10px rgba(0,0,0,0.4), 0 20px 40px rgba(0,0,0,0.5);
-  --ctf-doodle: #F3F3F4;
-  --ctf-doodle-opacity-hero: 0.34;
-  --ctf-doodle-opacity-mid: 0.27;
-  --ctf-doodle-opacity-low: 0.20;
-  --ctf-doodle-opacity-focal: 0.44;
-  --ctf-doodle-opacity-behind: 0.08;
+
   --ctf-code-bg: #0A0A0B;
   --ctf-code-text: #F2F2F2;
 
@@ -117,8 +107,27 @@ code, pre, kbd {
   font-family: "JetBrains Mono", ui-monospace, monospace;
 }
 
-body { background: var(--ctf-bg); }
-.md-main, .md-container { background: var(--ctf-bg); }
+body {
+  background-color: var(--ctf-bg);
+  background-image: url('../images/bg-geometry.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body[data-md-color-scheme="ctf-dark"] {
+  background-image:
+    linear-gradient(white, white),
+    url('../images/bg-geometry.png');
+  background-blend-mode: difference, normal;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+  background-attachment: fixed, fixed;
+}
+
+.md-main, .md-container { background: transparent; }
 
 /* -----------------------------------------------------------
    Header / Navbar — floating centered pill
@@ -666,33 +675,6 @@ body.ctf-no-scroll { overflow: hidden; }
   border-bottom: 1px solid var(--ctf-border);
 }
 
-.ctf-doodle-field {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-  color: var(--ctf-doodle);
-}
-
-.ctf-doodle-field svg {
-  position: absolute;
-  stroke: var(--ctf-doodle);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-}
-
-.ctf-doodle-field svg.ctf-doodle--fill {
-  fill: currentColor;
-  stroke: none;
-}
-
-.ctf-doodle-field--hero svg { opacity: var(--ctf-doodle-opacity-hero); }
-.ctf-doodle-field--mid svg { opacity: var(--ctf-doodle-opacity-mid); }
-.ctf-doodle-field--low svg { opacity: var(--ctf-doodle-opacity-low); }
-.ctf-doodle-field svg.ctf-doodle--focal { opacity: var(--ctf-doodle-opacity-focal); }
-.ctf-doodle-field svg.ctf-doodle--behind { opacity: var(--ctf-doodle-opacity-behind); }
 
 .ctf-hero__content {
   position: relative;
@@ -1373,20 +1355,13 @@ body.ctf-no-scroll { overflow: hidden; }
   transform: translateY(0);
 }
 
-@keyframes ctf-float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-14px) rotate(3deg); }
-}
 
-.ctf-float { animation: ctf-float 7s ease-in-out infinite; }
-.ctf-float--slow { animation-duration: 10s; }
-.ctf-float--rev { animation-direction: reverse; }
 
 html { scroll-behavior: smooth; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .ctf-reveal, .ctf-reveal-on-scroll, .ctf-float, .ctf-hero__title .ctf-underline path {
+  .ctf-reveal, .ctf-reveal-on-scroll, .ctf-hero__title .ctf-underline path {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;
@@ -1411,14 +1386,79 @@ html { scroll-behavior: smooth; }
   .ctf-writeup-hero { padding: 1.8rem; }
   .ctf-writeup-hero h1 { font-size: 1.9rem; }
 
-  /* The large focal/behind-text doodles are sized for wide viewports —
-     shrink them on mobile so they never crowd the hero copy. */
-  .ctf-doodle-field svg.ctf-doodle--focal {
-    width: 72px !important;
-    height: 64px !important;
+
+}
+
+/* -----------------------------------------------------------
+   Floating doodles — overlay
+   ----------------------------------------------------------- */
+
+@keyframes ctf-float-up {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-18px) rotate(2deg); }
+}
+@keyframes ctf-float-down {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(14px) rotate(-2deg); }
+}
+
+.ctf-floating-doodles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.ctf-fdoodle {
+  position: absolute;
+  color: var(--ctf-text);
+  will-change: transform;
+}
+
+/* Filled shapes (blobs, dots) */
+.ctf-fdoodle--blob {
+  fill: currentColor;
+  stroke: none;
+  opacity: 0.09;
+}
+
+/* Outlined shapes (circles, hexagons, squiggles, stars, arrows) */
+.ctf-fdoodle--stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.11;
+}
+
+/* Dark mode: slightly more visible */
+body[data-md-color-scheme="ctf-dark"] .ctf-fdoodle--blob  { opacity: 0.12; }
+body[data-md-color-scheme="ctf-dark"] .ctf-fdoodle--stroke { opacity: 0.14; }
+
+/* Accent doodles — same shapes/style, pitched a touch darker than the
+   bg-geometry.png pattern behind them so they read as a distinct, closer
+   layer rather than blending into the page background. */
+.ctf-fdoodle--blob.ctf-fdoodle--accent   { opacity: 0.16; }
+.ctf-fdoodle--stroke.ctf-fdoodle--accent { opacity: 0.19; }
+body[data-md-color-scheme="ctf-dark"] .ctf-fdoodle--blob.ctf-fdoodle--accent   { opacity: 0.20; }
+body[data-md-color-scheme="ctf-dark"] .ctf-fdoodle--stroke.ctf-fdoodle--accent { opacity: 0.22; }
+
+/* Animation classes — varied speeds and delays for organic feel */
+.ctf-float-1 { animation: ctf-float-up   7s  ease-in-out infinite; }
+.ctf-float-2 { animation: ctf-float-down 9s  ease-in-out infinite 1.2s; }
+.ctf-float-3 { animation: ctf-float-up   11s ease-in-out infinite 0.6s; }
+.ctf-float-4 { animation: ctf-float-down 8s  ease-in-out infinite 2.4s; }
+.ctf-float-5 { animation: ctf-float-up   10s ease-in-out infinite 1.8s; }
+.ctf-float-6 { animation: ctf-float-down 12s ease-in-out infinite 3.0s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ctf-fdoodle {
+    animation: none !important;
   }
-  .ctf-doodle-field svg.ctf-doodle--behind {
-    width: 100px !important;
-    height: 86px !important;
-  }
+}
+
+@media (max-width: 720px) {
+  .ctf-fdoodle { transform: scale(0.7); }
+  .ctf-floating-doodles svg[style*="width: 1"] { display: none; }
 }

@@ -67,3 +67,8 @@
 </header>
 
 {% include "partials/nav-drawer.html" %}
+
+{#- Rendered once, site-wide, at the very end of <header>'s siblings so it
+    paints above every page's content (topmost visual layer) while staying
+    pointer-events: none and below the navbar/drawer/search overlays. -#}
+{% include "partials/floating-doodles.html" %}

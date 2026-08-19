@@ -66,23 +66,6 @@
 .slide-up-delay-3 { animation-delay: 300ms; }
 .slide-up-delay-4 { animation-delay: 400ms; }
 
-/* ---------- Float (for doodles) ---------- */
-@keyframes float {
-  0%, 100% { translate: 0 0; }
-  50% { translate: 0 -12px; }
-}
-
-.float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.float-delay-1 { animation-delay: 0s; }
-.float-delay-2 { animation-delay: 1s; }
-.float-delay-3 { animation-delay: 2s; }
-.float-delay-4 { animation-delay: 3s; }
-.float-delay-5 { animation-delay: 4s; }
-.float-delay-6 { animation-delay: 5s; }
-
 /* ---------- Hover lift ---------- */
 .hover-lift {
   transition: transform var(--transition-base), box-shadow var(--transition-base);

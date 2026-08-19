@@ -255,32 +255,6 @@ body.home-page .md-tabs {
 }
 
 /* ==========================================================================
-   Page background decoration
-   ========================================================================== */
-.page-bg-decoration {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.bg-doodle {
-  position: absolute;
-  opacity: 0.04;
-  color: var(--color-text);
-}
-
-.bg-doodle--1 { top: 30%; right: 5%; width: 300px; }
-.bg-doodle--2 { top: 60%; left: 3%; width: 120px; }
-.bg-doodle--3 { top: 80%; right: 15%; width: 150px; }
-.bg-doodle--4 { top: 45%; left: 10%; width: 180px; }
-
-[data-md-color-scheme="slate"] .bg-doodle {
-  opacity: 0.03;
-}
-
-/* ==========================================================================
    Footer (doc pages)
    ========================================================================== */
 .md-footer {

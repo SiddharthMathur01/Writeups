@@ -100,16 +100,6 @@
     display: none;
   }
 
-  /* Doodles: hide on small screens */
-  .hero__doodle--5,
-  .hero__doodle--6 {
-    display: none;
-  }
-
-  .hero__doodle {
-    opacity: 0.06;
-  }
-
   .hero__label::before,
   .hero__label::after {
     width: 24px;
