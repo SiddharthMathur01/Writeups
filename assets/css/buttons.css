@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Buttons — Premium CTA styling
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 28px;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: var(--border-radius-pill);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  background: radial-gradient(circle at var(--ripple-x, 50%) var(--ripple-y, 50%), rgba(255,255,255,0.3) 0%, transparent 60%);
+  transition: opacity var(--transition-fast);
+}
+
+.btn:active::after {
+  opacity: 1;
+}
+
+.btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Primary — solid black/white */
+.btn--primary {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border: 2px solid var(--color-accent);
+  font-weight: 700;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Ensure button text is always visible */
+[data-md-color-scheme="slate"] .btn--primary {
+  background-color: #FFFFFF;
+  color: #000000;
+  border-color: #FFFFFF;
+}
+
+[data-md-color-scheme="slate"] .btn--primary:hover {
+  background-color: #E0E0E0;
+  border-color: #E0E0E0;
+}
+
+/* Secondary — ghost */
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1.5px solid var(--color-border);
+}
+
+.btn--secondary:hover {
+  border-color: var(--color-text);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Icon rotation on hover */
+.btn:hover svg {
+  transform: rotate(-5deg);
+  transition: transform var(--transition-fast);
+}
