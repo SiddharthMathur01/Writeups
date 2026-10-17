@@ -1,0 +1,1176 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="reverse a series of Linux text transformations to recover the original flag">
+      
+      
+        <meta name="author" content="Siddharth Mathur">
+      
+      
+        <link rel="canonical" href="https://siddharthmathur01.github.io/ctf-writeups/picoCTF/undo/">
+      
+      
+        <link rel="prev" href="../bytemancy%201/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>UNDO - Siddharth's CTF Writeups</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Public+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Public Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+      <link rel="stylesheet" href="../../assets/css/shell.css">
+    
+      <link rel="stylesheet" href="../../assets/css/desktop.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="ctf-dark" data-md-color-primary="black" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#challenge-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <header class="md-header ctf-header" data-md-component="header">
+  <nav class="ctf-navbar" aria-label="Header">
+
+    <div class="ctf-navbar__group ctf-navbar__group--left">
+      <a href="../.." class="ctf-navbar__brand" data-terminal-command="pwd" data-md-component="logo" aria-label="Siddharth's CTF Writeups">
+        <span class="ctf-navbar__prompt term-font"><span class="term-green">siddharth@ctf-lab</span>:<span class="term-tilde">~/research</span></span>
+      </a>
+    </div>
+
+    <div class="ctf-navbar__group ctf-navbar__group--right">
+      <div class="ctf-navbar__links" aria-label="Terminal shortcuts">
+        <button type="button" class="ctf-navbar__link term-font" data-terminal-command="ls writeups/">writeups/</button>
+        <button type="button" class="ctf-navbar__link term-font" data-terminal-command="cat about.txt">about</button>
+        <button type="button" class="ctf-navbar__link term-font" data-terminal-command="github">github</button>
+      </div>
+
+      <button type="button" class="ctf-navbar__sound" data-audio-toggle aria-pressed="false" aria-label="Enable terminal sound">SOUND: ON</button>
+
+      
+        
+          <div class="ctf-navbar__palette">
+            <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="ctf-dark" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="ctf-light" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+          </div>
+        
+      
+      
+        <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      
+
+    </div>
+
+  </nav>
+
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/" title="Siddharth&#39;s CTF Writeups" class="md-nav__button md-logo" aria-label="Siddharth's CTF Writeups" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <rect x="1.5" y="1.5" width="29" height="29" rx="8" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M9 12L14 16L9 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16 20H23" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
+    </a>
+    Siddharth's CTF Writeups
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SiddharthMathur01" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SiddharthMathur01
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Siddharth's CTF Writeups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Assets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wallpapers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wallpapers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ml4w
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ml4w
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/wallpapers/ml4w/README-upstream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ML4W Wallpaper Collection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    picoCTF
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    picoCTF
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../My%20Git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bytemancy%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bytemancy 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNDO
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNDO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#challenge-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step By Step solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step By Step solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-base64-reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Base64 reverse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-reversing-the-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Reversing the string
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3replacing-dashes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3:Replacing Dashes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-replacing-braces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        step 4: Replacing braces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-reversing-rot13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Reversing ROT13
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#challenge-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step By Step solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step By Step solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-base64-reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Base64 reverse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-reversing-the-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Reversing the string
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3replacing-dashes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3:Replacing Dashes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-replacing-braces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        step 4: Replacing braces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-reversing-rot13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Reversing ROT13
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="ctf-desktop" id="ctf-desktop" data-wallpaper-base="../../assets/wallpapers/ml4w/">
+  
+  <div class="desktop-wallpaper" id="desktop-wallpaper" aria-hidden="true"></div>
+
+  <header class="desktop-panel" aria-label="Desktop system panel">
+    <div class="desktop-panel__left">
+      <button class="panel-launcher" id="desktop-launcher" type="button" aria-label="Applications" aria-expanded="false"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M4 5h16M4 12h16M4 19h16"/></svg><span>Applications</span></button>
+      <nav class="workspace-switcher" aria-label="Workspaces">
+        <button type="button" class="workspace-switcher__active" data-workspace="1" aria-label="Switch to workspace 1" aria-pressed="true">1</button>
+        <button type="button" data-workspace="2" aria-label="Switch to workspace 2" aria-pressed="false">2</button>
+        <button type="button" data-workspace="3" aria-label="Switch to workspace 3" aria-pressed="false">3</button>
+      </nav>
+    </div>
+    <div class="panel-music" aria-label="Ambient music player">
+      <svg viewBox="0 0 24 24" class="ui-icon panel-music__note" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span class="panel-music__title" id="panel-track-title">Ambient research</span>
+      <button type="button" class="panel-control" data-music-toggle aria-label="Play ambient music"><svg viewBox="0 0 24 24" class="ui-icon"><path d="m8 5 12 7-12 7z"/></svg></button>
+      <span class="panel-music__time" id="panel-track-time">00:00</span>
+    </div>
+    <div class="desktop-panel__right">
+      <button type="button" class="panel-status" data-audio-toggle aria-label="Toggle terminal typing sound" aria-pressed="true"><svg viewBox="0 0 24 24" class="ui-icon"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg></button>
+      <button type="button" class="panel-status" data-music-mute aria-label="Mute ambient music" aria-pressed="false"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></button>
+      <button type="button" class="panel-status" data-open-window="settings" aria-label="Desktop settings"><span class="ui-icon icon-settings-glyph" aria-hidden="true">⚙︎</span></button>
+      <time class="panel-clock" id="desktop-clock"></time>
+    </div>
+  </header>
+
+  <div class="desktop-workspace" id="desktop-workspace" role="region" aria-label="CTF-LAB desktop">
+    <div class="desktop-icons" aria-label="Desktop applications">
+      <button class="desktop-icon" type="button" data-open-window="terminal" aria-label="Open Terminal"><svg viewBox="0 0 24 24" class="desktop-icon__glyph desktop-icon__glyph--terminal"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg><span>Terminal</span></button>
+      <button class="desktop-icon" type="button" data-open-window="files" aria-label="Open File Manager"><svg viewBox="0 0 24 24" class="desktop-icon__glyph desktop-icon__glyph--files"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></svg><span>File Manager</span></button>
+      <button class="desktop-icon" type="button" data-open-directory="writeups/" aria-label="Open Writeups Folder"><svg viewBox="0 0 24 24" class="desktop-icon__glyph desktop-icon__glyph--directory"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></svg><span>Writeups</span></button>
+      <button class="desktop-icon" type="button" data-terminal-command="cat about.txt" aria-label="Read About"><svg viewBox="0 0 24 24" class="desktop-icon__glyph"><path d="M5 3h9l5 5v13H5z"/><path d="M14 3v5h5m-10 5-2 2 2 2m6-4 2 2-2 2m-2-5-2 6"/></svg><span>About</span></button>
+      <button class="desktop-icon" type="button" data-open-window="settings" aria-label="Open Settings"><span class="desktop-icon__glyph desktop-icon__glyph--settings icon-settings-glyph" aria-hidden="true">⚙︎</span><span>Settings</span></button>
+      <button class="desktop-icon" type="button" data-open-window="music" aria-label="Open Music Player"><svg viewBox="0 0 24 24" class="desktop-icon__glyph desktop-icon__glyph--music"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span>Music</span></button>
+    </div>
+
+    <section class="desktop-window desktop-window--terminal" id="window-terminal" data-window-id="terminal-1" data-window-type="terminal" data-instance-id="1" data-workspace-id="1" data-open="true" aria-label="Terminal window">
+      <header class="window-titlebar" data-drag-handle>
+        <svg viewBox="0 0 24 24" class="window-app-icon"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg><span class="window-title">Terminal <span>— siddharth@ctf-lab</span></span>
+        <div class="window-controls"><button type="button" data-window-action="minimize" aria-label="Minimize terminal">−</button><button type="button" data-window-action="maximize" aria-label="Maximize terminal">□</button><button type="button" class="window-control--close" data-window-action="close" aria-label="Close terminal">×</button></div>
+      </header>
+      <div class="window-content window-content--terminal">
+        <main class="shell" id="shell" data-writeups='[{&#34;category&#34;: &#34;picoCTF&#34;, &#34;date&#34;: &#34;2026-03-14&#34;, &#34;description&#34;: &#34;Use Git commands to get the Flag&#34;, &#34;difficulty&#34;: &#34;Easy&#34;, &#34;points&#34;: 150, &#34;tags&#34;: [&#34;General Skill&#34;, &#34;GIT&#34;], &#34;title&#34;: &#34;My Git&#34;, &#34;url&#34;: &#34;picoCTF/My Git/&#34;}, {&#34;category&#34;: &#34;picoCTF&#34;, &#34;date&#34;: &#34;2026-03-14&#34;, &#34;description&#34;: &#34;Conjure the right bytes to get the Flag&#34;, &#34;difficulty&#34;: &#34;Easy&#34;, &#34;points&#34;: 150, &#34;tags&#34;: [&#34;General Skill&#34;], &#34;title&#34;: &#34;Bytemancy 1&#34;, &#34;url&#34;: &#34;picoCTF/bytemancy 1/&#34;}, {&#34;category&#34;: &#34;picoCTF&#34;, &#34;date&#34;: &#34;2026-03-14&#34;, &#34;description&#34;: &#34;reverse a series of Linux text transformations to recover the original flag&#34;, &#34;difficulty&#34;: &#34;Easy&#34;, &#34;points&#34;: 150, &#34;tags&#34;: [&#34;General Skill&#34;, &#34;Cryptography&#34;], &#34;title&#34;: &#34;UNDO&#34;, &#34;url&#34;: &#34;picoCTF/undo/&#34;}]' data-site-description="Documenting challenges, exploits, payloads, and lessons learned while solving Capture The Flag competitions." data-audio-src="../../assets/audio/typewriter-typing.mp3" aria-label="CTF-LAB terminal">
+          <section class="shell__body" aria-label="Persistent terminal session">
+            <span class="shell__skip-target" id="challenge-overview" tabindex="-1"></span>
+            
+            <p class="shell__hint" id="shell-hint"><span class="shell__working" id="shell-working" role="status" aria-live="polite"></span><span class="shell__hint-right"><button type="button" class="shell__skip" id="shell-skip" hidden>skip intro</button></span></p>
+            <div class="shell__output" id="shell-output" role="log" aria-live="polite" aria-relevant="additions text">
+              <div class="shell__intro" id="shell-intro" aria-hidden="true" hidden></div>
+              <form class="shell__form" id="shell-form" autocomplete="off">
+                <label class="shell__prompt" for="shell-input"><span>siddharth@ctf-lab</span>:<span class="shell__cwd" id="shell-cwd">~</span>$</label>
+                <span class="shell__input-wrap"><input id="shell-input" class="shell__input" aria-label="Terminal command" spellcheck="false" autocapitalize="off" autofocus><span class="shell__cursor" aria-hidden="true"></span></span>
+              </form>
+            </div>
+          </section>
+        </main>
+      </div>
+      <div class="window-resize window-resize--n" data-resize="n"></div><div class="window-resize window-resize--s" data-resize="s"></div><div class="window-resize window-resize--e" data-resize="e"></div><div class="window-resize window-resize--w" data-resize="w"></div>
+      <div class="window-resize window-resize--ne" data-resize="ne"></div><div class="window-resize window-resize--nw" data-resize="nw"></div><div class="window-resize window-resize--se" data-resize="se"></div><div class="window-resize window-resize--sw" data-resize="sw"></div>
+    </section>
+
+    <section class="desktop-window auxiliary-window" id="window-files" data-window-id="files-1" data-window-type="files" data-workspace-id="1" data-open="false" hidden aria-label="File Manager window">
+      <header class="window-titlebar" data-drag-handle><svg viewBox="0 0 24 24" class="window-app-icon"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></svg><span class="window-title">File Manager <span>— ~/writeups</span></span><div class="window-controls"><button data-window-action="minimize" aria-label="Minimize File Manager">−</button><button data-window-action="maximize" aria-label="Maximize File Manager">□</button><button class="window-control--close" data-window-action="close" aria-label="Close File Manager">×</button></div></header>
+      <div class="window-content file-manager"><div class="file-manager__sidebar"><button class="is-selected" data-file-path="">⌂ &nbsp; Home</button><button data-file-path="writeups/">▣ &nbsp; Writeups</button></div><div class="file-manager__main"><div class="file-manager__path" id="file-manager-path">~/</div><div class="file-manager__items" id="file-manager-items"></div></div></div>
+      <div class="window-resize window-resize--n" data-resize="n"></div><div class="window-resize window-resize--s" data-resize="s"></div><div class="window-resize window-resize--e" data-resize="e"></div><div class="window-resize window-resize--w" data-resize="w"></div><div class="window-resize window-resize--ne" data-resize="ne"></div><div class="window-resize window-resize--nw" data-resize="nw"></div><div class="window-resize window-resize--se" data-resize="se"></div><div class="window-resize window-resize--sw" data-resize="sw"></div>
+    </section>
+
+    <section class="desktop-window auxiliary-window" id="window-settings" data-window-id="settings-1" data-window-type="settings" data-workspace-id="1" data-open="false" hidden aria-label="Settings window">
+      <header class="window-titlebar" data-drag-handle><span class="window-app-icon icon-settings-glyph" aria-hidden="true">⚙︎</span><span class="window-title">Settings <span>— Desktop</span></span><div class="window-controls"><button data-window-action="minimize" aria-label="Minimize Settings">−</button><button data-window-action="maximize" aria-label="Maximize Settings">□</button><button class="window-control--close" data-window-action="close" aria-label="Close Settings">×</button></div></header>
+      <div class="window-content settings-window"><nav class="settings-tabs">
+        <button class="is-selected" data-settings-tab="wallpaper"><svg viewBox="0 0 24 24" class="ui-icon" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m4 17 5-5 3 3 3-4 5 6"/></svg><span>Wallpaper</span></button>
+        <button data-settings-tab="dock"><svg viewBox="0 0 24 24" class="ui-icon" aria-hidden="true"><rect x="3" y="16" width="18" height="5" rx="2"/><path d="M7 16V8m5 8V5m5 11v-6"/></svg><span>Dock</span></button>
+        <button data-settings-tab="sound"><svg viewBox="0 0 24 24" class="ui-icon" aria-hidden="true"><path d="M4 10v4h4l5 4V6l-5 4z"/><path d="M17 9a5 5 0 0 1 0 6m3-9a9 9 0 0 1 0 12"/></svg><span>Sound</span></button>
+      </nav><div class="settings-content" id="settings-content"></div></div>
+      <div class="window-resize window-resize--n" data-resize="n"></div><div class="window-resize window-resize--s" data-resize="s"></div><div class="window-resize window-resize--e" data-resize="e"></div><div class="window-resize window-resize--w" data-resize="w"></div><div class="window-resize window-resize--ne" data-resize="ne"></div><div class="window-resize window-resize--nw" data-resize="nw"></div><div class="window-resize window-resize--se" data-resize="se"></div><div class="window-resize window-resize--sw" data-resize="sw"></div>
+    </section>
+
+    <section class="desktop-window auxiliary-window" id="window-music" data-window-id="music-1" data-window-type="music" data-workspace-id="all" data-open="false" hidden aria-label="Music player window">
+      <header class="window-titlebar" data-drag-handle><svg viewBox="0 0 24 24" class="window-app-icon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span class="window-title">Ambient Player <span>— Study mode</span></span><div class="window-controls"><button data-window-action="minimize" aria-label="Minimize Music Player">−</button><button data-window-action="maximize" aria-label="Maximize Music Player">□</button><button class="window-control--close" data-window-action="close" aria-label="Close Music Player">×</button></div></header>
+      <div class="window-content music-window"><div class="music-art"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><p class="music-window__eyebrow">CTF-LAB AUDIO LIBRARY</p><h2 id="music-current-title">Ambient research</h2><p id="music-status" role="status">Original, locally generated focus music. Playback begins on request.</p><label class="music-track-select">Playlist <select id="music-track-select" aria-label="Select music track"></select></label><div class="music-progress"><span id="music-elapsed">00:00</span><input type="range" id="music-seek" min="0" max="1000" value="0" aria-label="Seek track"><span id="music-duration">01:30</span></div><div class="music-controls"><button type="button" data-music-previous aria-label="Previous track"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M6 5v14m13-14L8 12l11 7z"/></svg></button><button type="button" data-music-toggle aria-label="Play ambient music"><svg viewBox="0 0 24 24" class="ui-icon"><path d="m8 5 12 7-12 7z"/></svg></button><button type="button" data-music-next aria-label="Next track"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M18 5v14M5 5l11 7-11 7z"/></svg></button><button type="button" data-music-mute aria-label="Mute ambient music" aria-pressed="false"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></button></div><label class="music-volume">Volume <input type="range" id="music-volume" min="0" max="100" value="22"><span id="music-volume-value">22%</span></label></div>
+      <div class="window-resize window-resize--n" data-resize="n"></div><div class="window-resize window-resize--s" data-resize="s"></div><div class="window-resize window-resize--e" data-resize="e"></div><div class="window-resize window-resize--w" data-resize="w"></div><div class="window-resize window-resize--ne" data-resize="ne"></div><div class="window-resize window-resize--nw" data-resize="nw"></div><div class="window-resize window-resize--se" data-resize="se"></div><div class="window-resize window-resize--sw" data-resize="sw"></div>
+    </section>
+
+    <div class="desktop-app-menu" id="desktop-app-menu" hidden><button data-open-window="terminal"><svg viewBox="0 0 24 24" class="ui-icon"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg> Terminal</button><button data-new-terminal>＋ New Terminal</button><button data-open-window="files"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></svg> File Manager</button><button data-open-window="settings"><span class="ui-icon icon-settings-glyph" aria-hidden="true">⚙︎</span> Settings</button><button data-open-window="music"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> Music</button></div>
+    <div class="desktop-context-menu" id="desktop-context-menu" hidden><button data-open-window="terminal">Open Terminal</button><button data-new-terminal>New Terminal</button><button data-open-window="files">Open File Manager</button><button data-open-window="settings">Desktop Settings</button><button data-open-window="settings" data-settings-open="wallpaper">Change Wallpaper</button><button data-refresh-desktop>Refresh Desktop</button></div>
+  </div>
+
+  <nav class="desktop-dock" id="desktop-dock" data-dock-mode="always" data-dock-position="center" aria-label="Application dock">
+    <button data-task-app="terminal" data-running="true" aria-label="Terminal"><svg viewBox="0 0 24 24" class="ui-icon"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg><i></i></button><button data-task-app="files" data-running="false" aria-label="File Manager"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></svg><i></i></button><button data-task-app="writeups" data-running="false" aria-label="Writeups" data-open-directory="writeups/"><svg viewBox="0 0 24 24" class="ui-icon dock-icon--directory"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></svg><i></i></button><button data-task-app="settings" data-running="false" aria-label="Settings"><span class="ui-icon icon-settings-glyph" aria-hidden="true">⚙︎</span><i></i></button><button data-task-app="music" data-running="false" aria-label="Music"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><i></i></button>
+    <span class="dock-wallpaper-control" aria-label="Wallpaper selector"><button class="dock-wallpaper-arrow" type="button" data-wallpaper-prev aria-label="Previous wallpaper" title="Previous wallpaper"><svg viewBox="0 0 24 24" class="ui-icon"><path d="m15 18-6-6 6-6"/></svg></button><button class="dock-wallpaper-current" type="button" data-wallpaper-current aria-label="Open wallpaper settings" title="Current wallpaper"><img data-wallpaper-preview alt=""><span data-wallpaper-name>Wallpaper</span></button><button class="dock-wallpaper-arrow" type="button" data-wallpaper-next aria-label="Next wallpaper" title="Next wallpaper"><svg viewBox="0 0 24 24" class="ui-icon"><path d="m9 18 6-6-6-6"/></svg></button></span>
+    <button class="dock-collapse" type="button" id="dock-collapse" aria-label="Minimize dock"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M4 5h16M4 12h16M4 19h16"/></svg></button>
+  </nav>
+  <audio id="desktop-ambient-audio" preload="none"></audio>
+</div>
+
+  
+  
+  <template id="terminal-writeup-template">
+    <article class="md-typeset terminal-writeup">
+      <header class="ctf-writeup-hero">
+        <div class="ctf-writeup-hero__badges">
+          
+          <span class="ctf-badge ctf-badge--easy">Easy</span>
+          <span class="ctf-badge ctf-badge--dark">picoCTF</span>
+          <span class="ctf-badge">General Skill</span><span class="ctf-badge">Cryptography</span>
+        </div>
+        <h1>UNDO</h1>
+        <div class="ctf-writeup-hero__facts">
+          <div class="ctf-fact"><span class="ctf-fact__label">Points</span><span class="ctf-fact__value">150</span></div>
+          <div class="ctf-fact"><span class="ctf-fact__label">Est. Solve Time</span><span class="ctf-fact__value">~1min</span></div>
+          <div class="ctf-fact"><span class="ctf-fact__label">Author</span><span class="ctf-fact__value">Siddharth Mathur</span></div>
+          <div class="ctf-fact"><span class="ctf-fact__label">Date</span><span class="ctf-fact__value">2026-03-14</span></div>
+        </div>
+      </header>
+      
+
+
+
+<h2 id="challenge-overview">Challenge Overview<a class="headerlink" href="#challenge-overview" title="Permanent link">&para;</a></h2>
+<p>In this challenge we need to connect to a netcat server and reveres the given string to get the flag, On connecting to the given netcat address the instruction provided are:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="l l-Scalar l-Scalar-Plain">===Welcome to the Text Transformations Challenge!===</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="l l-Scalar l-Scalar-Plain">Your goal</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step by step, recover the original flag.</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="l l-Scalar l-Scalar-Plain">At each step, you'll see the transformed flag and a hint.</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="l l-Scalar l-Scalar-Plain">Enter the correct Linux command to reverse the last transformation.</span>
+</span></code></pre></div>
+<h2 id="step-by-step-solution">Step By Step solution<a class="headerlink" href="#step-by-step-solution" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-base64-reverse">Step 1: Base64 reverse<a class="headerlink" href="#step-1-base64-reverse" title="Permanent link">&para;</a></h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">Current flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">KTBxcDI0bnIwLWZhMDFnQHplMHNmYTRlRy1nazNnLXRhMWZlcmlyRShTR1BicHZj</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">Hint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Base64 encoded the string.</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">Enter the Linux command to reverse it</span><span class="p">:</span>
+</span></code></pre></div>
+<p>Linux command to reverse base64 is:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="l l-Scalar l-Scalar-Plain">base64 -d</span>
+</span></code></pre></div>
+<h3 id="step-2-reversing-the-string">Step 2: Reversing the string<a class="headerlink" href="#step-2-reversing-the-string" title="Permanent link">&para;</a></h3>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">Current flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">)0qp24nr0-fa01g@ze0sfa4eG-gk3g-ta1ferirE(SGPbpvc</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">Hint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reversed the text.</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">Enter the Linux command to reverse it</span><span class="p">:</span>
+</span></code></pre></div>
+Linux command to reverse is:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="l l-Scalar l-Scalar-Plain">rev</span>
+</span></code></pre></div>
+<h3 id="step-3replacing-dashes">Step 3:Replacing Dashes<a class="headerlink" href="#step-3replacing-dashes" title="Permanent link">&para;</a></h3>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">Current flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cvpbPGS(Eriref1at-g3kg-Ge4afs0ez@g10af-0rn42pq0)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">Hint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Replaced underscores with dashes.</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">Enter the Linux command to reverse it</span><span class="p">:</span>
+</span></code></pre></div>
+To replace tokens we use 'tr' command in linux. The command to replace underscores with dashes is:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="l l-Scalar l-Scalar-Plain">tr '-' '_'</span>
+</span></code></pre></div>
+<h3 id="step-4-replacing-braces">step 4: Replacing braces<a class="headerlink" href="#step-4-replacing-braces" title="Permanent link">&para;</a></h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">Current flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cvpbPGS(Eriref1at_g3kg_Ge4afs0ez@g10af_0rn42pq0)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">Hint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Replaced curly braces with parentheses.</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nt">Enter the Linux command to reverse it</span><span class="p">:</span>
+</span></code></pre></div>
+<p>We will use 'tr' again:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="l l-Scalar l-Scalar-Plain">tr '()' '{}'</span>
+</span></code></pre></div>
+<h3 id="step-5-reversing-rot13">Step 5: Reversing ROT13<a class="headerlink" href="#step-5-reversing-rot13" title="Permanent link">&para;</a></h3>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">Current flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cvpbPGS{Eriref1at_g3kg_Ge4afs0ez@g10af_0rn42pq0}</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nt">Hint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Applied ROT13 to letters.</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nt">Enter the Linux command to reverse it</span><span class="p">:</span>
+</span></code></pre></div>
+ROT13 can be reversed using Linux command:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="l l-Scalar l-Scalar-Plain">tr 'A-Za-z' 'N-ZA-Mn-za-m'</span>
+</span></code></pre></div>
+<h2 id="flag">Flag<a class="headerlink" href="#flag" title="Permanent link">&para;</a></h2>
+<p><img alt="Flag" src="../../assets/images/undo-flag.png" /></p>
+<h2 id="takeaways">Takeaways<a class="headerlink" href="#takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Base64 encoded string can be decoded using 'base64 -d'</li>
+<li>Any string can be reversed using 'rev'</li>
+<li>To replace tokens in a string we use 'tr'</li>
+<li>ROT13 can be reversed using tr 'A-Za-z' 'N-ZA-Mn-za-m</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+    </article>
+  </template>
+
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../bytemancy%201/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Bytemancy 1">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">Previous</span>
+              <div class="md-ellipsis">Bytemancy 1</div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+
+  <div class="md-footer-meta md-typeset">
+    <div class="ctf-footer">
+      <span>Made with <span aria-hidden="true">&#10084;&#65039;</span> by Siddharth Mathur</span>
+      <div class="ctf-footer__links">
+        <a href="https://github.com/SiddharthMathur01" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/siddharth-mathur-084804329/" target="_blank" rel="noopener">LinkedIn</a>
+        <span>&middot;</span>
+        <span>Last updated recently</span>
+        <span>&middot;</span>
+        <span>Copyright &copy; 2026 Siddharth Mathur</span>
+      </div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "content.action.edit", "toc.follow", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/js/extra.js"></script>
+      
+        <script src="../../assets/js/shell.js"></script>
+      
+        <script src="../../assets/js/desktop.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../assets/js/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
