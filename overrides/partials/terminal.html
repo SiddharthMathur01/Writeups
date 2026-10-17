@@ -1,0 +1,97 @@
+<div class="ctf-desktop" id="ctf-desktop" data-wallpaper-base="{{ 'assets/wallpapers/ml4w/' | url }}">
+  
+  <div class="desktop-wallpaper" id="desktop-wallpaper" aria-hidden="true"></div>
+
+  <header class="desktop-panel" aria-label="Desktop system panel">
+    <div class="desktop-panel__left">
+      <button class="panel-launcher" id="desktop-launcher" type="button" aria-label="Applications" aria-expanded="false"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M4 5h16M4 12h16M4 19h16"/></svg><span>Applications</span></button>
+      <nav class="workspace-switcher" aria-label="Workspaces">
+        <button type="button" class="workspace-switcher__active" data-workspace="1" aria-label="Switch to workspace 1" aria-pressed="true">1</button>
+        <button type="button" data-workspace="2" aria-label="Switch to workspace 2" aria-pressed="false">2</button>
+        <button type="button" data-workspace="3" aria-label="Switch to workspace 3" aria-pressed="false">3</button>
+      </nav>
+    </div>
+    <div class="panel-music" aria-label="Ambient music player">
+      <svg viewBox="0 0 24 24" class="ui-icon panel-music__note" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span class="panel-music__title" id="panel-track-title">Ambient research</span>
+      <button type="button" class="panel-control" data-music-toggle aria-label="Play ambient music"><svg viewBox="0 0 24 24" class="ui-icon"><path d="m8 5 12 7-12 7z"/></svg></button>
+      <span class="panel-music__time" id="panel-track-time">00:00</span>
+    </div>
+    <div class="desktop-panel__right">
+      <button type="button" class="panel-status" data-audio-toggle aria-label="Toggle terminal typing sound" aria-pressed="true"><svg viewBox="0 0 24 24" class="ui-icon"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg></button>
+      <button type="button" class="panel-status" data-music-mute aria-label="Mute ambient music" aria-pressed="false"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></button>
+      <button type="button" class="panel-status" data-open-window="settings" aria-label="Desktop settings"><span class="ui-icon icon-settings-glyph" aria-hidden="true">⚙︎</span></button>
+      <time class="panel-clock" id="desktop-clock"></time>
+    </div>
+  </header>
+
+  <div class="desktop-workspace" id="desktop-workspace" role="region" aria-label="CTF-LAB desktop">
+    <div class="desktop-icons" aria-label="Desktop applications">
+      <button class="desktop-icon" type="button" data-open-window="terminal" aria-label="Open Terminal"><svg viewBox="0 0 24 24" class="desktop-icon__glyph desktop-icon__glyph--terminal"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg><span>Terminal</span></button>
+      <button class="desktop-icon" type="button" data-open-window="files" aria-label="Open File Manager"><svg viewBox="0 0 24 24" class="desktop-icon__glyph desktop-icon__glyph--files"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></svg><span>File Manager</span></button>
+      <button class="desktop-icon" type="button" data-open-directory="writeups/" aria-label="Open Writeups Folder"><svg viewBox="0 0 24 24" class="desktop-icon__glyph desktop-icon__glyph--directory"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></svg><span>Writeups</span></button>
+      <button class="desktop-icon" type="button" data-terminal-command="cat about.txt" aria-label="Read About"><svg viewBox="0 0 24 24" class="desktop-icon__glyph"><path d="M5 3h9l5 5v13H5z"/><path d="M14 3v5h5m-10 5-2 2 2 2m6-4 2 2-2 2m-2-5-2 6"/></svg><span>About</span></button>
+      <button class="desktop-icon" type="button" data-open-window="settings" aria-label="Open Settings"><span class="desktop-icon__glyph desktop-icon__glyph--settings icon-settings-glyph" aria-hidden="true">⚙︎</span><span>Settings</span></button>
+      <button class="desktop-icon" type="button" data-open-window="music" aria-label="Open Music Player"><svg viewBox="0 0 24 24" class="desktop-icon__glyph desktop-icon__glyph--music"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span>Music</span></button>
+    </div>
+
+    <section class="desktop-window desktop-window--terminal" id="window-terminal" data-window-id="terminal-1" data-window-type="terminal" data-instance-id="1" data-workspace-id="1" data-open="true" aria-label="Terminal window">
+      <header class="window-titlebar" data-drag-handle>
+        <svg viewBox="0 0 24 24" class="window-app-icon"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg><span class="window-title">Terminal <span>— siddharth@ctf-lab</span></span>
+        <div class="window-controls"><button type="button" data-window-action="minimize" aria-label="Minimize terminal">−</button><button type="button" data-window-action="maximize" aria-label="Maximize terminal">□</button><button type="button" class="window-control--close" data-window-action="close" aria-label="Close terminal">×</button></div>
+      </header>
+      <div class="window-content window-content--terminal">
+        <main class="shell" id="shell" data-writeups='{{ config.extra.recent_writeups | tojson | forceescape }}' data-site-description="{{ config.site_description | e }}" data-audio-src="{{ 'assets/audio/typewriter-typing.mp3' | url }}" aria-label="CTF-LAB terminal">
+          <section class="shell__body" aria-label="Persistent terminal session">
+            {% if page and page.file.src_uri == "about.md" %}<span class="shell__skip-target" id="about-me" tabindex="-1"></span>
+            {% elif page and page.url.startswith("picoCTF/") and page.url != "picoCTF/" %}<span class="shell__skip-target" id="challenge-overview" tabindex="-1"></span>
+            {% elif page and page.url == "picoCTF/" %}<span class="shell__skip-target" id="picoctf-writeups" tabindex="-1"></span>
+            {% else %}<span class="shell__skip-target" id="siddharths-ctf-writeups" tabindex="-1"></span>{% endif %}
+            <p class="shell__hint" id="shell-hint"><span class="shell__working" id="shell-working" role="status" aria-live="polite"></span><span class="shell__hint-right"><button type="button" class="shell__skip" id="shell-skip" hidden>skip intro</button></span></p>
+            <div class="shell__output" id="shell-output" role="log" aria-live="polite" aria-relevant="additions text">
+              <div class="shell__intro" id="shell-intro" aria-hidden="true" hidden></div>
+              <form class="shell__form" id="shell-form" autocomplete="off">
+                <label class="shell__prompt" for="shell-input"><span>siddharth@ctf-lab</span>:<span class="shell__cwd" id="shell-cwd">~</span>$</label>
+                <span class="shell__input-wrap"><input id="shell-input" class="shell__input" aria-label="Terminal command" spellcheck="false" autocapitalize="off" autofocus><span class="shell__cursor" aria-hidden="true"></span></span>
+              </form>
+            </div>
+          </section>
+        </main>
+      </div>
+      <div class="window-resize window-resize--n" data-resize="n"></div><div class="window-resize window-resize--s" data-resize="s"></div><div class="window-resize window-resize--e" data-resize="e"></div><div class="window-resize window-resize--w" data-resize="w"></div>
+      <div class="window-resize window-resize--ne" data-resize="ne"></div><div class="window-resize window-resize--nw" data-resize="nw"></div><div class="window-resize window-resize--se" data-resize="se"></div><div class="window-resize window-resize--sw" data-resize="sw"></div>
+    </section>
+
+    <section class="desktop-window auxiliary-window" id="window-files" data-window-id="files-1" data-window-type="files" data-workspace-id="1" data-open="false" hidden aria-label="File Manager window">
+      <header class="window-titlebar" data-drag-handle><svg viewBox="0 0 24 24" class="window-app-icon"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></svg><span class="window-title">File Manager <span>— ~/writeups</span></span><div class="window-controls"><button data-window-action="minimize" aria-label="Minimize File Manager">−</button><button data-window-action="maximize" aria-label="Maximize File Manager">□</button><button class="window-control--close" data-window-action="close" aria-label="Close File Manager">×</button></div></header>
+      <div class="window-content file-manager"><div class="file-manager__sidebar"><button class="is-selected" data-file-path="">⌂ &nbsp; Home</button><button data-file-path="writeups/">▣ &nbsp; Writeups</button></div><div class="file-manager__main"><div class="file-manager__path" id="file-manager-path">~/</div><div class="file-manager__items" id="file-manager-items"></div></div></div>
+      <div class="window-resize window-resize--n" data-resize="n"></div><div class="window-resize window-resize--s" data-resize="s"></div><div class="window-resize window-resize--e" data-resize="e"></div><div class="window-resize window-resize--w" data-resize="w"></div><div class="window-resize window-resize--ne" data-resize="ne"></div><div class="window-resize window-resize--nw" data-resize="nw"></div><div class="window-resize window-resize--se" data-resize="se"></div><div class="window-resize window-resize--sw" data-resize="sw"></div>
+    </section>
+
+    <section class="desktop-window auxiliary-window" id="window-settings" data-window-id="settings-1" data-window-type="settings" data-workspace-id="1" data-open="false" hidden aria-label="Settings window">
+      <header class="window-titlebar" data-drag-handle><span class="window-app-icon icon-settings-glyph" aria-hidden="true">⚙︎</span><span class="window-title">Settings <span>— Desktop</span></span><div class="window-controls"><button data-window-action="minimize" aria-label="Minimize Settings">−</button><button data-window-action="maximize" aria-label="Maximize Settings">□</button><button class="window-control--close" data-window-action="close" aria-label="Close Settings">×</button></div></header>
+      <div class="window-content settings-window"><nav class="settings-tabs">
+        <button class="is-selected" data-settings-tab="wallpaper"><svg viewBox="0 0 24 24" class="ui-icon" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m4 17 5-5 3 3 3-4 5 6"/></svg><span>Wallpaper</span></button>
+        <button data-settings-tab="dock"><svg viewBox="0 0 24 24" class="ui-icon" aria-hidden="true"><rect x="3" y="16" width="18" height="5" rx="2"/><path d="M7 16V8m5 8V5m5 11v-6"/></svg><span>Dock</span></button>
+        <button data-settings-tab="sound"><svg viewBox="0 0 24 24" class="ui-icon" aria-hidden="true"><path d="M4 10v4h4l5 4V6l-5 4z"/><path d="M17 9a5 5 0 0 1 0 6m3-9a9 9 0 0 1 0 12"/></svg><span>Sound</span></button>
+      </nav><div class="settings-content" id="settings-content"></div></div>
+      <div class="window-resize window-resize--n" data-resize="n"></div><div class="window-resize window-resize--s" data-resize="s"></div><div class="window-resize window-resize--e" data-resize="e"></div><div class="window-resize window-resize--w" data-resize="w"></div><div class="window-resize window-resize--ne" data-resize="ne"></div><div class="window-resize window-resize--nw" data-resize="nw"></div><div class="window-resize window-resize--se" data-resize="se"></div><div class="window-resize window-resize--sw" data-resize="sw"></div>
+    </section>
+
+    <section class="desktop-window auxiliary-window" id="window-music" data-window-id="music-1" data-window-type="music" data-workspace-id="all" data-open="false" hidden aria-label="Music player window">
+      <header class="window-titlebar" data-drag-handle><svg viewBox="0 0 24 24" class="window-app-icon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span class="window-title">Ambient Player <span>— Study mode</span></span><div class="window-controls"><button data-window-action="minimize" aria-label="Minimize Music Player">−</button><button data-window-action="maximize" aria-label="Maximize Music Player">□</button><button class="window-control--close" data-window-action="close" aria-label="Close Music Player">×</button></div></header>
+      <div class="window-content music-window"><div class="music-art"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><p class="music-window__eyebrow">CTF-LAB AUDIO LIBRARY</p><h2 id="music-current-title">Ambient research</h2><p id="music-status" role="status">Original, locally generated focus music. Playback begins on request.</p><label class="music-track-select">Playlist <select id="music-track-select" aria-label="Select music track"></select></label><div class="music-progress"><span id="music-elapsed">00:00</span><input type="range" id="music-seek" min="0" max="1000" value="0" aria-label="Seek track"><span id="music-duration">01:30</span></div><div class="music-controls"><button type="button" data-music-previous aria-label="Previous track"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M6 5v14m13-14L8 12l11 7z"/></svg></button><button type="button" data-music-toggle aria-label="Play ambient music"><svg viewBox="0 0 24 24" class="ui-icon"><path d="m8 5 12 7-12 7z"/></svg></button><button type="button" data-music-next aria-label="Next track"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M18 5v14M5 5l11 7-11 7z"/></svg></button><button type="button" data-music-mute aria-label="Mute ambient music" aria-pressed="false"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></button></div><label class="music-volume">Volume <input type="range" id="music-volume" min="0" max="100" value="22"><span id="music-volume-value">22%</span></label></div>
+      <div class="window-resize window-resize--n" data-resize="n"></div><div class="window-resize window-resize--s" data-resize="s"></div><div class="window-resize window-resize--e" data-resize="e"></div><div class="window-resize window-resize--w" data-resize="w"></div><div class="window-resize window-resize--ne" data-resize="ne"></div><div class="window-resize window-resize--nw" data-resize="nw"></div><div class="window-resize window-resize--se" data-resize="se"></div><div class="window-resize window-resize--sw" data-resize="sw"></div>
+    </section>
+
+    <div class="desktop-app-menu" id="desktop-app-menu" hidden><button data-open-window="terminal"><svg viewBox="0 0 24 24" class="ui-icon"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg> Terminal</button><button data-new-terminal>＋ New Terminal</button><button data-open-window="files"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></svg> File Manager</button><button data-open-window="settings"><span class="ui-icon icon-settings-glyph" aria-hidden="true">⚙︎</span> Settings</button><button data-open-window="music"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> Music</button></div>
+    <div class="desktop-context-menu" id="desktop-context-menu" hidden><button data-open-window="terminal">Open Terminal</button><button data-new-terminal>New Terminal</button><button data-open-window="files">Open File Manager</button><button data-open-window="settings">Desktop Settings</button><button data-open-window="settings" data-settings-open="wallpaper">Change Wallpaper</button><button data-refresh-desktop>Refresh Desktop</button></div>
+  </div>
+
+  <nav class="desktop-dock" id="desktop-dock" data-dock-mode="always" data-dock-position="center" aria-label="Application dock">
+    <button data-task-app="terminal" data-running="true" aria-label="Terminal"><svg viewBox="0 0 24 24" class="ui-icon"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg><i></i></button><button data-task-app="files" data-running="false" aria-label="File Manager"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></svg><i></i></button><button data-task-app="writeups" data-running="false" aria-label="Writeups" data-open-directory="writeups/"><svg viewBox="0 0 24 24" class="ui-icon dock-icon--directory"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 10h18"/></svg><i></i></button><button data-task-app="settings" data-running="false" aria-label="Settings"><span class="ui-icon icon-settings-glyph" aria-hidden="true">⚙︎</span><i></i></button><button data-task-app="music" data-running="false" aria-label="Music"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><i></i></button>
+    <span class="dock-wallpaper-control" aria-label="Wallpaper selector"><button class="dock-wallpaper-arrow" type="button" data-wallpaper-prev aria-label="Previous wallpaper" title="Previous wallpaper"><svg viewBox="0 0 24 24" class="ui-icon"><path d="m15 18-6-6 6-6"/></svg></button><button class="dock-wallpaper-current" type="button" data-wallpaper-current aria-label="Open wallpaper settings" title="Current wallpaper"><img data-wallpaper-preview alt=""><span data-wallpaper-name>Wallpaper</span></button><button class="dock-wallpaper-arrow" type="button" data-wallpaper-next aria-label="Next wallpaper" title="Next wallpaper"><svg viewBox="0 0 24 24" class="ui-icon"><path d="m9 18 6-6-6-6"/></svg></button></span>
+    <button class="dock-collapse" type="button" id="dock-collapse" aria-label="Minimize dock"><svg viewBox="0 0 24 24" class="ui-icon"><path d="M4 5h16M4 12h16M4 19h16"/></svg></button>
+  </nav>
+  <audio id="desktop-ambient-audio" preload="none"></audio>
+</div>
+

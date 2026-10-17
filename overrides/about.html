@@ -1,15 +1,5 @@
-{#-
-  About page template. Same base content rendering as a normal page, but
-  wrapped so we can style the About page consistently with the homepage —
-  the About page feeling visually connected to the homepage.
-  Selected via front matter: `template: about.html`
--#}
 {% extends "base.html" %}
-
 {% block container %}
-  <div class="md-content" data-md-component="content">
-    <article class="md-content__inner md-typeset ctf-about-page">
-      {% include "partials/content.html" %}
-    </article>
-  </div>
+  {% include "partials/terminal.html" %}
+  <template id="terminal-about-template"><div class="md-typeset terminal-document__content">{% include "partials/content.html" %}</div></template>
 {% endblock %}

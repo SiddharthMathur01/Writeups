@@ -1,0 +1,8 @@
+ML4W wallpaper assets
+
+Source repository: https://github.com/mylinuxforwork/wallpaper
+Pinned source commit: 9e9d463d80e6090e1a60cfdfbd17dcd82eddd779
+Repository attribution: MyLinuxForWork (Stephan Raabe), ML4W Wallpaper Collection.
+The full upstream repository was shallow-cloned and every supported JPG, JPEG, PNG, and WebP image was recursively enumerated. The downloaded repository license and README are preserved alongside this notice. The repository describes a personal wallpaper collection and links to third-party wallpaper resources; no image-by-image rights metadata was present in the inspected repository files. Keep the source links and this notice with redistributed images, and check the original asset rights for any use beyond this project.
+
+The generated catalog.json lists every successfully processed wallpaper. Full-size sources are under full/; optimized 480x270 WebP previews are under thumbs/. generation-report.json records discovered, copied, thumbnail, and failed totals. To regenerate, shallow-clone the repository into the project root as .wallpaper-source-ml4w, then run: python scripts/generate_wallpapers.py

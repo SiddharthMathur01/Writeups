@@ -1,25 +1,94 @@
-{#- Hero: large heading, subtitle, CTA buttons -#}
+{#- Desktop Hero: Two-Column Layout -#}
 <section class="ctf-hero">
-  <div class="ctf-hero__content">
-    <p class="ctf-eyebrow ctf-reveal">Capture&nbsp;The&nbsp;Flag &middot; Writeups &amp; Research</p>
-    <h1 class="ctf-hero__title ctf-reveal ctf-reveal--delay-1">
-      Learn. Break.
-      <span class="ctf-underline">Document.
-        <svg viewBox="0 0 220 14" preserveAspectRatio="none"><path d="M2 9C40 2 100 2 218 9" /></svg>
-      </span>
-    </h1>
-    <p class="ctf-hero__subtitle ctf-reveal ctf-reveal--delay-2">
-      A collection of CTF writeups, exploitation techniques, and cybersecurity research.
-    </p>
-    <div class="ctf-hero__actions ctf-reveal ctf-reveal--delay-3">
-      <a href="picoCTF/" class="ctf-btn ctf-btn--primary">
-        <span class="ctf-btn__label">View Writeups</span>
-        <span class="ctf-btn__arrow" aria-hidden="true">→</span>
-      </a>
-      <a href="https://github.com/SiddharthMathur01" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost">
-        <span class="ctf-btn__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/github.svg" %}</span>
-        <span class="ctf-btn__label">GitHub</span>
-      </a>
+  <div class="ctf-hero__container">
+    <!-- LEFT COLUMN -->
+    <div class="ctf-hero__intro">
+      <div class="ctf-hero__eyebrow term-font">
+        <span class="term-prompt">$</span> CYBERSECURITY RESEARCH / CTF WRITEUPS
+      </div>
+      <h1 class="ctf-hero__title">
+        Siddharth Mathur
+      </h1>
+      <p class="ctf-hero__desc">
+        Documenting challenge solutions, binary exploits, web vulnerabilities,
+        and reverse engineering techniques from Capture The Flag competitions.
+      </p>
+      <div class="ctf-hero__actions">
+        <a href="#writeups" class="ctf-btn ctf-btn--primary term-font">
+          <span class="ctf-btn__prompt">./</span>view-writeups
+        </a>
+        <a href="https://github.com/SiddharthMathur01" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost term-font">
+          <span class="ctf-btn__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/github.svg" %}</span>
+          <span>github.com</span>
+          <span class="ctf-btn__arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: PROPERLY SIZED TERMINAL WINDOW -->
+    <div class="ctf-hero__terminal">
+      <div class="term-window term-window--hero">
+        <div class="term-title-bar">
+          <div class="term-controls">
+            <span class="term-control term-control--close"></span>
+            <span class="term-control term-control--minimize"></span>
+            <span class="term-control term-control--maximize"></span>
+          </div>
+          <span class="term-host">siddharth@ctf-lab: ~</span>
+        </div>
+        <div class="term-body">
+          <div class="term-cmd-group">
+            <div class="term-line">
+              <span class="term-prompt">┌──(</span><span class="term-user">siddharth㉿ctf-lab</span><span class="term-prompt">)-[</span><span class="term-path">~/research</span><span class="term-prompt">]</span>
+            </div>
+            <div class="term-line">
+              <span class="term-prompt">└─$</span> <span class="term-cmd">./status.sh</span>
+            </div>
+            <div class="term-output">
+              <span class="term-ok">[ OK ]</span> CTF Environment: <span class="term-val">Active</span><br>
+              <span class="term-ok">[ OK ]</span> Exploits &amp; Writeups: <span class="term-val">Loaded</span><br>
+              <span class="term-ok">[ OK ]</span> Target: <span class="term-val">picoCTF / HTB</span>
+            </div>
+          </div>
+
+          <div class="term-cmd-group">
+            <div class="term-line">
+              <span class="term-prompt">┌──(</span><span class="term-user">siddharth㉿ctf-lab</span><span class="term-prompt">)-[</span><span class="term-path">~</span><span class="term-prompt">]</span>
+            </div>
+            <div class="term-line">
+              <span class="term-prompt">└─$</span> <span class="term-cmd">whoami</span>
+            </div>
+            <div class="term-output">
+              <span class="term-output--highlight">Siddharth Mathur</span> &middot; Security Researcher &amp; CTF Player
+            </div>
+          </div>
+
+          <div class="term-cmd-group">
+            <div class="term-line">
+              <span class="term-prompt">┌──(</span><span class="term-user">siddharth㉿ctf-lab</span><span class="term-prompt">)-[</span><span class="term-path">~</span><span class="term-prompt">]</span>
+            </div>
+            <div class="term-line">
+              <span class="term-prompt">└─$</span> <span class="term-cmd">ls -p ./categories</span>
+            </div>
+            <div class="term-output term-dirs">
+              <span class="term-dir">binary-exploitation/</span>
+              <span class="term-dir">reverse-engineering/</span>
+              <span class="term-dir">web-security/</span>
+              <span class="term-dir">cryptography/</span>
+              <span class="term-dir">forensics/</span>
+            </div>
+          </div>
+
+          <div class="term-cmd-group">
+            <div class="term-line">
+              <span class="term-prompt">┌──(</span><span class="term-user">siddharth㉿ctf-lab</span><span class="term-prompt">)-[</span><span class="term-path">~</span><span class="term-prompt">]</span>
+            </div>
+            <div class="term-line">
+              <span class="term-prompt">└─$</span> <span class="term-cursor">█</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

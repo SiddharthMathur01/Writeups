@@ -6,10 +6,10 @@
   title twice.
 -#}
 {% include "partials/tags.html" %}
-{% if page.meta.template != "writeup.html" %}
+{% if page.meta.template not in ["writeup.html", "about.html"] %}
   {% include "partials/actions.html" %}
 {% endif %}
-{% if "\u003ch1" not in page.content and page.meta.template != "writeup.html" %}
+{% if "\u003ch1" not in page.content and page.meta.template not in ["writeup.html", "about.html"] %}
   <h1>{{ page.title | d(config.site_name, true)}}</h1>
 {% endif %}
 {{ page.content }}

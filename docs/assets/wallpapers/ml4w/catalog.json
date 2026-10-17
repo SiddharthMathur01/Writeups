@@ -1,0 +1,1754 @@
+[
+  {
+    "id": "ml4w-3d-tech",
+    "name": "3D Tech",
+    "category": "ML4W",
+    "full": "full/3d-tech.jpg",
+    "thumbnail": "thumbs/3d-tech.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/3d-tech.jpg"
+  },
+  {
+    "id": "ml4w-abstract-dark",
+    "name": "Abstract Dark",
+    "category": "ML4W",
+    "full": "full/abstract-dark.png",
+    "thumbnail": "thumbs/abstract-dark.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/abstract-dark.png"
+  },
+  {
+    "id": "ml4w-adwaita-l",
+    "name": "Adwaita L",
+    "category": "ML4W",
+    "full": "full/adwaita-l.jpg",
+    "thumbnail": "thumbs/adwaita-l.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/adwaita-l.jpg"
+  },
+  {
+    "id": "ml4w-aesthetic-deer",
+    "name": "Aesthetic Deer",
+    "category": "ML4W",
+    "full": "full/aesthetic_deer.jpg",
+    "thumbnail": "thumbs/aesthetic_deer.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/aesthetic_deer.jpg"
+  },
+  {
+    "id": "ml4w-african-light",
+    "name": "African Light",
+    "category": "ML4W",
+    "full": "full/african-light.jpg",
+    "thumbnail": "thumbs/african-light.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/african-light.jpg"
+  },
+  {
+    "id": "ml4w-ai-machine",
+    "name": "Ai Machine",
+    "category": "ML4W",
+    "full": "full/ai-machine.png",
+    "thumbnail": "thumbs/ai-machine.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/ai-machine.png"
+  },
+  {
+    "id": "ml4w-amazing-nature-mountain",
+    "name": "Amazing Nature Mountain",
+    "category": "ML4W",
+    "full": "full/amazing-nature-mountain.jpg",
+    "thumbnail": "thumbs/amazing-nature-mountain.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/amazing-nature-mountain.jpg"
+  },
+  {
+    "id": "ml4w-amber-island",
+    "name": "Amber Island",
+    "category": "ML4W",
+    "full": "full/amber-island.jpg",
+    "thumbnail": "thumbs/amber-island.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/amber-island.jpg"
+  },
+  {
+    "id": "ml4w-anime1",
+    "name": "Anime1",
+    "category": "ML4W",
+    "full": "full/anime1.png",
+    "thumbnail": "thumbs/anime1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/anime1.png"
+  },
+  {
+    "id": "ml4w-anime2",
+    "name": "Anime2",
+    "category": "ML4W",
+    "full": "full/anime2.jpg",
+    "thumbnail": "thumbs/anime2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/anime2.jpg"
+  },
+  {
+    "id": "ml4w-anime3",
+    "name": "Anime3",
+    "category": "ML4W",
+    "full": "full/anime3.png",
+    "thumbnail": "thumbs/anime3.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/anime3.png"
+  },
+  {
+    "id": "ml4w-apex-octane",
+    "name": "Apex Octane",
+    "category": "ML4W",
+    "full": "full/apex_octane.jpg",
+    "thumbnail": "thumbs/apex_octane.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/apex_octane.jpg"
+  },
+  {
+    "id": "ml4w-apple-dark",
+    "name": "Apple Dark",
+    "category": "ML4W",
+    "full": "full/apple-dark.jpg",
+    "thumbnail": "thumbs/apple-dark.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/apple-dark.jpg"
+  },
+  {
+    "id": "ml4w-apple-light",
+    "name": "Apple Light",
+    "category": "ML4W",
+    "full": "full/apple-light.jpg",
+    "thumbnail": "thumbs/apple-light.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/apple-light.jpg"
+  },
+  {
+    "id": "ml4w-apple-waves1",
+    "name": "Apple Waves1",
+    "category": "ML4W",
+    "full": "full/apple-waves1.jpg",
+    "thumbnail": "thumbs/apple-waves1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/apple-waves1.jpg"
+  },
+  {
+    "id": "ml4w-arch1",
+    "name": "Arch1",
+    "category": "ML4W",
+    "full": "full/arch1.png",
+    "thumbnail": "thumbs/arch1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/arch1.png"
+  },
+  {
+    "id": "ml4w-arch2",
+    "name": "Arch2",
+    "category": "ML4W",
+    "full": "full/arch2.jpg",
+    "thumbnail": "thumbs/arch2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/arch2.jpg"
+  },
+  {
+    "id": "ml4w-arch3",
+    "name": "Arch3",
+    "category": "ML4W",
+    "full": "full/arch3.jpg",
+    "thumbnail": "thumbs/arch3.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/arch3.jpg"
+  },
+  {
+    "id": "ml4w-astronaut",
+    "name": "Astronaut",
+    "category": "ML4W",
+    "full": "full/astronaut.png",
+    "thumbnail": "thumbs/astronaut.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/astronaut.png"
+  },
+  {
+    "id": "ml4w-astronaut2",
+    "name": "Astronaut2",
+    "category": "ML4W",
+    "full": "full/astronaut2.png",
+    "thumbnail": "thumbs/astronaut2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/astronaut2.png"
+  },
+  {
+    "id": "ml4w-astronaut-jellyfish",
+    "name": "Astronaut Jellyfish",
+    "category": "ML4W",
+    "full": "full/astronaut_jellyfish.jpg",
+    "thumbnail": "thumbs/astronaut_jellyfish.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/astronaut_jellyfish.jpg"
+  },
+  {
+    "id": "ml4w-autumns-hues",
+    "name": "Autumns.Hues",
+    "category": "ML4W",
+    "full": "full/autumns.hues.png",
+    "thumbnail": "thumbs/autumns.hues.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/autumns.hues.png"
+  },
+  {
+    "id": "ml4w-big-sur-6",
+    "name": "Big Sur 6",
+    "category": "ML4W",
+    "full": "full/big-sur-6.jpg",
+    "thumbnail": "thumbs/big-sur-6.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/big-sur-6.jpg"
+  },
+  {
+    "id": "ml4w-black-whole",
+    "name": "Black Whole",
+    "category": "ML4W",
+    "full": "full/black-whole.jpg",
+    "thumbnail": "thumbs/black-whole.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/black-whole.jpg"
+  },
+  {
+    "id": "ml4w-black-whole2",
+    "name": "Black Whole2",
+    "category": "ML4W",
+    "full": "full/black-whole2.png",
+    "thumbnail": "thumbs/black-whole2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/black-whole2.png"
+  },
+  {
+    "id": "ml4w-blackhole",
+    "name": "Blackhole",
+    "category": "ML4W",
+    "full": "full/blackhole.jpg",
+    "thumbnail": "thumbs/blackhole.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/blackhole.jpg"
+  },
+  {
+    "id": "ml4w-bloodrock-steppes",
+    "name": "Bloodrock Steppes",
+    "category": "ML4W",
+    "full": "full/bloodrock-steppes.png",
+    "thumbnail": "thumbs/bloodrock-steppes.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/bloodrock-steppes.png"
+  },
+  {
+    "id": "ml4w-breathtaking-mountain-view",
+    "name": "Breathtaking Mountain View",
+    "category": "ML4W",
+    "full": "full/breathtaking-mountain-view.jpg",
+    "thumbnail": "thumbs/breathtaking-mountain-view.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/breathtaking-mountain-view.jpg"
+  },
+  {
+    "id": "ml4w-building-cyber",
+    "name": "Building Cyber",
+    "category": "ML4W",
+    "full": "full/building_cyber.jpg",
+    "thumbnail": "thumbs/building_cyber.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/building_cyber.jpg"
+  },
+  {
+    "id": "ml4w-calder-moore-aliencrack-01-copy",
+    "name": "Calder Moore Aliencrack 01 Copy",
+    "category": "ML4W",
+    "full": "full/calder-moore-aliencrack-01-copy.jpg",
+    "thumbnail": "thumbs/calder-moore-aliencrack-01-copy.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/calder-moore-aliencrack-01-copy.jpg"
+  },
+  {
+    "id": "ml4w-car-on-mars",
+    "name": "Car On Mars",
+    "category": "ML4W",
+    "full": "full/car_on_mars.jpg",
+    "thumbnail": "thumbs/car_on_mars.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/car_on_mars.jpg"
+  },
+  {
+    "id": "ml4w-catching-the-desert",
+    "name": "Catching The Desert",
+    "category": "ML4W",
+    "full": "full/catching-the-desert.jpeg",
+    "thumbnail": "thumbs/catching-the-desert.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/catching-the-desert.jpeg"
+  },
+  {
+    "id": "ml4w-chromatic-waves",
+    "name": "Chromatic Waves",
+    "category": "ML4W",
+    "full": "full/chromatic-waves.png",
+    "thumbnail": "thumbs/chromatic-waves.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/chromatic-waves.png"
+  },
+  {
+    "id": "ml4w-city-from-above",
+    "name": "City From Above",
+    "category": "ML4W",
+    "full": "full/city-from-above.jpg",
+    "thumbnail": "thumbs/city-from-above.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/city-from-above.jpg"
+  },
+  {
+    "id": "ml4w-city-rain",
+    "name": "City Rain",
+    "category": "ML4W",
+    "full": "full/city-rain.png",
+    "thumbnail": "thumbs/city-rain.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/city-rain.png"
+  },
+  {
+    "id": "ml4w-city-skyline",
+    "name": "City Skyline",
+    "category": "ML4W",
+    "full": "full/city-skyline.jpg",
+    "thumbnail": "thumbs/city-skyline.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/city-skyline.jpg"
+  },
+  {
+    "id": "ml4w-city-sundown",
+    "name": "City Sundown",
+    "category": "ML4W",
+    "full": "full/city-sundown.png",
+    "thumbnail": "thumbs/city-sundown.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/city-sundown.png"
+  },
+  {
+    "id": "ml4w-color-wall",
+    "name": "Color Wall",
+    "category": "ML4W",
+    "full": "full/color-wall.jpg",
+    "thumbnail": "thumbs/color-wall.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/color-wall.jpg"
+  },
+  {
+    "id": "ml4w-colored-silence",
+    "name": "Colored Silence",
+    "category": "ML4W",
+    "full": "full/colored-silence.jpg",
+    "thumbnail": "thumbs/colored-silence.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/colored-silence.jpg"
+  },
+  {
+    "id": "ml4w-comet",
+    "name": "Comet",
+    "category": "ML4W",
+    "full": "full/comet.jpg",
+    "thumbnail": "thumbs/comet.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/comet.jpg"
+  },
+  {
+    "id": "ml4w-cool-astronaut",
+    "name": "Cool Astronaut",
+    "category": "ML4W",
+    "full": "full/cool-astronaut.jpg",
+    "thumbnail": "thumbs/cool-astronaut.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/cool-astronaut.jpg"
+  },
+  {
+    "id": "ml4w-copper-mountain",
+    "name": "Copper Mountain",
+    "category": "ML4W",
+    "full": "full/copper_mountain.jpg",
+    "thumbnail": "thumbs/copper_mountain.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/copper_mountain.jpg"
+  },
+  {
+    "id": "ml4w-core-memory",
+    "name": "Core Memory",
+    "category": "ML4W",
+    "full": "full/core_memory.jpg",
+    "thumbnail": "thumbs/core_memory.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/core_memory.jpg"
+  },
+  {
+    "id": "ml4w-cyberpunk",
+    "name": "Cyberpunk",
+    "category": "ML4W",
+    "full": "full/cyberpunk.png",
+    "thumbnail": "thumbs/cyberpunk.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/cyberpunk.png"
+  },
+  {
+    "id": "ml4w-cyberpunk1",
+    "name": "Cyberpunk1",
+    "category": "ML4W",
+    "full": "full/cyberpunk1.jpg",
+    "thumbnail": "thumbs/cyberpunk1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/cyberpunk1.jpg"
+  },
+  {
+    "id": "ml4w-cyberpunk2-drive",
+    "name": "Cyberpunk2 Drive",
+    "category": "ML4W",
+    "full": "full/cyberpunk2-drive.jpg",
+    "thumbnail": "thumbs/cyberpunk2-drive.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/cyberpunk2-drive.jpg"
+  },
+  {
+    "id": "ml4w-cyberpunk3-drive",
+    "name": "Cyberpunk3 Drive",
+    "category": "ML4W",
+    "full": "full/cyberpunk3-drive.jpg",
+    "thumbnail": "thumbs/cyberpunk3-drive.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/cyberpunk3-drive.jpg"
+  },
+  {
+    "id": "ml4w-dark-star",
+    "name": "Dark Star",
+    "category": "ML4W",
+    "full": "full/dark-star.jpg",
+    "thumbnail": "thumbs/dark-star.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/dark-star.jpg"
+  },
+  {
+    "id": "ml4w-dark-waves",
+    "name": "Dark Waves",
+    "category": "ML4W",
+    "full": "full/dark-waves.jpg",
+    "thumbnail": "thumbs/dark-waves.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/dark-waves.jpg"
+  },
+  {
+    "id": "ml4w-deer-and-sunset",
+    "name": "Deer And Sunset",
+    "category": "ML4W",
+    "full": "full/deer_and_sunset.jpg",
+    "thumbnail": "thumbs/deer_and_sunset.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/deer_and_sunset.jpg"
+  },
+  {
+    "id": "ml4w-deer-in-pine-forest",
+    "name": "Deer In Pine Forest",
+    "category": "ML4W",
+    "full": "full/deer_in_pine_forest.jpg",
+    "thumbnail": "thumbs/deer_in_pine_forest.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/deer_in_pine_forest.jpg"
+  },
+  {
+    "id": "ml4w-default",
+    "name": "Default",
+    "category": "ML4W",
+    "full": "full/default.jpg",
+    "thumbnail": "thumbs/default.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/default.jpg"
+  },
+  {
+    "id": "ml4w-depechemode-violator",
+    "name": "Depechemode Violator",
+    "category": "ML4W",
+    "full": "full/depechemode-violator.png",
+    "thumbnail": "thumbs/depechemode-violator.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/depechemode-violator.png"
+  },
+  {
+    "id": "ml4w-desert-red-sun",
+    "name": "Desert Red Sun",
+    "category": "ML4W",
+    "full": "full/desert-red-sun.jpg",
+    "thumbnail": "thumbs/desert-red-sun.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/desert-red-sun.jpg"
+  },
+  {
+    "id": "ml4w-desert-with-mountains-moon",
+    "name": "Desert With Mountains Moon",
+    "category": "ML4W",
+    "full": "full/Desert-With-Mountains-Moon.jpg",
+    "thumbnail": "thumbs/Desert-With-Mountains-Moon.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/Desert-With-Mountains-Moon.jpg"
+  },
+  {
+    "id": "ml4w-dunes-sun",
+    "name": "Dunes Sun",
+    "category": "ML4W",
+    "full": "full/dunes-sun.jpg",
+    "thumbnail": "thumbs/dunes-sun.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/dunes-sun.jpg"
+  },
+  {
+    "id": "ml4w-earth-from-moon",
+    "name": "Earth From Moon",
+    "category": "ML4W",
+    "full": "full/earth-from-moon.jpg",
+    "thumbnail": "thumbs/earth-from-moon.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/earth-from-moon.jpg"
+  },
+  {
+    "id": "ml4w-emergence",
+    "name": "Emergence",
+    "category": "ML4W",
+    "full": "full/emergence.jpg",
+    "thumbnail": "thumbs/emergence.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/emergence.jpg"
+  },
+  {
+    "id": "ml4w-enterprise-desert-crash",
+    "name": "Enterprise Desert Crash",
+    "category": "ML4W",
+    "full": "full/enterprise-desert-crash.png",
+    "thumbnail": "thumbs/enterprise-desert-crash.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/enterprise-desert-crash.png"
+  },
+  {
+    "id": "ml4w-escape-velocity",
+    "name": "Escape Velocity",
+    "category": "ML4W",
+    "full": "full/escape_velocity.jpg",
+    "thumbnail": "thumbs/escape_velocity.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/escape_velocity.jpg"
+  },
+  {
+    "id": "ml4w-expanse",
+    "name": "Expanse",
+    "category": "ML4W",
+    "full": "full/expanse.jpg",
+    "thumbnail": "thumbs/expanse.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/expanse.jpg"
+  },
+  {
+    "id": "ml4w-explorer-robot",
+    "name": "Explorer Robot",
+    "category": "ML4W",
+    "full": "full/explorer-robot.png",
+    "thumbnail": "thumbs/explorer-robot.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/explorer-robot.png"
+  },
+  {
+    "id": "ml4w-explorer-green-day",
+    "name": "Explorer Green Day",
+    "category": "ML4W",
+    "full": "full/explorer_green_day.jpg",
+    "thumbnail": "thumbs/explorer_green_day.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/explorer_green_day.jpg"
+  },
+  {
+    "id": "ml4w-explorer-orange-sunset",
+    "name": "Explorer Orange Sunset",
+    "category": "ML4W",
+    "full": "full/explorer_orange_sunset.jpg",
+    "thumbnail": "thumbs/explorer_orange_sunset.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/explorer_orange_sunset.jpg"
+  },
+  {
+    "id": "ml4w-fall-echo-tries",
+    "name": "Fall Echo Tries",
+    "category": "ML4W",
+    "full": "full/fall-echo-tries.png",
+    "thumbnail": "thumbs/fall-echo-tries.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/fall-echo-tries.png"
+  },
+  {
+    "id": "ml4w-fantasy-autumn",
+    "name": "Fantasy Autumn",
+    "category": "ML4W",
+    "full": "full/Fantasy-Autumn.png",
+    "thumbnail": "thumbs/Fantasy-Autumn.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/Fantasy-Autumn.png"
+  },
+  {
+    "id": "ml4w-fantasy-landscape3",
+    "name": "Fantasy Landscape3",
+    "category": "ML4W",
+    "full": "full/Fantasy-Landscape3.png",
+    "thumbnail": "thumbs/Fantasy-Landscape3.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/Fantasy-Landscape3.png"
+  },
+  {
+    "id": "ml4w-fantasy-mountain1",
+    "name": "Fantasy Mountain1",
+    "category": "ML4W",
+    "full": "full/fantasy-mountain1.jpg",
+    "thumbnail": "thumbs/fantasy-mountain1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/fantasy-mountain1.jpg"
+  },
+  {
+    "id": "ml4w-fantasy-mountain2",
+    "name": "Fantasy Mountain2",
+    "category": "ML4W",
+    "full": "full/fantasy-mountain2.jpg",
+    "thumbnail": "thumbs/fantasy-mountain2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/fantasy-mountain2.jpg"
+  },
+  {
+    "id": "ml4w-fantasy-mountain3",
+    "name": "Fantasy Mountain3",
+    "category": "ML4W",
+    "full": "full/fantasy-mountain3.jpg",
+    "thumbnail": "thumbs/fantasy-mountain3.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/fantasy-mountain3.jpg"
+  },
+  {
+    "id": "ml4w-fiery-sunset-reflection",
+    "name": "Fiery Sunset Reflection",
+    "category": "ML4W",
+    "full": "full/fiery-sunset-reflection.jpg",
+    "thumbnail": "thumbs/fiery-sunset-reflection.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/fiery-sunset-reflection.jpg"
+  },
+  {
+    "id": "ml4w-fish-2",
+    "name": "Fish 2",
+    "category": "ML4W",
+    "full": "full/fish_2.jpg",
+    "thumbnail": "thumbs/fish_2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/fish_2.jpg"
+  },
+  {
+    "id": "ml4w-flowers1",
+    "name": "Flowers1",
+    "category": "ML4W",
+    "full": "full/flowers1.png",
+    "thumbnail": "thumbs/flowers1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/flowers1.png"
+  },
+  {
+    "id": "ml4w-flowers2",
+    "name": "Flowers2",
+    "category": "ML4W",
+    "full": "full/flowers2.jpg",
+    "thumbnail": "thumbs/flowers2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/flowers2.jpg"
+  },
+  {
+    "id": "ml4w-forest-landscape",
+    "name": "Forest Landscape",
+    "category": "ML4W",
+    "full": "full/forest-landscape.jpg",
+    "thumbnail": "thumbs/forest-landscape.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/forest-landscape.jpg"
+  },
+  {
+    "id": "ml4w-forest1",
+    "name": "Forest1",
+    "category": "ML4W",
+    "full": "full/forest1.jpg",
+    "thumbnail": "thumbs/forest1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/forest1.jpg"
+  },
+  {
+    "id": "ml4w-forest2",
+    "name": "Forest2",
+    "category": "ML4W",
+    "full": "full/forest2.jpg",
+    "thumbnail": "thumbs/forest2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/forest2.jpg"
+  },
+  {
+    "id": "ml4w-forest3-mononoke",
+    "name": "Forest3 Mononoke",
+    "category": "ML4W",
+    "full": "full/forest3-mononoke.png",
+    "thumbnail": "thumbs/forest3-mononoke.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/forest3-mononoke.png"
+  },
+  {
+    "id": "ml4w-forest4",
+    "name": "Forest4",
+    "category": "ML4W",
+    "full": "full/forest4.png",
+    "thumbnail": "thumbs/forest4.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/forest4.png"
+  },
+  {
+    "id": "ml4w-frequency",
+    "name": "Frequency",
+    "category": "ML4W",
+    "full": "full/frequency.jpg",
+    "thumbnail": "thumbs/frequency.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/frequency.jpg"
+  },
+  {
+    "id": "ml4w-frozen-shores-burning-sky",
+    "name": "Frozen Shores Burning Sky",
+    "category": "ML4W",
+    "full": "full/frozen-shores-burning-sky.jpeg",
+    "thumbnail": "thumbs/frozen-shores-burning-sky.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/frozen-shores-burning-sky.jpeg"
+  },
+  {
+    "id": "ml4w-gdtography",
+    "name": "Gdtography",
+    "category": "ML4W",
+    "full": "full/gdtography.jpg",
+    "thumbnail": "thumbs/gdtography.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/gdtography.jpg"
+  },
+  {
+    "id": "ml4w-geometric-abstract",
+    "name": "Geometric Abstract",
+    "category": "ML4W",
+    "full": "full/geometric-abstract.jpg",
+    "thumbnail": "thumbs/geometric-abstract.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/geometric-abstract.jpg"
+  },
+  {
+    "id": "ml4w-geometric-horizons",
+    "name": "Geometric Horizons",
+    "category": "ML4W",
+    "full": "full/geometric-horizons.png",
+    "thumbnail": "thumbs/geometric-horizons.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/geometric-horizons.png"
+  },
+  {
+    "id": "ml4w-glowing-green-dew",
+    "name": "Glowing Green Dew",
+    "category": "ML4W",
+    "full": "full/glowing-green-dew.jpg",
+    "thumbnail": "thumbs/glowing-green-dew.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/glowing-green-dew.jpg"
+  },
+  {
+    "id": "ml4w-golden-horizon",
+    "name": "Golden Horizon",
+    "category": "ML4W",
+    "full": "full/golden-horizon.jpg",
+    "thumbnail": "thumbs/golden-horizon.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/golden-horizon.jpg"
+  },
+  {
+    "id": "ml4w-golden-hours",
+    "name": "Golden Hours",
+    "category": "ML4W",
+    "full": "full/golden-hours.png",
+    "thumbnail": "thumbs/golden-hours.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/golden-hours.png"
+  },
+  {
+    "id": "ml4w-green-sea",
+    "name": "Green Sea",
+    "category": "ML4W",
+    "full": "full/green_sea.jpg",
+    "thumbnail": "thumbs/green_sea.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/green_sea.jpg"
+  },
+  {
+    "id": "ml4w-groot-1",
+    "name": "Groot 1",
+    "category": "ML4W",
+    "full": "full/groot_1.jpg",
+    "thumbnail": "thumbs/groot_1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/groot_1.jpg"
+  },
+  {
+    "id": "ml4w-headphones-paint-color-splash",
+    "name": "Headphones Paint Color Splash",
+    "category": "ML4W",
+    "full": "full/headphones-paint-color-splash.jpg",
+    "thumbnail": "thumbs/headphones-paint-color-splash.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/headphones-paint-color-splash.jpg"
+  },
+  {
+    "id": "ml4w-highlands-grid",
+    "name": "Highlands Grid",
+    "category": "ML4W",
+    "full": "full/highlands-grid.jpg",
+    "thumbnail": "thumbs/highlands-grid.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/highlands-grid.jpg"
+  },
+  {
+    "id": "ml4w-honkadaloonga",
+    "name": "Honkadaloonga",
+    "category": "ML4W",
+    "full": "full/honkadaloonga.png",
+    "thumbnail": "thumbs/honkadaloonga.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/honkadaloonga.png"
+  },
+  {
+    "id": "ml4w-house1",
+    "name": "House1",
+    "category": "ML4W",
+    "full": "full/house1.png",
+    "thumbnail": "thumbs/house1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/house1.png"
+  },
+  {
+    "id": "ml4w-hyprland",
+    "name": "Hyprland",
+    "category": "ML4W",
+    "full": "full/hyprland.jpg",
+    "thumbnail": "thumbs/hyprland.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/hyprland.jpg"
+  },
+  {
+    "id": "ml4w-ireland-hills",
+    "name": "Ireland Hills",
+    "category": "ML4W",
+    "full": "full/ireland-hills.jpg",
+    "thumbnail": "thumbs/ireland-hills.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/ireland-hills.jpg"
+  },
+  {
+    "id": "ml4w-italy",
+    "name": "Italy",
+    "category": "ML4W",
+    "full": "full/italy.png",
+    "thumbnail": "thumbs/italy.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/italy.png"
+  },
+  {
+    "id": "ml4w-jagged-peaks",
+    "name": "Jagged Peaks",
+    "category": "ML4W",
+    "full": "full/jagged-peaks.jpg",
+    "thumbnail": "thumbs/jagged-peaks.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/jagged-peaks.jpg"
+  },
+  {
+    "id": "ml4w-japanese1",
+    "name": "Japanese1",
+    "category": "ML4W",
+    "full": "full/japanese1.jpg",
+    "thumbnail": "thumbs/japanese1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/japanese1.jpg"
+  },
+  {
+    "id": "ml4w-japanese2",
+    "name": "Japanese2",
+    "category": "ML4W",
+    "full": "full/japanese2.png",
+    "thumbnail": "thumbs/japanese2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/japanese2.png"
+  },
+  {
+    "id": "ml4w-japanese3",
+    "name": "Japanese3",
+    "category": "ML4W",
+    "full": "full/japanese3.jpg",
+    "thumbnail": "thumbs/japanese3.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/japanese3.jpg"
+  },
+  {
+    "id": "ml4w-kath",
+    "name": "Kath",
+    "category": "ML4W",
+    "full": "full/kath.jpg",
+    "thumbnail": "thumbs/kath.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/kath.jpg"
+  },
+  {
+    "id": "ml4w-lake-mcdonald",
+    "name": "Lake Mcdonald",
+    "category": "ML4W",
+    "full": "full/lake-mcdonald.jpg",
+    "thumbnail": "thumbs/lake-mcdonald.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/lake-mcdonald.jpg"
+  },
+  {
+    "id": "ml4w-landscape-abstract-neon",
+    "name": "Landscape Abstract Neon",
+    "category": "ML4W",
+    "full": "full/landscape-abstract-neon.jpg",
+    "thumbnail": "thumbs/landscape-abstract-neon.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/landscape-abstract-neon.jpg"
+  },
+  {
+    "id": "ml4w-landscape",
+    "name": "Landscape",
+    "category": "ML4W",
+    "full": "full/landscape.jpg",
+    "thumbnail": "thumbs/landscape.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/landscape.jpg"
+  },
+  {
+    "id": "ml4w-landscape1",
+    "name": "Landscape1",
+    "category": "ML4W",
+    "full": "full/landscape1.png",
+    "thumbnail": "thumbs/landscape1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/landscape1.png"
+  },
+  {
+    "id": "ml4w-landscape2",
+    "name": "Landscape2",
+    "category": "ML4W",
+    "full": "full/landscape2.jpg",
+    "thumbnail": "thumbs/landscape2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/landscape2.jpg"
+  },
+  {
+    "id": "ml4w-landscape3",
+    "name": "Landscape3",
+    "category": "ML4W",
+    "full": "full/landscape3.png",
+    "thumbnail": "thumbs/landscape3.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/landscape3.png"
+  },
+  {
+    "id": "ml4w-landscape4-whisper",
+    "name": "Landscape4 Whisper",
+    "category": "ML4W",
+    "full": "full/landscape4-whisper.png",
+    "thumbnail": "thumbs/landscape4-whisper.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/landscape4-whisper.png"
+  },
+  {
+    "id": "ml4w-lion-galaxy-purple",
+    "name": "Lion Galaxy Purple",
+    "category": "ML4W",
+    "full": "full/lion_galaxy_purple.jpg",
+    "thumbnail": "thumbs/lion_galaxy_purple.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/lion_galaxy_purple.jpg"
+  },
+  {
+    "id": "ml4w-liquid1",
+    "name": "Liquid1",
+    "category": "ML4W",
+    "full": "full/liquid1.jpg",
+    "thumbnail": "thumbs/liquid1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/liquid1.jpg"
+  },
+  {
+    "id": "ml4w-liquid2",
+    "name": "Liquid2",
+    "category": "ML4W",
+    "full": "full/liquid2.jpg",
+    "thumbnail": "thumbs/liquid2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/liquid2.jpg"
+  },
+  {
+    "id": "ml4w-lofoten-sundown",
+    "name": "Lofoten Sundown",
+    "category": "ML4W",
+    "full": "full/lofoten-sundown.jpg",
+    "thumbnail": "thumbs/lofoten-sundown.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/lofoten-sundown.jpg"
+  },
+  {
+    "id": "ml4w-lofoten1",
+    "name": "Lofoten1",
+    "category": "ML4W",
+    "full": "full/lofoten1.jpg",
+    "thumbnail": "thumbs/lofoten1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/lofoten1.jpg"
+  },
+  {
+    "id": "ml4w-lofoten2",
+    "name": "Lofoten2",
+    "category": "ML4W",
+    "full": "full/lofoten2.jpg",
+    "thumbnail": "thumbs/lofoten2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/lofoten2.jpg"
+  },
+  {
+    "id": "ml4w-marina-bay-sands",
+    "name": "Marina Bay Sands",
+    "category": "ML4W",
+    "full": "full/marina-bay-sands.png",
+    "thumbnail": "thumbs/marina-bay-sands.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/marina-bay-sands.png"
+  },
+  {
+    "id": "ml4w-midnight-reflections-moonlit-sea",
+    "name": "Midnight Reflections Moonlit Sea",
+    "category": "ML4W",
+    "full": "full/midnight-reflections-moonlit-sea.jpg",
+    "thumbnail": "thumbs/midnight-reflections-moonlit-sea.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/midnight-reflections-moonlit-sea.jpg"
+  },
+  {
+    "id": "ml4w-minimal-beton-building",
+    "name": "Minimal Beton Building",
+    "category": "ML4W",
+    "full": "full/minimal-beton-building.jpg",
+    "thumbnail": "thumbs/minimal-beton-building.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/minimal-beton-building.jpg"
+  },
+  {
+    "id": "ml4w-minimal-boxes",
+    "name": "Minimal Boxes",
+    "category": "ML4W",
+    "full": "full/minimal-boxes.jpg",
+    "thumbnail": "thumbs/minimal-boxes.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/minimal-boxes.jpg"
+  },
+  {
+    "id": "ml4w-miracleos-light",
+    "name": "Miracleos Light",
+    "category": "ML4W",
+    "full": "full/miracleOS_light.jpg",
+    "thumbnail": "thumbs/miracleOS_light.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/miracleOS_light.jpg"
+  },
+  {
+    "id": "ml4w-mojave-dark-mode",
+    "name": "Mojave Dark Mode",
+    "category": "ML4W",
+    "full": "full/mojave-dark-mode.png",
+    "thumbnail": "thumbs/mojave-dark-mode.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mojave-dark-mode.png"
+  },
+  {
+    "id": "ml4w-molten-veins",
+    "name": "Molten Veins",
+    "category": "ML4W",
+    "full": "full/molten_veins.png",
+    "thumbnail": "thumbs/molten_veins.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/molten_veins.png"
+  },
+  {
+    "id": "ml4w-moonlight",
+    "name": "Moonlight",
+    "category": "ML4W",
+    "full": "full/moonlight.jpg",
+    "thumbnail": "thumbs/moonlight.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/moonlight.jpg"
+  },
+  {
+    "id": "ml4w-mountain-lake",
+    "name": "Mountain Lake",
+    "category": "ML4W",
+    "full": "full/mountain-lake.jpg",
+    "thumbnail": "thumbs/mountain-lake.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mountain-lake.jpg"
+  },
+  {
+    "id": "ml4w-mountain-landscape",
+    "name": "Mountain Landscape",
+    "category": "ML4W",
+    "full": "full/mountain-landscape.jpg",
+    "thumbnail": "thumbs/mountain-landscape.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mountain-landscape.jpg"
+  },
+  {
+    "id": "ml4w-mountain-range-during-sunrise",
+    "name": "Mountain Range During Sunrise",
+    "category": "ML4W",
+    "full": "full/mountain-range-during-sunrise.jpg",
+    "thumbnail": "thumbs/mountain-range-during-sunrise.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mountain-range-during-sunrise.jpg"
+  },
+  {
+    "id": "ml4w-mountain-snow-minima",
+    "name": "Mountain Snow Minima",
+    "category": "ML4W",
+    "full": "full/mountain-snow-minima.jpg",
+    "thumbnail": "thumbs/mountain-snow-minima.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mountain-snow-minima.jpg"
+  },
+  {
+    "id": "ml4w-mountain-sunrise",
+    "name": "Mountain Sunrise",
+    "category": "ML4W",
+    "full": "full/mountain-sunrise.jpg",
+    "thumbnail": "thumbs/mountain-sunrise.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mountain-sunrise.jpg"
+  },
+  {
+    "id": "ml4w-mountain-winter-sun",
+    "name": "Mountain Winter Sun",
+    "category": "ML4W",
+    "full": "full/mountain-winter-sun.jpg",
+    "thumbnail": "thumbs/mountain-winter-sun.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mountain-winter-sun.jpg"
+  },
+  {
+    "id": "ml4w-mountain-winter3",
+    "name": "Mountain Winter3",
+    "category": "ML4W",
+    "full": "full/mountain-winter3.jpg",
+    "thumbnail": "thumbs/mountain-winter3.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mountain-winter3.jpg"
+  },
+  {
+    "id": "ml4w-mountain-with-snow",
+    "name": "Mountain With Snow",
+    "category": "ML4W",
+    "full": "full/mountain-with-snow.jpg",
+    "thumbnail": "thumbs/mountain-with-snow.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mountain-with-snow.jpg"
+  },
+  {
+    "id": "ml4w-mountain",
+    "name": "Mountain",
+    "category": "ML4W",
+    "full": "full/mountain.jpg",
+    "thumbnail": "thumbs/mountain.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mountain.jpg"
+  },
+  {
+    "id": "ml4w-mountain-range",
+    "name": "Mountain Range",
+    "category": "ML4W",
+    "full": "full/mountain_range.jpg",
+    "thumbnail": "thumbs/mountain_range.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mountain_range.jpg"
+  },
+  {
+    "id": "ml4w-mountain-view",
+    "name": "Mountain View",
+    "category": "ML4W",
+    "full": "full/mountain_view.jpg",
+    "thumbnail": "thumbs/mountain_view.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mountain_view.jpg"
+  },
+  {
+    "id": "ml4w-mountains-with-sky",
+    "name": "Mountains With Sky",
+    "category": "ML4W",
+    "full": "full/mountains-with-sky.jpg",
+    "thumbnail": "thumbs/mountains-with-sky.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mountains-with-sky.jpg"
+  },
+  {
+    "id": "ml4w-muscle-car-ice-road-red-moon",
+    "name": "Muscle Car Ice Road Red Moon",
+    "category": "ML4W",
+    "full": "full/muscle-car-ice-road-red-moon.jpg",
+    "thumbnail": "thumbs/muscle-car-ice-road-red-moon.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/muscle-car-ice-road-red-moon.jpg"
+  },
+  {
+    "id": "ml4w-mystical-night-in-town",
+    "name": "Mystical Night In Town",
+    "category": "ML4W",
+    "full": "full/mystical-night-in-town.jpg",
+    "thumbnail": "thumbs/mystical-night-in-town.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/mystical-night-in-town.jpg"
+  },
+  {
+    "id": "ml4w-nature-quiet-masterpiece",
+    "name": "Nature Quiet Masterpiece",
+    "category": "ML4W",
+    "full": "full/nature-quiet-masterpiece.jpg",
+    "thumbnail": "thumbs/nature-quiet-masterpiece.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/nature-quiet-masterpiece.jpg"
+  },
+  {
+    "id": "ml4w-nature",
+    "name": "Nature",
+    "category": "ML4W",
+    "full": "full/nature.jpg",
+    "thumbnail": "thumbs/nature.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/nature.jpg"
+  },
+  {
+    "id": "ml4w-natures-mountain-waters",
+    "name": "Natures Mountain Waters",
+    "category": "ML4W",
+    "full": "full/natures-mountain-waters.jpg",
+    "thumbnail": "thumbs/natures-mountain-waters.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/natures-mountain-waters.jpg"
+  },
+  {
+    "id": "ml4w-neon-car",
+    "name": "Neon Car",
+    "category": "ML4W",
+    "full": "full/neon_car.jpg",
+    "thumbnail": "thumbs/neon_car.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/neon_car.jpg"
+  },
+  {
+    "id": "ml4w-neon-office",
+    "name": "Neon Office",
+    "category": "ML4W",
+    "full": "full/neon_office.jpg",
+    "thumbnail": "thumbs/neon_office.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/neon_office.jpg"
+  },
+  {
+    "id": "ml4w-neural",
+    "name": "Neural",
+    "category": "ML4W",
+    "full": "full/neural.jpg",
+    "thumbnail": "thumbs/neural.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/neural.jpg"
+  },
+  {
+    "id": "ml4w-new-worlds",
+    "name": "New Worlds",
+    "category": "ML4W",
+    "full": "full/new-worlds.png",
+    "thumbnail": "thumbs/new-worlds.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/new-worlds.png"
+  },
+  {
+    "id": "ml4w-night-city",
+    "name": "Night City",
+    "category": "ML4W",
+    "full": "full/night_city.jpg",
+    "thumbnail": "thumbs/night_city.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/night_city.jpg"
+  },
+  {
+    "id": "ml4w-no-mans-land",
+    "name": "No Mans Land",
+    "category": "ML4W",
+    "full": "full/no-mans-land.jpg",
+    "thumbnail": "thumbs/no-mans-land.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/no-mans-land.jpg"
+  },
+  {
+    "id": "ml4w-nocturne-of-steel-and-glass",
+    "name": "Nocturne Of Steel And Glass",
+    "category": "ML4W",
+    "full": "full/Nocturne-of-Steel-and-Glass.png",
+    "thumbnail": "thumbs/Nocturne-of-Steel-and-Glass.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/Nocturne-of-Steel-and-Glass.png"
+  },
+  {
+    "id": "ml4w-nordwall3",
+    "name": "Nordwall3",
+    "category": "ML4W",
+    "full": "full/nordwall3.jpg",
+    "thumbnail": "thumbs/nordwall3.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/nordwall3.jpg"
+  },
+  {
+    "id": "ml4w-northern-night",
+    "name": "Northern Night",
+    "category": "ML4W",
+    "full": "full/northern-night.jpg",
+    "thumbnail": "thumbs/northern-night.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/northern-night.jpg"
+  },
+  {
+    "id": "ml4w-onyx-flow",
+    "name": "Onyx Flow",
+    "category": "ML4W",
+    "full": "full/onyx-flow.png",
+    "thumbnail": "thumbs/onyx-flow.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/onyx-flow.png"
+  },
+  {
+    "id": "ml4w-orange-art",
+    "name": "Orange Art",
+    "category": "ML4W",
+    "full": "full/orange-art.jpg",
+    "thumbnail": "thumbs/orange-art.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/orange-art.jpg"
+  },
+  {
+    "id": "ml4w-orange-desert",
+    "name": "Orange Desert",
+    "category": "ML4W",
+    "full": "full/orange-desert.jpg",
+    "thumbnail": "thumbs/orange-desert.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/orange-desert.jpg"
+  },
+  {
+    "id": "ml4w-orange-tower",
+    "name": "Orange Tower",
+    "category": "ML4W",
+    "full": "full/orange-tower.jpg",
+    "thumbnail": "thumbs/orange-tower.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/orange-tower.jpg"
+  },
+  {
+    "id": "ml4w-peak-in-the-clouds",
+    "name": "Peak In The Clouds",
+    "category": "ML4W",
+    "full": "full/peak-in-the-clouds.jpg",
+    "thumbnail": "thumbs/peak-in-the-clouds.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/peak-in-the-clouds.jpg"
+  },
+  {
+    "id": "ml4w-pexels-robert-clark",
+    "name": "Pexels Robert Clark",
+    "category": "ML4W",
+    "full": "full/pexels-robert-clark.jpg",
+    "thumbnail": "thumbs/pexels-robert-clark.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/pexels-robert-clark.jpg"
+  },
+  {
+    "id": "ml4w-plasmawaves",
+    "name": "Plasmawaves",
+    "category": "ML4W",
+    "full": "full/plasmawaves.png",
+    "thumbnail": "thumbs/plasmawaves.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/plasmawaves.png"
+  },
+  {
+    "id": "ml4w-raw-expression",
+    "name": "Raw Expression",
+    "category": "ML4W",
+    "full": "full/raw-expression.jpg",
+    "thumbnail": "thumbs/raw-expression.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/raw-expression.jpg"
+  },
+  {
+    "id": "ml4w-red-and-blue-pillars",
+    "name": "Red And Blue Pillars",
+    "category": "ML4W",
+    "full": "full/red-and-blue-pillars.jpg",
+    "thumbnail": "thumbs/red-and-blue-pillars.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/red-and-blue-pillars.jpg"
+  },
+  {
+    "id": "ml4w-retro-race",
+    "name": "Retro Race",
+    "category": "ML4W",
+    "full": "full/retro-race.jpg",
+    "thumbnail": "thumbs/retro-race.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/retro-race.jpg"
+  },
+  {
+    "id": "ml4w-retro-truck",
+    "name": "Retro Truck",
+    "category": "ML4W",
+    "full": "full/retro-truck.png",
+    "thumbnail": "thumbs/retro-truck.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/retro-truck.png"
+  },
+  {
+    "id": "ml4w-river-to-castle-theme-blue",
+    "name": "River To Castle Theme Blue",
+    "category": "ML4W",
+    "full": "full/river_to_castle_theme_blue.jpg",
+    "thumbnail": "thumbs/river_to_castle_theme_blue.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/river_to_castle_theme_blue.jpg"
+  },
+  {
+    "id": "ml4w-robot-home",
+    "name": "Robot Home",
+    "category": "ML4W",
+    "full": "full/robot-home.png",
+    "thumbnail": "thumbs/robot-home.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/robot-home.png"
+  },
+  {
+    "id": "ml4w-rocket-launch",
+    "name": "Rocket Launch",
+    "category": "ML4W",
+    "full": "full/rocket_launch.jpg",
+    "thumbnail": "thumbs/rocket_launch.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/rocket_launch.jpg"
+  },
+  {
+    "id": "ml4w-rocky-land",
+    "name": "Rocky Land",
+    "category": "ML4W",
+    "full": "full/rocky_land.jpg",
+    "thumbnail": "thumbs/rocky_land.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/rocky_land.jpg"
+  },
+  {
+    "id": "ml4w-room-dark",
+    "name": "Room Dark",
+    "category": "ML4W",
+    "full": "full/room-dark.png",
+    "thumbnail": "thumbs/room-dark.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/room-dark.png"
+  },
+  {
+    "id": "ml4w-room1-sunset",
+    "name": "Room1 Sunset",
+    "category": "ML4W",
+    "full": "full/room1-sunset.png",
+    "thumbnail": "thumbs/room1-sunset.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/room1-sunset.png"
+  },
+  {
+    "id": "ml4w-sand-dunes",
+    "name": "Sand Dunes",
+    "category": "ML4W",
+    "full": "full/sand-dunes.jpg",
+    "thumbnail": "thumbs/sand-dunes.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sand-dunes.jpg"
+  },
+  {
+    "id": "ml4w-sea1",
+    "name": "Sea1",
+    "category": "ML4W",
+    "full": "full/sea1.jpg",
+    "thumbnail": "thumbs/sea1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sea1.jpg"
+  },
+  {
+    "id": "ml4w-sea2-waves",
+    "name": "Sea2 Waves",
+    "category": "ML4W",
+    "full": "full/sea2-waves.jpg",
+    "thumbnail": "thumbs/sea2-waves.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sea2-waves.jpg"
+  },
+  {
+    "id": "ml4w-shard-window-dark",
+    "name": "Shard Window Dark",
+    "category": "ML4W",
+    "full": "full/shard-window-dark.png",
+    "thumbnail": "thumbs/shard-window-dark.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/shard-window-dark.png"
+  },
+  {
+    "id": "ml4w-sky1",
+    "name": "Sky1",
+    "category": "ML4W",
+    "full": "full/sky1.jpg",
+    "thumbnail": "thumbs/sky1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sky1.jpg"
+  },
+  {
+    "id": "ml4w-sky2",
+    "name": "Sky2",
+    "category": "ML4W",
+    "full": "full/sky2.jpeg",
+    "thumbnail": "thumbs/sky2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sky2.jpeg"
+  },
+  {
+    "id": "ml4w-snowcapped-mountains",
+    "name": "Snowcapped Mountains",
+    "category": "ML4W",
+    "full": "full/snowcapped-mountains.jpg",
+    "thumbnail": "thumbs/snowcapped-mountains.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/snowcapped-mountains.jpg"
+  },
+  {
+    "id": "ml4w-snowy-peace",
+    "name": "Snowy Peace",
+    "category": "ML4W",
+    "full": "full/snowy-peace.png",
+    "thumbnail": "thumbs/snowy-peace.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/snowy-peace.png"
+  },
+  {
+    "id": "ml4w-solitary-glow",
+    "name": "Solitary Glow",
+    "category": "ML4W",
+    "full": "full/Solitary-Glow.png",
+    "thumbnail": "thumbs/Solitary-Glow.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/Solitary-Glow.png"
+  },
+  {
+    "id": "ml4w-solitary-peaks",
+    "name": "Solitary Peaks",
+    "category": "ML4W",
+    "full": "full/solitary-peaks.jpg",
+    "thumbnail": "thumbs/solitary-peaks.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/solitary-peaks.jpg"
+  },
+  {
+    "id": "ml4w-space-age-adventures",
+    "name": "Space Age Adventures",
+    "category": "ML4W",
+    "full": "full/space-age-adventures.png",
+    "thumbnail": "thumbs/space-age-adventures.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/space-age-adventures.png"
+  },
+  {
+    "id": "ml4w-space-bullet",
+    "name": "Space Bullet",
+    "category": "ML4W",
+    "full": "full/space-bullet.jpg",
+    "thumbnail": "thumbs/space-bullet.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/space-bullet.jpg"
+  },
+  {
+    "id": "ml4w-space-city",
+    "name": "Space City",
+    "category": "ML4W",
+    "full": "full/space-city.jpg",
+    "thumbnail": "thumbs/space-city.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/space-city.jpg"
+  },
+  {
+    "id": "ml4w-space-nebula",
+    "name": "Space Nebula",
+    "category": "ML4W",
+    "full": "full/Space-Nebula.png",
+    "thumbnail": "thumbs/Space-Nebula.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/Space-Nebula.png"
+  },
+  {
+    "id": "ml4w-space-with-ships",
+    "name": "Space With Ships",
+    "category": "ML4W",
+    "full": "full/space-with-ships.png",
+    "thumbnail": "thumbs/space-with-ships.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/space-with-ships.png"
+  },
+  {
+    "id": "ml4w-space1",
+    "name": "Space1",
+    "category": "ML4W",
+    "full": "full/space1.jpg",
+    "thumbnail": "thumbs/space1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/space1.jpg"
+  },
+  {
+    "id": "ml4w-space2",
+    "name": "Space2",
+    "category": "ML4W",
+    "full": "full/space2.jpg",
+    "thumbnail": "thumbs/space2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/space2.jpg"
+  },
+  {
+    "id": "ml4w-space3",
+    "name": "Space3",
+    "category": "ML4W",
+    "full": "full/space3.jpg",
+    "thumbnail": "thumbs/space3.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/space3.jpg"
+  },
+  {
+    "id": "ml4w-spaceship-start",
+    "name": "Spaceship Start",
+    "category": "ML4W",
+    "full": "full/spaceship-start.jpg",
+    "thumbnail": "thumbs/spaceship-start.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/spaceship-start.jpg"
+  },
+  {
+    "id": "ml4w-spaceship1",
+    "name": "Spaceship1",
+    "category": "ML4W",
+    "full": "full/spaceship1.jpg",
+    "thumbnail": "thumbs/spaceship1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/spaceship1.jpg"
+  },
+  {
+    "id": "ml4w-spaceship2",
+    "name": "Spaceship2",
+    "category": "ML4W",
+    "full": "full/spaceship2.jpg",
+    "thumbnail": "thumbs/spaceship2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/spaceship2.jpg"
+  },
+  {
+    "id": "ml4w-spaceshuttle",
+    "name": "Spaceshuttle",
+    "category": "ML4W",
+    "full": "full/spaceshuttle.png",
+    "thumbnail": "thumbs/spaceshuttle.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/spaceshuttle.png"
+  },
+  {
+    "id": "ml4w-sparkling-crystals",
+    "name": "Sparkling Crystals",
+    "category": "ML4W",
+    "full": "full/sparkling-crystals.jpg",
+    "thumbnail": "thumbs/sparkling-crystals.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sparkling-crystals.jpg"
+  },
+  {
+    "id": "ml4w-spirited-away1",
+    "name": "Spirited Away1",
+    "category": "ML4W",
+    "full": "full/spirited-away1.jpg",
+    "thumbnail": "thumbs/spirited-away1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/spirited-away1.jpg"
+  },
+  {
+    "id": "ml4w-stars-as-minimal",
+    "name": "Stars As Minimal",
+    "category": "ML4W",
+    "full": "full/stars-as-minimal.jpg",
+    "thumbnail": "thumbs/stars-as-minimal.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/stars-as-minimal.jpg"
+  },
+  {
+    "id": "ml4w-street1",
+    "name": "Street1",
+    "category": "ML4W",
+    "full": "full/street1.jpg",
+    "thumbnail": "thumbs/street1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/street1.jpg"
+  },
+  {
+    "id": "ml4w-sundown-mountain",
+    "name": "Sundown Mountain",
+    "category": "ML4W",
+    "full": "full/sundown_mountain.jpg",
+    "thumbnail": "thumbs/sundown_mountain.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sundown_mountain.jpg"
+  },
+  {
+    "id": "ml4w-sunset-01",
+    "name": "Sunset 01",
+    "category": "ML4W",
+    "full": "full/sunset-01.png",
+    "thumbnail": "thumbs/sunset-01.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sunset-01.png"
+  },
+  {
+    "id": "ml4w-sunset-10",
+    "name": "Sunset 10",
+    "category": "ML4W",
+    "full": "full/sunset-10.jpg",
+    "thumbnail": "thumbs/sunset-10.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sunset-10.jpg"
+  },
+  {
+    "id": "ml4w-sunset-drive-forest",
+    "name": "Sunset Drive Forest",
+    "category": "ML4W",
+    "full": "full/sunset-drive-forest.jpg",
+    "thumbnail": "thumbs/sunset-drive-forest.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sunset-drive-forest.jpg"
+  },
+  {
+    "id": "ml4w-sunset-in-thick-forest",
+    "name": "Sunset In Thick Forest",
+    "category": "ML4W",
+    "full": "full/sunset-in-thick-forest.jpg",
+    "thumbnail": "thumbs/sunset-in-thick-forest.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sunset-in-thick-forest.jpg"
+  },
+  {
+    "id": "ml4w-sunset-lookout",
+    "name": "Sunset Lookout",
+    "category": "ML4W",
+    "full": "full/sunset-lookout.jpg",
+    "thumbnail": "thumbs/sunset-lookout.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sunset-lookout.jpg"
+  },
+  {
+    "id": "ml4w-sunset-mountain-beautiful",
+    "name": "Sunset Mountain Beautiful",
+    "category": "ML4W",
+    "full": "full/sunset-mountain-beautiful.jpg",
+    "thumbnail": "thumbs/sunset-mountain-beautiful.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sunset-mountain-beautiful.jpg"
+  },
+  {
+    "id": "ml4w-sunset-scenery-minimalist",
+    "name": "Sunset Scenery Minimalist",
+    "category": "ML4W",
+    "full": "full/sunset-scenery-minimalist.jpg",
+    "thumbnail": "thumbs/sunset-scenery-minimalist.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sunset-scenery-minimalist.jpg"
+  },
+  {
+    "id": "ml4w-sunset-layers",
+    "name": "Sunset Layers",
+    "category": "ML4W",
+    "full": "full/sunset_layers.png",
+    "thumbnail": "thumbs/sunset_layers.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/sunset_layers.png"
+  },
+  {
+    "id": "ml4w-suzume1",
+    "name": "Suzume1",
+    "category": "ML4W",
+    "full": "full/suzume1.jpg",
+    "thumbnail": "thumbs/suzume1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/suzume1.jpg"
+  },
+  {
+    "id": "ml4w-symmetry-in-the-stillness",
+    "name": "Symmetry In The Stillness",
+    "category": "ML4W",
+    "full": "full/symmetry-in-the-stillness.jpg",
+    "thumbnail": "thumbs/symmetry-in-the-stillness.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/symmetry-in-the-stillness.jpg"
+  },
+  {
+    "id": "ml4w-the-last-light",
+    "name": "The Last Light",
+    "category": "ML4W",
+    "full": "full/the-last-light.png",
+    "thumbnail": "thumbs/the-last-light.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/the-last-light.png"
+  },
+  {
+    "id": "ml4w-the-snap-hunt-camping",
+    "name": "The Snap Hunt Camping",
+    "category": "ML4W",
+    "full": "full/the-snap-hunt-camping.png",
+    "thumbnail": "thumbs/the-snap-hunt-camping.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/the-snap-hunt-camping.png"
+  },
+  {
+    "id": "ml4w-the-sphere",
+    "name": "The Sphere",
+    "category": "ML4W",
+    "full": "full/the-sphere.png",
+    "thumbnail": "thumbs/the-sphere.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/the-sphere.png"
+  },
+  {
+    "id": "ml4w-tower-night",
+    "name": "Tower Night",
+    "category": "ML4W",
+    "full": "full/tower-night.png",
+    "thumbnail": "thumbs/tower-night.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/tower-night.png"
+  },
+  {
+    "id": "ml4w-tree",
+    "name": "Tree",
+    "category": "ML4W",
+    "full": "full/tree.jpg",
+    "thumbnail": "thumbs/tree.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/tree.jpg"
+  },
+  {
+    "id": "ml4w-tron-ares",
+    "name": "Tron Ares",
+    "category": "ML4W",
+    "full": "full/tron-ares.jpg",
+    "thumbnail": "thumbs/tron-ares.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/tron-ares.jpg"
+  },
+  {
+    "id": "ml4w-tron-legacy1",
+    "name": "Tron Legacy1",
+    "category": "ML4W",
+    "full": "full/tron_legacy1.jpg",
+    "thumbnail": "thumbs/tron_legacy1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/tron_legacy1.jpg"
+  },
+  {
+    "id": "ml4w-tron-legacy2",
+    "name": "Tron Legacy2",
+    "category": "ML4W",
+    "full": "full/tron_legacy2.jpg",
+    "thumbnail": "thumbs/tron_legacy2.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/tron_legacy2.jpg"
+  },
+  {
+    "id": "ml4w-tron-legacy4",
+    "name": "Tron Legacy4",
+    "category": "ML4W",
+    "full": "full/tron_legacy4.jpg",
+    "thumbnail": "thumbs/tron_legacy4.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/tron_legacy4.jpg"
+  },
+  {
+    "id": "ml4w-tron-legacy6",
+    "name": "Tron Legacy6",
+    "category": "ML4W",
+    "full": "full/tron_legacy6.jpg",
+    "thumbnail": "thumbs/tron_legacy6.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/tron_legacy6.jpg"
+  },
+  {
+    "id": "ml4w-vintage-ascent",
+    "name": "Vintage Ascent",
+    "category": "ML4W",
+    "full": "full/vintage-ascent.jpg",
+    "thumbnail": "thumbs/vintage-ascent.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/vintage-ascent.jpg"
+  },
+  {
+    "id": "ml4w-vulcan",
+    "name": "Vulcan",
+    "category": "ML4W",
+    "full": "full/vulcan.jpg",
+    "thumbnail": "thumbs/vulcan.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/vulcan.jpg"
+  },
+  {
+    "id": "ml4w-wallhaven1",
+    "name": "Wallhaven1",
+    "category": "ML4W",
+    "full": "full/wallhaven1.jpg",
+    "thumbnail": "thumbs/wallhaven1.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/wallhaven1.jpg"
+  },
+  {
+    "id": "ml4w-wallhaven3",
+    "name": "Wallhaven3",
+    "category": "ML4W",
+    "full": "full/wallhaven3.jpg",
+    "thumbnail": "thumbs/wallhaven3.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/wallhaven3.jpg"
+  },
+  {
+    "id": "ml4w-wallhaven4",
+    "name": "Wallhaven4",
+    "category": "ML4W",
+    "full": "full/wallhaven4.jpg",
+    "thumbnail": "thumbs/wallhaven4.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/wallhaven4.jpg"
+  },
+  {
+    "id": "ml4w-watchtower-mountains-and-forests",
+    "name": "Watchtower Mountains And Forests",
+    "category": "ML4W",
+    "full": "full/watchtower-mountains-and-forests.jpg",
+    "thumbnail": "thumbs/watchtower-mountains-and-forests.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/watchtower-mountains-and-forests.jpg"
+  },
+  {
+    "id": "ml4w-winter-is-here",
+    "name": "Winter Is Here",
+    "category": "ML4W",
+    "full": "full/winter-is-here.png",
+    "thumbnail": "thumbs/winter-is-here.webp",
+    "source": "https://github.com/mylinuxforwork/wallpaper/blob/main/winter-is-here.png"
+  }
+]

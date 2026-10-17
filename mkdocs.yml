@@ -23,20 +23,18 @@ theme:
     code: JetBrains Mono
 
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: ctf-light
+    - scheme: ctf-dark
       primary: black
-      accent: black
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: ctf-dark
-      primary: black
-      accent: white
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+    - scheme: ctf-light
+      primary: black
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
 
   features:
     - navigation.instant
@@ -54,10 +52,13 @@ theme:
 
 extra_css:
   - assets/css/extra.css
+  - assets/css/shell.css
+  - assets/css/desktop.css
 
 extra_javascript:
   - assets/js/extra.js
-  - assets/js/navbar.js
+  - assets/js/shell.js
+  - assets/js/desktop.js
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
   - assets/js/mermaid-init.js
 
@@ -71,10 +72,7 @@ extra:
     - icon: fontawesome/solid/envelope
       link: mailto:16mathursiddharth@gmail.com
   stats:
-    challenges_solved: 17
-    writeups: 17
-    categories: 1
-    platforms: "picoCTF"
+    challenges_solved: 132
 
 markdown_extensions:
   - attr_list

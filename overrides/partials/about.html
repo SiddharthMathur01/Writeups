@@ -1,33 +1,55 @@
-{#- About Me: split layout, picture placeholder + bio + social buttons -#}
+{#- About Me: Terminal security research profile -#}
 <section class="ctf-section" id="about">
-  <div class="ctf-about">
-    <div class="ctf-about__image ctf-reveal-on-scroll">
-      <img src="assets/images/profile-placeholder.svg" alt="Portrait placeholder for Siddharth Mathur" loading="lazy" />
+  <div class="term-window term-window--profile">
+    <div class="term-title-bar">
+      <span class="term-control term-control--close"></span>
+      <span class="term-control term-control--minimize"></span>
+      <span class="term-control term-control--maximize"></span>
+      <span class="term-host">siddharth@ctf-lab: ~/.config/researcher.json</span>
     </div>
-    <div class="ctf-about__text ctf-reveal-on-scroll" style="transition-delay: 0.08s;">
-      <p class="ctf-eyebrow">About Me</p>
-      <h2 class="ctf-about__heading">Hi, I'm Siddharth.</h2>
-      <p>
-        I'm a Computer Science student passionate about Cyber Security, Reverse Engineering,
-        Binary Exploitation, Web Security, Digital Forensics, Cryptography, and CTF competitions.
-      </p>
-      <p>
-        I created this website to document my learning journey through CTF writeups. Every
-        challenge teaches something new, and these notes serve both as my personal knowledge
-        base and as a resource for others.
-      </p>
-      <div class="ctf-about__actions">
-        <a href="https://github.com/SiddharthMathur01" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost">
+    <div class="term-body">
+      <div class="term-line">
+        <span class="term-prompt">┌──(</span><span class="term-user">siddharth㉿ctf-lab</span><span class="term-prompt">)-[</span><span class="term-path">~</span><span class="term-prompt">]</span>
+      </div>
+      <div class="term-line">
+        <span class="term-prompt">└─$</span> <span class="term-cmd">cat ~/.config/researcher.json</span>
+      </div>
+      <div class="term-profile-grid">
+        <div class="term-profile-code">
+          <pre><code><span class="token-punct">{</span>
+  <span class="token-key">"handle"</span>: <span class="token-str">"siddharth"</span>,
+  <span class="token-key">"role"</span>: <span class="token-str">"Cybersecurity Researcher &amp; CTF Player"</span>,
+  <span class="token-key">"interests"</span>: [
+    <span class="token-val">"Binary Exploitation"</span>,
+    <span class="token-val">"Reverse Engineering"</span>,
+    <span class="token-val">"Web Security"</span>,
+    <span class="token-val">"Digital Forensics"</span>,
+    <span class="token-val">"Cryptography"</span>
+  ],
+  <span class="token-key">"mission"</span>: <span class="token-str">"Documenting challenge solutions, exploits, payloads, and core fundamentals learned while competing in CTFs."</span>,
+  <span class="token-key">"status"</span>: <span class="token-val term-green">"Active / Hunting Flags"</span>
+<span class="token-punct">}</span></code></pre>
+        </div>
+      </div>
+      <div class="term-line term-spacer"></div>
+      <div class="term-line">
+        <span class="term-prompt">┌──(</span><span class="term-user">siddharth㉿ctf-lab</span><span class="term-prompt">)-[</span><span class="term-path">~</span><span class="term-prompt">]</span>
+      </div>
+      <div class="term-line">
+        <span class="term-prompt">└─$</span> <span class="term-cmd">./contact.sh --channels</span>
+      </div>
+      <div class="term-profile-actions">
+        <a href="https://github.com/SiddharthMathur01" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost term-font">
           <span class="ctf-btn__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/github.svg" %}</span>
-          <span class="ctf-btn__label">GitHub</span>
+          <span class="ctf-btn__label">github.com/SiddharthMathur01</span>
         </a>
-        <a href="https://www.linkedin.com/in/siddharth-mathur-084804329/" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost">
+        <a href="https://www.linkedin.com/in/siddharth-mathur-084804329/" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost term-font">
           <span class="ctf-btn__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/linkedin.svg" %}</span>
-          <span class="ctf-btn__label">LinkedIn</span>
+          <span class="ctf-btn__label">linkedin/siddharth-mathur</span>
         </a>
-        <a href="mailto:16mathursiddharth@gmail.com" class="ctf-btn ctf-btn--ghost">
+        <a href="mailto:16mathursiddharth@gmail.com" class="ctf-btn ctf-btn--ghost term-font">
           <span class="ctf-btn__icon" aria-hidden="true">{% include ".icons/fontawesome/solid/envelope.svg" %}</span>
-          <span class="ctf-btn__label">Email</span>
+          <span class="ctf-btn__label">16mathursiddharth@gmail.com</span>
         </a>
       </div>
     </div>

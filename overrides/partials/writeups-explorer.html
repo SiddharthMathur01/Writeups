@@ -1,0 +1,77 @@
+{#- Writeups Explorer: Interactive directory-style filesystem interface -#}
+<section class="ctf-section" id="writeups">
+  <div class="term-window term-window--explorer">
+    <div class="term-title-bar">
+      <span class="term-control term-control--close"></span>
+      <span class="term-control term-control--minimize"></span>
+      <span class="term-control term-control--maximize"></span>
+      <span class="term-host">siddharth@ctf-lab: ~/ctf-writeups</span>
+    </div>
+    <div class="term-body">
+      <div class="term-line">
+        <span class="term-prompt">┌──(</span><span class="term-user">siddharth㉿ctf-lab</span><span class="term-prompt">)-[</span><span class="term-path">~/ctf-writeups</span><span class="term-prompt">]</span>
+      </div>
+      <div class="term-line">
+        <span class="term-prompt">└─$</span> <span class="term-cmd">ls -la ./writeups</span>
+      </div>
+
+      <div class="term-explorer-table-wrap">
+        <table class="term-explorer-table" aria-label="CTF Writeups Directory Listing">
+          <thead>
+            <tr>
+              <th scope="col" class="term-col-perm">PERMISSIONS</th>
+              <th scope="col" class="term-col-type">TYPE</th>
+              <th scope="col" class="term-col-name">NAME / CHALLENGE</th>
+              <th scope="col" class="term-col-platform">PLATFORM</th>
+              <th scope="col" class="term-col-diff">DIFFICULTY</th>
+              <th scope="col" class="term-col-points">POINTS</th>
+              <th scope="col" class="term-col-date">DATE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="term-row-dir">
+              <td class="term-col-perm">drwxr-xr-x</td>
+              <td class="term-col-type"><span class="term-type-tag">DIR</span></td>
+              <td class="term-col-name"><a href="{{ 'picoCTF/' | url }}" class="term-dir-link">picoCTF/</a></td>
+              <td class="term-col-platform">picoCTF</td>
+              <td class="term-col-diff"><span class="term-dash">───</span></td>
+              <td class="term-col-points"><span class="term-dash">───</span></td>
+              <td class="term-col-date">2026-03-14</td>
+            </tr>
+            {% for writeup in config.extra.recent_writeups %}
+            {% set diff = (writeup.difficulty or "Medium") | lower %}
+            <tr class="term-row-file">
+              <td class="term-col-perm">-rw-r--r--</td>
+              <td class="term-col-type"><span class="term-type-tag term-type-tag--file">FILE</span></td>
+              <td class="term-col-name">
+                <a href="{{ writeup.url | url }}" class="term-file-link">
+                  <span class="term-file-icon">📄</span> {{ writeup.title }}
+                </a>
+                {% if writeup.description %}
+                  <div class="term-file-desc">{{ writeup.description }}</div>
+                {% endif %}
+              </td>
+              <td class="term-col-platform"><span class="term-platform-tag">{{ writeup.category }}</span></td>
+              <td class="term-col-diff">
+                <span class="term-badge term-badge--{{ diff }}">{{ writeup.difficulty }}</span>
+              </td>
+              <td class="term-col-points">{{ writeup.points or "—" }}{% if writeup.points %} pts{% endif %}</td>
+              <td class="term-col-date">{{ writeup.date or "—" }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="term-explorer-footer term-font">
+        <span class="term-green">total {{ (config.extra.recent_writeups | length) + 1 }} entries</span>
+        <span class="term-stats-sep">|</span>
+        <span>{{ config.extra.stats.platforms }} platform</span>
+        <span class="term-stats-sep">|</span>
+        <span>{{ config.extra.stats.categories }} categories</span>
+        <span class="term-stats-sep">|</span>
+        <span class="term-green">[ OK ] indexed</span>
+      </div>
+    </div>
+  </div>
+</section>

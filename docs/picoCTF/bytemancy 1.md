@@ -42,7 +42,7 @@ while(True):
 ```
 
 ## Recon
-The challange askes to send char with ascii value 101 1751 times without any space
+The challange askes to submit ascii char 101(e) 1751 times without any space 
 
 ## Exploitation Strategy
 1. Use a simple python scrpit to genrate the ascii char 101 1751 and submit it
@@ -61,3 +61,8 @@ Send me ASCII DECIMAL 101 1751 times, side-by-side, no space.
 ⊹─────────────⟡─────────────⊹
 ==> picoCTF{***_****_***_********}
 ```
+
+## Takeaways
+
+- Simple scripting techniques
+- Encoding and decoding of ascii characters

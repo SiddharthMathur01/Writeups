@@ -5,7 +5,7 @@
   Behavior (open/close, Escape, outside click, focus handling) lives in
   docs/assets/js/navbar.js.
 -#}
-{% set home_url = config.extra.homepage | d(nav.homepage.url, true) | url %}
+{% set home_url = nav.homepage.url | url %}
 {% set is_home = page and (page.url == "" or page.url == ".") %}
 {% set is_about = page and page.file is defined and page.file.src_uri == "about.md" %}
 {% set is_picoCTF = page and page.url.startswith("picoCTF/") %}

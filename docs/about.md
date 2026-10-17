@@ -6,44 +6,31 @@ hide:
   - toc
 ---
 
-<div class="ctf-page-hero">
-  <p class="ctf-eyebrow">About</p>
-  <h1>About Me</h1>
-  <p>Computer Science student, CTF player, and occasional writer of overly long writeups.</p>
-</div>
+<pre class="shell__text-file">NAME
+  Siddharth Mathur
 
-Hi, I'm **Siddharth Mathur**, a Computer Science student passionate about Cyber
-Security, Reverse Engineering, Binary Exploitation, Web Security, Digital
-Forensics, Cryptography, and CTF competitions.
+ROLE
+  Computer Science student, CTF player, and occasional writer of overly long writeups.
 
-I created this website to document my learning journey through CTF writeups.
-Every challenge teaches something new, and these notes serve both as my
-personal knowledge base and as a resource for others working through similar
-problems.
+ABOUT
+  I document my learning journey through CTF writeups. Every challenge teaches
+  something new; these notes are both my personal knowledge base and a resource
+  for others working through similar problems.
 
-## What you'll find here
+RESEARCH INTERESTS
+  Cryptography       Custom scheme analysis, RSA weaknesses, classical ciphers
+  Web security       Authentication flaws, injection, logic bugs
+  Binary exploitation Memory corruption, reverse engineering
+  Digital forensics  Artifact recovery, steganography, network analysis
+  Reverse engineering
+  CTF competitions
 
-- **Structured writeups** — approach, tooling, and the reasoning behind each
-  step, not just the final flag.
-- **Reusable techniques** — patterns that show up across categories:
-  crypto reductions, binary exploitation primitives, forensic triage, and
-  web exploitation chains.
-- **Honest notes on what didn't work** — the dead ends are often as
-  instructive as the solution.
+WHAT YOU'LL FIND HERE
+  Structured writeups with the approach, tools, and reasoning behind each step.
+  Reusable techniques across crypto, binary exploitation, forensics, and web.
+  Honest notes about dead ends as well as successful solutions.
 
-## Interests
-
-| Area | Focus |
-|---|---|
-| Cryptography | Custom scheme analysis, RSA weaknesses, classical ciphers |
-| Web Security | Authentication flaws, injection, logic bugs |
-| Binary Exploitation | Memory corruption, reverse engineering |
-| Digital Forensics | Artifact recovery, steganography, network capture analysis |
-
-## Elsewhere
-
-<div class="ctf-about__actions" style="margin-top: 1.5rem;">
-  <a href="https://github.com/SiddharthMathur01" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost"><span class="ctf-btn__label">GitHub</span></a>
-  <a href="https://www.linkedin.com/in/siddharth-mathur-084804329/" target="_blank" rel="noopener" class="ctf-btn ctf-btn--ghost"><span class="ctf-btn__label">LinkedIn</span></a>
-  <a href="mailto:16mathursiddharth@gmail.com" class="ctf-btn ctf-btn--ghost"><span class="ctf-btn__label">Email</span></a>
-</div>
+ELSEWHERE
+  GitHub   <a href="https://github.com/SiddharthMathur01" target="_blank" rel="noopener">https://github.com/SiddharthMathur01</a>
+  LinkedIn <a href="https://www.linkedin.com/in/siddharth-mathur-084804329/" target="_blank" rel="noopener">https://www.linkedin.com/in/siddharth-mathur-084804329/</a>
+  Email    <a href="mailto:16mathursiddharth@gmail.com">16mathursiddharth@gmail.com</a></pre>

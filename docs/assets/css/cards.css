@@ -214,19 +214,21 @@
 .writeup-card {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
-  padding: var(--space-xl);
-  transition: all var(--transition-base);
+  border-radius: 12px;
+  padding: var(--space-lg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   display: flex;
   flex-direction: column;
   text-decoration: none !important;
 }
 
 .writeup-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
   border-color: var(--color-text-light);
 }
+
+
 
 .writeup-card__header {
   display: flex;

@@ -70,6 +70,13 @@
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
   --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* Terminal design system */
+  --term-bg: #0B0F10;
+  --term-surface: #111718;
+  --term-surface-raised: #161D1E;
+  --term-border: #293532;
+  --term-green: #7CFF9B;
+  --term-amber: #D8B66A;
 }
 
 /* ==========================================================================

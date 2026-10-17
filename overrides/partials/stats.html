@@ -1,21 +1,33 @@
-{#- Stats: quick numeric highlights, easy to update via mkdocs.yml extra.stats -#}
-<section class="ctf-section ctf-section--tight">
-  <div class="ctf-stats">
-    <div class="ctf-stat-card ctf-reveal-on-scroll">
-      <div class="ctf-stat-card__value" data-count="{{ config.extra.stats.challenges_solved }}">0</div>
-      <div class="ctf-stat-card__label">Challenges Solved</div>
+{#- Stats: Full-width System Status Panel -#}
+<section class="ctf-section ctf-section--stats">
+  <div class="term-stats">
+    <div class="term-stats__header term-font">
+      <span class="term-prompt">$</span> <span class="term-cmd">./stats --summary</span>
+      <span class="term-stats__live"><span class="term-status-dot"></span> SYSTEM ONLINE</span>
     </div>
-    <div class="ctf-stat-card ctf-reveal-on-scroll" style="transition-delay: 0.06s;">
-      <div class="ctf-stat-card__value" data-count="{{ config.extra.stats.writeups }}">0</div>
-      <div class="ctf-stat-card__label">Writeups</div>
-    </div>
-    <div class="ctf-stat-card ctf-reveal-on-scroll" style="transition-delay: 0.12s;">
-      <div class="ctf-stat-card__value" data-count="{{ config.extra.stats.categories }}">0</div>
-      <div class="ctf-stat-card__label">Categories</div>
-    </div>
-    <div class="ctf-stat-card ctf-reveal-on-scroll" style="transition-delay: 0.18s;">
-      <div class="ctf-stat-card__value">{{ config.extra.stats.platforms }}</div>
-      <div class="ctf-stat-card__label">Platforms</div>
+    <div class="term-stats__grid">
+      <div class="term-stats__item">
+        <div class="term-stats__value" data-count="{{ config.extra.stats.challenges_solved }}">{{ config.extra.stats.challenges_solved }}</div>
+        <div class="term-stats__label term-font">CHALLENGES SOLVED</div>
+      </div>
+      <div class="term-stats__item">
+        <div class="term-stats__value" data-count="{{ config.extra.stats.writeups }}">{{ config.extra.stats.writeups }}</div>
+        <div class="term-stats__label term-font">WRITEUPS PUBLISHED</div>
+      </div>
+      <div class="term-stats__item">
+        <div class="term-stats__value" data-count="{{ config.extra.stats.categories }}">{{ config.extra.stats.categories }}</div>
+        <div class="term-stats__label term-font">CATEGORIES</div>
+      </div>
+      <div class="term-stats__item">
+        <div class="term-stats__value" data-count="{{ config.extra.stats.platforms }}">{{ config.extra.stats.platforms }}</div>
+        <div class="term-stats__label term-font">PLATFORMS</div>
+      </div>
+      <div class="term-stats__item term-stats__item--status">
+        <div class="term-stats__value term-stats__value--status">
+          <span class="term-status-dot"></span> ACTIVE
+        </div>
+        <div class="term-stats__label term-font">RESEARCH STATUS</div>
+      </div>
     </div>
   </div>
 </section>
